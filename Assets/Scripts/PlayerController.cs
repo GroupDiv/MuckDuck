@@ -11,6 +11,12 @@ public class PlayerController : MonoBehaviour {
     // a better implementation
     public float friction;
 
+    // These variables store the limits on how far the duck can travel
+    public float xMin, xMax, yMin, yMax;
+
+    // Defines which bullet object the duck will use to shoot.
+    public GameObject bullet;
+
     // This points to the rigidbody component of the duck
     private Rigidbody2D rb2d;
 
@@ -33,5 +39,19 @@ public class PlayerController : MonoBehaviour {
 
         // AddForce applies forces to the body, in this case a multiple of our movement tuple
         rb2d.AddForce (movement * speed);
+
+        rb2d.position = new Vector2
+        (
+            Mathf.Clamp(rb2d.position.x, xMin, xMax),
+            Mathf.Clamp(rb2d.position.y, yMin, yMax)
+        );
+    }
+
+    void Update()
+    {
+        if (Input.GetButton("Fire1"))
+        {
+            Instantiate(bullet);
+        }
     }
 }
