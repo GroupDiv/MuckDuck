@@ -7,6 +7,11 @@ public class PlayerController : MonoBehaviour {
     // speed is a multiplier to movement, because it is a public variable it can be changed without recompiling
     public float speed;
 
+    // fireRate is how fast the gun will fire.  nextFire is updated every time the gun is shot by adding fireRate to the current time.
+    // the shot won't be ready until this time has passed
+    public float fireRate;
+    private float nextFire;
+
     // Like speed, friction determines how fast the duck slows down, and it is adjustable on the fly.  This may need
     // a better implementation
     public float friction;
@@ -16,6 +21,7 @@ public class PlayerController : MonoBehaviour {
 
     // Defines which bullet object the duck will use to shoot.
     public GameObject bullet;
+    public Transform bulletSpawn;
 
     // This points to the rigidbody component of the duck
     private Rigidbody2D rb2d;
@@ -23,6 +29,7 @@ public class PlayerController : MonoBehaviour {
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D> ();
+        nextFire = Time.time;
 
         // drag is a property of rigidbody that determines how much the object slows down.
         rb2d.drag = friction;
@@ -49,9 +56,16 @@ public class PlayerController : MonoBehaviour {
 
     void Update()
     {
-        if (Input.GetButton("Fire1"))
+
+        // Checks if Fire1 (default spacebar) is pushed and if the timer is ready for the next fire
+        if (Input.GetButton("Fire1") && nextFire < Time.time)
         {
-            Instantiate(bullet);
+
+            // adds time to nextFire to delay the next shot
+            nextFire = Time.time + fireRate;
+
+            // spawns a bullet at the end bullet spawn location (top of the duck)
+            Instantiate(bullet, bulletSpawn.position, bulletSpawn.rotation);
         }
     }
 }

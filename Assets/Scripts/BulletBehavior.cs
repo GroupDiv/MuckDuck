@@ -7,14 +7,25 @@ public class BulletBehavior : MonoBehaviour
 
     public float speed;
 
+    // None of the destroy stuff works yet --TB
+    public float destroyTimer;
+
+    private Rigidbody2D rb2d;
+    private float initialTime;
+
     void Start()
     {
+        rb2d = GetComponent<Rigidbody2D>();
+        rb2d.velocity = transform.up * speed;
+
+        initialTime = Time.time;
 
     }
 
-    // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector2.up);
+        if (initialTime + destroyTimer > Time.time) {
+            //Destroy(gameObject);
+        }
     }
 }
