@@ -26,6 +26,10 @@ public class PlayerController : MonoBehaviour {
     // This points to the rigidbody component of the duck
     private Rigidbody2D rb2d;
 
+    /*
+    @pre: none
+    @post: initializes player object with initial firing time and movement properties.
+    */
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D> ();
@@ -35,6 +39,10 @@ public class PlayerController : MonoBehaviour {
         rb2d.drag = friction;
     }
 
+    /*
+    @pre: none
+    @post: Updates duck position
+    */
     void FixedUpdate()
     {
 
@@ -54,6 +62,10 @@ public class PlayerController : MonoBehaviour {
         );
     }
 
+    /*
+    @pre: none
+    @post: If fire command is triggered, spawn bullet.
+    */
     void Update()
     {
 

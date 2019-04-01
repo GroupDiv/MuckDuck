@@ -26,6 +26,10 @@ public class BulletBehavior : MonoBehaviour
 
     }
 
+    /*
+    @pre: none
+    @post: checks if bullet has reached its target. If so, target is destroyed.
+    */
     void Update()
     {
         if (initialTime + destroyTimer > Time.time) {
