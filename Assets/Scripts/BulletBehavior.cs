@@ -13,6 +13,10 @@ public class BulletBehavior : MonoBehaviour
     private Rigidbody2D rb2d;
     private float initialTime;
 
+    /*
+    @pre: none
+    @post: sets bullet velocity and initial time of bullet descent
+    */
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
