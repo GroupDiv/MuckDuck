@@ -10,6 +10,8 @@ public class WaveBehavior : MonoBehaviour
     public float startWait;
     public float waveWait;
 
+    public GameObject playerObject;
+
     void Start()
     {
         StartCoroutine (SpawnWaves());
@@ -24,7 +26,9 @@ public class WaveBehavior : MonoBehaviour
             {
                 Vector2 spawnPosition = new Vector2(Random.Range(-spawnValues.x, spawnValues.x), Random.Range(0, spawnValues.y));
                 Quaternion spawnRotation = Quaternion.identity;
-                Instantiate(hazard, spawnPosition, spawnRotation);
+                var obj = Instantiate(hazard, spawnPosition, spawnRotation);
+                obj.GetComponent<Movement>().RecievePlayerParameter(playerObject);
+
                 yield return new WaitForSeconds(spawnWait);
             }
             yield return new WaitForSeconds(waveWait);
