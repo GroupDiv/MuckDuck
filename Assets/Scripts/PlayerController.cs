@@ -29,8 +29,13 @@ public class PlayerController : MonoBehaviour {
 
     // a Text variable to store the score string
     public Text scoreText;
-
+    // keeps track of actual score value
     public int score;
+
+    // a Text variable to store the lives string
+    public Text livesText;
+    // keeps track of lives remaining value
+    public int lives;
 
     /*
     @pre: none
@@ -46,6 +51,8 @@ public class PlayerController : MonoBehaviour {
 
         score = 0;
         updateScoreString(score);
+        lives = 3;
+        updateLivesString(lives);
     }
 
     /*
@@ -90,9 +97,23 @@ public class PlayerController : MonoBehaviour {
         }
 
         updateScoreString(this.score);
+        updateLivesString(this.lives);
     }
 
     void updateScoreString(int newScore) {
-        this.scoreText.text = "Score: " + newScore.ToString();
+        this.scoreText.text = "SCORE: " + newScore.ToString();
+    }
+
+    void updateLivesString(int newLives)
+    {
+        this.livesText.text = "LIVES: " + newLives.ToString();
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        //if (collision.gameObject.tag == "Enemy")
+        {
+            this.lives--;
+        }
     }
 }
