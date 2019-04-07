@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6464199135043392567}
   - component: {fileID: 6464199135043392566}
   - component: {fileID: 1713002358361497240}
+  - component: {fileID: 378366280462890852}
   m_Layer: 0
   m_Name: EnemyDog - temp
   m_TagString: Enemy
@@ -110,3 +111,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.025
+--- !u!114 &378366280462890852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6464199135043392564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d28b2a25be31484298f96c604d4a2bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  game: {fileID: 0}
+  player: {fileID: 7462737853704056382, guid: 9962d04e0ff4347329929aaaa75eded8, type: 3}
