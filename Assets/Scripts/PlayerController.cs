@@ -37,6 +37,12 @@ public class PlayerController : MonoBehaviour {
     // keeps track of lives remaining value
     public int lives;
 
+    public Text restartText;
+    public Text gameOverText;
+
+    private bool gameOver;
+    private bool restart;
+
     /*
     @pre: none
     @post: initializes player object with initial firing time and movement properties.
@@ -46,7 +52,10 @@ public class PlayerController : MonoBehaviour {
         Debug.Log("DEBUG LOG INITIALIZED");
         rb2d = GetComponent<Rigidbody2D> ();
         nextFire = Time.time;
-
+        gameOver = false;
+        restart = false;
+        gameOverText.text = "";
+        restartText.text = "";
         // drag is a property of rigidbody that determines how much the object slows down.
         rb2d.drag = friction;
 
@@ -99,6 +108,25 @@ public class PlayerController : MonoBehaviour {
 
         updateScoreString(this.score);
         updateLivesString(this.lives);
+
+        if (lives == 0)
+        {
+            GameOver();
+        }
+
+        if (gameOver)
+        {
+            restartText.text = "Press 'R' to Restart";
+            restart = true;
+        }
+
+        if (restart)
+        {
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                Application.LoadLevel (Application.loadedLevel);
+            }
+        }
     }
 
     void updateScoreString(int newScore) {
@@ -117,5 +145,10 @@ public class PlayerController : MonoBehaviour {
         {
             this.lives--;
         }
+    }
+
+    public void GameOver() {
+        gameOverText.text = "Game Over!";
+        gameOver = true;
     }
 }

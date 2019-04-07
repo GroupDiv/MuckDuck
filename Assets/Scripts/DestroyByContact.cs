@@ -13,7 +13,7 @@ public class DestroyByContact : MonoBehaviour
     {
         
     }
-
+/*
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Boundary" || other.tag == "EnemyDog")
@@ -26,5 +26,5 @@ public class DestroyByContact : MonoBehaviour
             Destroy(gameObject);
             game.GameOver();
         }
-    }
+    }*/
 }

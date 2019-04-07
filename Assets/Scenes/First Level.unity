@@ -711,8 +711,6 @@ MonoBehaviour:
   spawnWait: 1
   startWait: 0
   waveWait: 1
-  restartText: {fileID: 376942888}
-  gameOverText: {fileID: 536213240}
   playerObject: {fileID: 1764469181}
 --- !u!4 &1225813172
 Transform:
@@ -1029,5 +1027,15 @@ PrefabInstance:
       propertyPath: livesText
       value: 
       objectReference: {fileID: 1858841323}
+    - target: {fileID: 7462737853704056381, guid: 9962d04e0ff4347329929aaaa75eded8,
+        type: 3}
+      propertyPath: restartText
+      value: 
+      objectReference: {fileID: 376942888}
+    - target: {fileID: 7462737853704056381, guid: 9962d04e0ff4347329929aaaa75eded8,
+        type: 3}
+      propertyPath: gameOverText
+      value: 
+      objectReference: {fileID: 536213240}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9962d04e0ff4347329929aaaa75eded8, type: 3}
