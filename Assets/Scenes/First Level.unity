@@ -711,8 +711,8 @@ MonoBehaviour:
   spawnWait: 1
   startWait: 0
   waveWait: 1
-  restartText: {fileID: 0}
-  gameOverText: {fileID: 0}
+  restartText: {fileID: 376942888}
+  gameOverText: {fileID: 536213240}
   playerObject: {fileID: 1764469181}
 --- !u!4 &1225813172
 Transform:
