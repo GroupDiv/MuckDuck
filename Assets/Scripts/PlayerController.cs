@@ -43,6 +43,7 @@ public class PlayerController : MonoBehaviour {
     */
     void Start()
     {
+        Debug.Log("DEBUG LOG INITIALIZED");
         rb2d = GetComponent<Rigidbody2D> ();
         nextFire = Time.time;
 
@@ -111,7 +112,8 @@ public class PlayerController : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        //if (collision.gameObject.tag == "Enemy")
+        Debug.Log("Collision detected");
+        if (collision.gameObject.tag == "Enemy")
         {
             this.lives--;
         }
