@@ -11,6 +11,16 @@ public class Movement : MonoBehaviour
         Character = playerObject;
     }
 
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        // Destroy everything that leaves the trigger
+        if (other.gameObject.tag == "Bullet"){
+            Destroy(other.gameObject);
+            Destroy(gameObject);
+            Character.GetComponent<PlayerController>().score ++;
+        }
+    }
+
     void Update()
     {
         

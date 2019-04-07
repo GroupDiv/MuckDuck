@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour {
 
@@ -26,6 +27,11 @@ public class PlayerController : MonoBehaviour {
     // This points to the rigidbody component of the duck
     private Rigidbody2D rb2d;
 
+    // a Text variable to store the score string
+    public Text scoreText;
+
+    public int score;
+
     /*
     @pre: none
     @post: initializes player object with initial firing time and movement properties.
@@ -37,6 +43,9 @@ public class PlayerController : MonoBehaviour {
 
         // drag is a property of rigidbody that determines how much the object slows down.
         rb2d.drag = friction;
+
+        score = 0;
+        updateScoreString(score);
     }
 
     /*
@@ -79,5 +88,11 @@ public class PlayerController : MonoBehaviour {
             // spawns a bullet at the end bullet spawn location (top of the duck)
             Instantiate(bullet, bulletSpawn.position, bulletSpawn.rotation);
         }
+
+        updateScoreString(this.score);
+    }
+
+    void updateScoreString(int newScore) {
+        this.scoreText.text = "Score: " + newScore.ToString();
     }
 }
