@@ -257,7 +257,7 @@ MonoBehaviour:
     m_MaxSize: 40
     m_Alignment: 2
     m_AlignByGeometry: 0
-    m_RichText: 0
+    m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
@@ -711,6 +711,8 @@ MonoBehaviour:
   spawnWait: 1
   startWait: 0
   waveWait: 1
+  restartText: {fileID: 0}
+  gameOverText: {fileID: 0}
   playerObject: {fileID: 1764469181}
 --- !u!4 &1225813172
 Transform:

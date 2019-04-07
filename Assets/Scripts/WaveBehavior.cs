@@ -51,20 +51,15 @@ public class WaveBehavior : MonoBehaviour
                 var obj = Instantiate(hazard, spawnPosition, spawnRotation);
                 obj.GetComponent<Movement>().RecievePlayerParameter(playerObject);
 
-                //if (obj.transform.position == playerObject.transform.position)
-                //{
-                //    gameOver = true;
-                //}
-
                 yield return new WaitForSeconds(spawnWait);
             }
             yield return new WaitForSeconds(waveWait);
-           // if (gameOver)
-            //{
-            //    restartText.text = "Press 'R' to Restart";
-            //    restart = true;
-            //    break;
-           // }
+            if (gameOver)
+            {
+                restartText.text = "Press 'R' to Restart";
+                restart = true;
+                break;
+            }
         }
     }
 
