@@ -14,11 +14,19 @@ public class WaveBehavior : MonoBehaviour
 
     public GameObject playerObject;
 
+    /*
+    * @pre: none
+    * @post: starts enemy spawn by calling SpawnWaves
+    */
     void Start()
     {
         StartCoroutine (SpawnWaves());
     }
 
+    /*
+    * @pre: none
+    * @post: randomly generates continuously spawning wave of enemies
+    */
     IEnumerator SpawnWaves()
     {
         yield return new WaitForSeconds(startWait);

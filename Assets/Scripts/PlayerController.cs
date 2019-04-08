@@ -140,15 +140,30 @@ public class PlayerController : MonoBehaviour {
         }
     }
 
+    /*
+    * @pre: score has been updated
+    * @post: updates score text to be displayed in UI
+    * @param newScore: updated player score
+    */
     void updateScoreString(int newScore) {
         this.scoreText.text = "SCORE: " + newScore.ToString();
     }
 
+    /*
+    * @pre: score has been updated
+    * @post: updates lives text to be displayed in UI
+    * @param newLives: updated number of player lives remaining
+    */
     void updateLivesString(int newLives)
     {
         this.livesText.text = "LIVES: " + newLives.ToString();
     }
 
+    /*
+    * @pre: player hits another collider gameobject
+    * @post: If the collision is with an ememy, decrements player lives
+    * @param collision: collider object the player comes into contact with
+    */
     void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log("Collision detected");
@@ -159,6 +174,10 @@ public class PlayerController : MonoBehaviour {
         }
     }
 
+    /*
+    * @pre: none
+    * @post: plays game music
+    */
     void playMusic()
     {
         GetComponent<AudioSource>().clip = gameClip;
@@ -167,6 +186,10 @@ public class PlayerController : MonoBehaviour {
         GetComponent<AudioSource>().loop = false; // for audio looping
     }
 
+    /*
+    * @pre: player has run out of lives
+    * @post: updates game over text to "Game Over" which will be displayed in the UI
+    */
     public void GameOver() {
         gameOverText.text = "Game Over!";
         gameOver = true;
