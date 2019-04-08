@@ -7,7 +7,7 @@ public class EnemyBehavior : MonoBehaviour
     private Vector2 directionOfCharacter;
     public Vector2 randomMovement;
     public float wobbleFactor;
-    
+    private ShakeBehavior shake;
 
     /*
     * @pre: none
@@ -17,6 +17,7 @@ public class EnemyBehavior : MonoBehaviour
     public void RecievePlayerParameter(GameObject playerObject)
     {
         Character = playerObject;
+        shake = GameObject.FindGameObjectWithTag("Shake").GetComponent<ShakeBehavior>();
     }
 
     /*
@@ -28,6 +29,7 @@ public class EnemyBehavior : MonoBehaviour
     {
         // Destroy everything that leaves the trigger
         if (other.gameObject.tag == "Bullet"){
+            shake.EnemyCameraShake();
             Destroy(other.gameObject);
             Destroy(gameObject);
             Character.GetComponent<PlayerController>().score ++;

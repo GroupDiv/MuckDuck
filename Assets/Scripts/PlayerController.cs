@@ -166,7 +166,6 @@ public class PlayerController : MonoBehaviour {
     */
     void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Collision detected");
         if (collision.gameObject.tag == "Enemy" && gameOver == false)
         {
             playMusic();
