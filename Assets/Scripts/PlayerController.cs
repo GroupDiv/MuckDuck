@@ -100,7 +100,7 @@ public class PlayerController : MonoBehaviour {
     {
 
         // Checks if Fire1 (default spacebar) is pushed and if the timer is ready for the next fire
-        if (Input.GetButton("Fire1") && nextFire < Time.time)
+        if (Input.GetButton("Fire1") && nextFire < Time.time && !gameOver)
         {
 
             // adds time to nextFire to delay the next shot
@@ -112,6 +112,8 @@ public class PlayerController : MonoBehaviour {
 
         if (!gameOver)
         {
+            // Show the duck's sprite  
+            this.GetComponent<SpriteRenderer>().enabled = true;
             updateScoreString(this.score);
             updateLivesString(this.lives);
         }
@@ -123,6 +125,8 @@ public class PlayerController : MonoBehaviour {
 
         if (gameOver)
         {
+            // Hide the duck's sprite
+            this.GetComponent<SpriteRenderer>().enabled = false;
             restartText.text = "Press 'R' to Restart";
             restart = true;
         }
