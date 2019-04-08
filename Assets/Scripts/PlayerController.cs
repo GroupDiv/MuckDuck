@@ -106,8 +106,11 @@ public class PlayerController : MonoBehaviour {
             Instantiate(bullet, bulletSpawn.position, bulletSpawn.rotation);
         }
 
-        updateScoreString(this.score);
-        updateLivesString(this.lives);
+        if (!gameOver)
+        {
+            updateScoreString(this.score);
+            updateLivesString(this.lives);
+        }
 
         if (lives == 0)
         {
