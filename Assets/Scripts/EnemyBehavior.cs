@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class Movement : MonoBehaviour
+public class EnemyBehavior : MonoBehaviour
 {
     private GameObject Character; // Target Object to follow
     public float speed; // Enemy speed

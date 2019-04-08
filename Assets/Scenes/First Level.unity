@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.3587269, a: 1}
+  m_IndirectSpecularColor: {r: 0.3731196, g: 0.38074002, b: 0.35872713, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -710,10 +710,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hazard: {fileID: 6464199135043392564, guid: 27c8be829d4bb426a8d8d2e8a5168d1c, type: 3}
   spawnValues: {x: 2, y: 4}
-  hazardCount: 20
-  spawnWait: 1
-  startWait: 0
-  waveWait: 1
+  hazardCount: 1000
+  spawnWait: 0.6
+  startWait: 1
+  waveWait: 0.6
   playerObject: {fileID: 1764469181}
 --- !u!4 &1225813172
 Transform:
