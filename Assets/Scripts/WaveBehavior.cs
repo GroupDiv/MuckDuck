@@ -29,7 +29,7 @@ public class WaveBehavior : MonoBehaviour
                 Vector2 spawnPosition = new Vector2(Random.Range(-spawnValues.x, spawnValues.x), Random.Range(0, spawnValues.y));
                 Quaternion spawnRotation = Quaternion.identity;
                 var obj = Instantiate(hazard, spawnPosition, spawnRotation);
-                obj.GetComponent<Movement>().RecievePlayerParameter(playerObject);
+                obj.GetComponent<EnemyBehavior>().RecievePlayerParameter(playerObject);
 
                 yield return new WaitForSeconds(spawnWait);
             }
