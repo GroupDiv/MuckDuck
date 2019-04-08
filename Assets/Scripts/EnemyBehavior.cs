@@ -5,6 +5,9 @@ public class EnemyBehavior : MonoBehaviour
     private GameObject Character; // Target Object to follow
     public float speed; // Enemy speed
     private Vector2 directionOfCharacter;
+    public Vector2 randomMovement;
+    public float wobbleFactor;
+    
 
     public void RecievePlayerParameter(GameObject playerObject)
     {
@@ -23,10 +26,10 @@ public class EnemyBehavior : MonoBehaviour
 
     void FixedUpdate()
     {
-        
+        randomMovement = Random.insideUnitCircle;
 
         directionOfCharacter = Character.transform.position - transform.position;
-        directionOfCharacter = directionOfCharacter.normalized;    // Get Direction to Move Towards
+        directionOfCharacter = directionOfCharacter.normalized + randomMovement * wobbleFactor;    // Get Direction to Move Towards
         transform.Translate(directionOfCharacter * speed, Space.World);
     }
 }
