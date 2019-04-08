@@ -49,6 +49,8 @@ public class PlayerController : MonoBehaviour {
     */
     void Start()
     {
+                //forces the game window to be the resolution we want
+        Screen.SetResolution(540, 960, true);
         Debug.Log("DEBUG LOG INITIALIZED");
         rb2d = GetComponent<Rigidbody2D> ();
         nextFire = Time.time;
