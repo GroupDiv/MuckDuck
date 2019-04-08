@@ -37,6 +37,8 @@ public class PlayerController : MonoBehaviour {
     // keeps track of lives remaining value
     public int lives;
 
+    public AudioClip gameClip;
+
     public Text restartText;
     public Text gameOverText;
 
@@ -146,8 +148,17 @@ public class PlayerController : MonoBehaviour {
         Debug.Log("Collision detected");
         if (collision.gameObject.tag == "Enemy")
         {
+            playMusic();
             this.lives--;
         }
+    }
+
+    void playMusic()
+    {
+        GetComponent<AudioSource>().clip = gameClip;
+        GetComponent<AudioSource>().Play();
+        GetComponent<AudioSource>().volume = 1.0f; // optional
+        GetComponent<AudioSource>().loop = false; // for audio looping
     }
 
     public void GameOver() {
