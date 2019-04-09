@@ -37,7 +37,7 @@ public class EnemyBehavior : MonoBehaviour
             shake.EnemyCameraShake();
             Destroy(other.gameObject);
             Destroy(gameObject);
-            Character.GetComponent<PlayerController>().score ++;
+            Character.GetComponent<PlayerController>().score += 10;
         }
     }
 

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074, b: 0.35872698, a: 1}
+  m_IndirectSpecularColor: {r: 0.3731196, g: 0.38074002, b: 0.35872713, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -731,9 +731,9 @@ MonoBehaviour:
   hazard: {fileID: 6464199135043392564, guid: 27c8be829d4bb426a8d8d2e8a5168d1c, type: 3}
   spawnValues: {x: 2, y: 4}
   hazardCount: 1000
-  spawnWait: 0.6
-  startWait: 1
-  waveWait: 0.6
+  spawnWait: 0.5
+  startWait: 0.5
+  waveWait: 0.5
   playerObject: {fileID: 1764469181}
 --- !u!4 &1225813172
 Transform:
@@ -1329,10 +1329,20 @@ PrefabInstance:
       propertyPath: gameClip
       value: 
       objectReference: {fileID: 8300000, guid: 404b601b7439c4d8bab1fdd274de1026, type: 3}
+    - target: {fileID: 7462737853704056381, guid: 9962d04e0ff4347329929aaaa75eded8,
+        type: 3}
+      propertyPath: fireRate
+      value: 0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 7462737853577136625, guid: 9962d04e0ff4347329929aaaa75eded8,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 7462737853577136625, guid: 9962d04e0ff4347329929aaaa75eded8,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.44
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9962d04e0ff4347329929aaaa75eded8, type: 3}
