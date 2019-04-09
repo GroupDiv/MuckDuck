@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3731196, g: 0.38074002, b: 0.35872713, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074, b: 0.35872698, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -842,9 +842,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.03888011}
   serializedVersion: 2
-  m_Radius: 3.025
+  m_Radius: 2.6128662
 --- !u!82 &1764469187
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1329,5 +1329,10 @@ PrefabInstance:
       propertyPath: gameClip
       value: 
       objectReference: {fileID: 8300000, guid: 404b601b7439c4d8bab1fdd274de1026, type: 3}
+    - target: {fileID: 7462737853577136625, guid: 9962d04e0ff4347329929aaaa75eded8,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9962d04e0ff4347329929aaaa75eded8, type: 3}
