@@ -58,7 +58,7 @@ Transform:
   m_GameObject: {fileID: 7462737853704056382}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.03, y: -1.64, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 1}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_Children:
   - {fileID: 7462737853577136625}
   m_Father: {fileID: 0}
@@ -101,12 +101,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 35fea5048c02349eea8194c44d1c363f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b53b8ccdabacc44d49bdb9a6540b5c67, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 6.05, y: 5.67}
+  m_Size: {x: 5.12, y: 5.12}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -154,3 +154,10 @@ MonoBehaviour:
   yMax: 3.6
   bullet: {fileID: 9027419482928808400, guid: bac419058d8be47bf896a44df554da0d, type: 3}
   bulletSpawn: {fileID: 7462737853577136625}
+  scoreText: {fileID: 0}
+  score: 0
+  livesText: {fileID: 0}
+  lives: 0
+  gameClip: {fileID: 0}
+  restartText: {fileID: 0}
+  gameOverText: {fileID: 0}
