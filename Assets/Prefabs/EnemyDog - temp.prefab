@@ -111,4 +111,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.025
   randomMovement: {x: 0, y: 0}
-  wobbleFactor: 3
+  wobbleFactor: 1
+  wobbleWait: 1
