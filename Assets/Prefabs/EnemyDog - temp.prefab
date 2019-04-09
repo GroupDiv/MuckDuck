@@ -109,4 +109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ba6ee77681774106828bcc63398fdcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.025
+  speed: 0.035
+  randomMovement: {x: 0, y: 0}
+  wobbleFactor: 1
+  wobbleWait: 0.5
