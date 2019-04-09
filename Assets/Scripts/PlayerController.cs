@@ -168,6 +168,7 @@ public class PlayerController : MonoBehaviour {
     {
         if (collision.gameObject.tag == "Enemy" && gameOver == false)
         {
+            Destroy(collision.gameObject);
             playMusic();
             this.lives--;
         }
