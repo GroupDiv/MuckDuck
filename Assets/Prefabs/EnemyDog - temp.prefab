@@ -112,4 +112,4 @@ MonoBehaviour:
   speed: 0.025
   randomMovement: {x: 0, y: 0}
   wobbleFactor: 1
-  shake: {fileID: 2667037541187003457, guid: 790163c2d0ba44508a52ab751ff8cb6b, type: 3}
+  wobbleWait: 1
