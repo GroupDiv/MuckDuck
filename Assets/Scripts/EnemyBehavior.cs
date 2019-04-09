@@ -7,6 +7,9 @@ public class EnemyBehavior : MonoBehaviour
     private Vector2 directionOfCharacter;
     public Vector2 randomMovement;
     public float wobbleFactor;
+    public float wobbleWait;
+    private float nextWobble;
+
     private ShakeBehavior shake;
 
     /*
@@ -18,6 +21,8 @@ public class EnemyBehavior : MonoBehaviour
     {
         Character = playerObject;
         shake = GameObject.FindGameObjectWithTag("Shake").GetComponent<ShakeBehavior>();
+        nextWobble = Time.time;
+
     }
 
     /*
@@ -42,7 +47,10 @@ public class EnemyBehavior : MonoBehaviour
     */
     void FixedUpdate()
     {
-        randomMovement = Random.insideUnitCircle;
+        if (nextWobble < Time.time){
+            randomMovement = Random.insideUnitCircle;
+            nextWobble = Time.time + wobbleWait;
+        }
 
         directionOfCharacter = Character.transform.position - transform.position;
         directionOfCharacter = directionOfCharacter.normalized + randomMovement * wobbleFactor;    // Get Direction to Move Towards
