@@ -56,6 +56,8 @@ public class PlayerController : MonoBehaviour {
     //! True if the player restarts, resets to false once the game is restarted
     private bool restart;
 
+    private ShakeBehavior shake; 
+
     /*!
     @pre: none
     @post: initializes player object with initial firing time and movement properties.
@@ -78,6 +80,8 @@ public class PlayerController : MonoBehaviour {
         updateScoreString(score);
         lives = 3;
         updateLivesString(lives);
+
+        shake = GameObject.FindGameObjectWithTag("Shake").GetComponent<ShakeBehavior>();
     }
 
     /*!
@@ -179,6 +183,7 @@ public class PlayerController : MonoBehaviour {
     {
         if (collision.gameObject.tag == "Enemy" && gameOver == false)
         {
+            shake.EnemyCameraShake();
             Destroy(collision.gameObject);
             playMusic();
             this.lives--;
