@@ -2,21 +2,21 @@
 
 public class EnemyBehavior : MonoBehaviour
 {
-    private GameObject Character; // Target Object to follow
-    public float speed; // Enemy speed
-    private Vector2 directionOfCharacter;
-    public Vector2 randomMovement;
-    public float wobbleFactor;
-    public float wobbleWait;
-    private float nextWobble;
+    private GameObject Character; //! Target Object to follow (usually player)
+    public float speed; //! Enemy speed settable from Unity editor
+    private Vector2 directionOfCharacter; //! The direction of the character from this instance of the enemy
+    public Vector2 randomMovement; //! An occasionally-generated random vector to apply to enemy movement
+    public float wobbleFactor;  //! A scalar to multiply randomMovement by, to amplify random movement
+    public float wobbleWait; //! How long until a new randomMovement should be applied to movement
+    private float nextWobble; //! The variable that keeps track of the next time to apply randomMovement
 
-    private ShakeBehavior shake;
+    private ShakeBehavior shake; //! The class the contains the animation to apply camera shake behavior to
 
-    /*
+    /*!
     * @pre: none
     * @post: assigns GameObject Character to playerObject 
     * @param playerObject: the player object we are currently interacting with
-    */
+    !*/
     public void RecievePlayerParameter(GameObject playerObject)
     {
         Character = playerObject;
@@ -25,11 +25,11 @@ public class EnemyBehavior : MonoBehaviour
 
     }
 
-    /*
+    /*!
     * @pre: none
-    * @post: destroys everything a bullet comes into contact with
+    * @post: kills the enemy, bullet, and shakes the camera
     * @param other: object the bullet collides with
-    */
+    !*/
     void OnTriggerEnter2D(Collider2D other)
     {
         // Destroy everything that leaves the trigger
@@ -41,10 +41,10 @@ public class EnemyBehavior : MonoBehaviour
         }
     }
 
-    /*
+    /*!
     * @pre: none
-    * @post: updates player position according to player controls
-    */
+    * @post: updates enemy position according to player and if nextWobble is up, as well as updating the nextWobble
+    !*/
     void FixedUpdate()
     {
         if (nextWobble < Time.time){
