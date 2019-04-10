@@ -5,15 +5,27 @@ using UnityEngine.UI;
 
 public class WaveBehavior : MonoBehaviour
 {
-    public GameObject hazard; //! The enemy that the wave will spawn
-    public Vector2 spawnValues; //! The range from the object from which the hazards will spawn
-    public int hazardCount; //! How many enemies to spawn in each wave
 
-    public float spawnWait; //! How long to wait between spawns
-    public float startWait; //! How long to wait at the begining of the wave's life
-    public float waveWait; //! How long to wait in between spawns
+    //! The enemy that the wave will spawn
+    public GameObject hazard; 
 
-    public GameObject playerObject; //! A reference to the player object, for passing down to the enemies so they know who to follow
+    //! The range from the object from which the hazards will spawn
+    public Vector2 spawnValues; 
+
+    //! How many enemies to spawn in each wave
+    public int hazardCount; 
+
+    //! How long to wait between spawns
+    public float spawnWait;
+
+    //! How long to wait at the begining of the wave's life
+    public float startWait; 
+
+    //! How long to wait in between spawns
+    public float waveWait; 
+
+    //! A reference to the player object, for passing down to the enemies so they know who to follow
+    public GameObject playerObject; 
 
     /*!
     * @pre: none

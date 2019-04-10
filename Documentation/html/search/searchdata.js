@@ -1,18 +1,24 @@
 var indexSectionsWithContent =
 {
-  0: "bdepsw",
-  1: "bdepsw"
+  0: "bdefghlprswx",
+  1: "bdepsw",
+  2: "egr",
+  3: "bdfghlprswx"
 };
 
 var indexSectionNames =
 {
   0: "all",
-  1: "classes"
+  1: "classes",
+  2: "functions",
+  3: "variables"
 };
 
 var indexSectionLabels =
 {
   0: "All",
-  1: "Classes"
+  1: "Classes",
+  2: "Functions",
+  3: "Variables"
 };
 

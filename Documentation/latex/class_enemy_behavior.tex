@@ -7,24 +7,43 @@ Inherits Mono\+Behaviour.
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_enemy_behavior_a1a0d6efe8ce9e53a0e4bddd06c379097}\label{class_enemy_behavior_a1a0d6efe8ce9e53a0e4bddd06c379097}} 
-void {\bfseries Recieve\+Player\+Parameter} (Game\+Object player\+Object)
+void \mbox{\hyperlink{class_enemy_behavior_a1a0d6efe8ce9e53a0e4bddd06c379097}{Recieve\+Player\+Parameter}} (Game\+Object player\+Object)
 \end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{class_enemy_behavior_a1c7f38d162cec582d736b2b7d7d0ac6b}\label{class_enemy_behavior_a1c7f38d162cec582d736b2b7d7d0ac6b}} 
-float {\bfseries speed}
-\item 
+float \mbox{\hyperlink{class_enemy_behavior_a1c7f38d162cec582d736b2b7d7d0ac6b}{speed}}
+\begin{DoxyCompactList}\small\item\em Enemy speed settable from Unity editor. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_enemy_behavior_a6f9339ebbcc8c5ad4e538d52bfde73c1}\label{class_enemy_behavior_a6f9339ebbcc8c5ad4e538d52bfde73c1}} 
-Vector2 {\bfseries random\+Movement}
-\item 
+Vector2 \mbox{\hyperlink{class_enemy_behavior_a6f9339ebbcc8c5ad4e538d52bfde73c1}{random\+Movement}}
+\begin{DoxyCompactList}\small\item\em An occasionally-\/generated random vector to apply to enemy movement. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_enemy_behavior_a80484f747dfb85a8063a50dd115f65e0}\label{class_enemy_behavior_a80484f747dfb85a8063a50dd115f65e0}} 
-float {\bfseries wobble\+Factor}
-\item 
+float \mbox{\hyperlink{class_enemy_behavior_a80484f747dfb85a8063a50dd115f65e0}{wobble\+Factor}}
+\begin{DoxyCompactList}\small\item\em A scalar to multiply random\+Movement by, to amplify random movement. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_enemy_behavior_ade5bcff77085ea22523d28312c252d75}\label{class_enemy_behavior_ade5bcff77085ea22523d28312c252d75}} 
-float {\bfseries wobble\+Wait}
-\end{DoxyCompactItemize}
+float \mbox{\hyperlink{class_enemy_behavior_ade5bcff77085ea22523d28312c252d75}{wobble\+Wait}}
+\begin{DoxyCompactList}\small\item\em How long until a new random\+Movement should be applied to movement. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_enemy_behavior_a1a0d6efe8ce9e53a0e4bddd06c379097}\label{class_enemy_behavior_a1a0d6efe8ce9e53a0e4bddd06c379097}} 
+\index{EnemyBehavior@{EnemyBehavior}!RecievePlayerParameter@{RecievePlayerParameter}}
+\index{RecievePlayerParameter@{RecievePlayerParameter}!EnemyBehavior@{EnemyBehavior}}
+\subsubsection{\texorpdfstring{RecievePlayerParameter()}{RecievePlayerParameter()}}
+{\footnotesize\ttfamily void Enemy\+Behavior.\+Recieve\+Player\+Parameter (\begin{DoxyParamCaption}\item[{Game\+Object}]{player\+Object }\end{DoxyParamCaption})}
+
+\begin{DoxyPrecond}{Precondition}
+\+: none 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+\+: assigns Game\+Object Character to player\+Object 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parameters}
+{\em player\+Object} & the player object we are currently interacting with ! \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

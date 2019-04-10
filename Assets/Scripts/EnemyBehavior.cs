@@ -2,15 +2,29 @@
 
 public class EnemyBehavior : MonoBehaviour
 {
-    private GameObject Character; //! Target Object to follow (usually player)
-    public float speed; //! Enemy speed settable from Unity editor
-    private Vector2 directionOfCharacter; //! The direction of the character from this instance of the enemy
-    public Vector2 randomMovement; //! An occasionally-generated random vector to apply to enemy movement
-    public float wobbleFactor;  //! A scalar to multiply randomMovement by, to amplify random movement
-    public float wobbleWait; //! How long until a new randomMovement should be applied to movement
-    private float nextWobble; //! The variable that keeps track of the next time to apply randomMovement
+    //! Target Object to follow (usually player)
+    private GameObject Character; 
 
-    private ShakeBehavior shake; //! The class the contains the animation to apply camera shake behavior to
+    //! Enemy speed settable from Unity editor
+    public float speed;
+
+    //! The direction of the character from this instance of the enemy
+    private Vector2 directionOfCharacter; 
+    
+    //! An occasionally-generated random vector to apply to enemy movement
+    public Vector2 randomMovement; 
+
+    //! A scalar to multiply randomMovement by, to amplify random movement
+    public float wobbleFactor;  
+
+    //! How long until a new randomMovement should be applied to movement
+    public float wobbleWait; 
+
+    //! The variable that keeps track of the next time to apply randomMovement
+    private float nextWobble; 
+
+    //! The class the contains the animation to apply camera shake behavior to
+    private ShakeBehavior shake; 
 
     /*!
     * @pre: none

@@ -77,25 +77,55 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a1a0d6efe8ce9e53a0e4bddd06c379097"><td class="memItemLeft" align="right" valign="top"><a id="a1a0d6efe8ce9e53a0e4bddd06c379097"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>RecievePlayerParameter</b> (GameObject playerObject)</td></tr>
+<tr class="memitem:a1a0d6efe8ce9e53a0e4bddd06c379097"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy_behavior.html#a1a0d6efe8ce9e53a0e4bddd06c379097">RecievePlayerParameter</a> (GameObject playerObject)</td></tr>
 <tr class="separator:a1a0d6efe8ce9e53a0e4bddd06c379097"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a1c7f38d162cec582d736b2b7d7d0ac6b"><td class="memItemLeft" align="right" valign="top"><a id="a1c7f38d162cec582d736b2b7d7d0ac6b"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>speed</b></td></tr>
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy_behavior.html#a1c7f38d162cec582d736b2b7d7d0ac6b">speed</a></td></tr>
+<tr class="memdesc:a1c7f38d162cec582d736b2b7d7d0ac6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enemy speed settable from Unity editor. <br /></td></tr>
 <tr class="separator:a1c7f38d162cec582d736b2b7d7d0ac6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f9339ebbcc8c5ad4e538d52bfde73c1"><td class="memItemLeft" align="right" valign="top"><a id="a6f9339ebbcc8c5ad4e538d52bfde73c1"></a>
-Vector2&#160;</td><td class="memItemRight" valign="bottom"><b>randomMovement</b></td></tr>
+Vector2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy_behavior.html#a6f9339ebbcc8c5ad4e538d52bfde73c1">randomMovement</a></td></tr>
+<tr class="memdesc:a6f9339ebbcc8c5ad4e538d52bfde73c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">An occasionally-generated random vector to apply to enemy movement. <br /></td></tr>
 <tr class="separator:a6f9339ebbcc8c5ad4e538d52bfde73c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a80484f747dfb85a8063a50dd115f65e0"><td class="memItemLeft" align="right" valign="top"><a id="a80484f747dfb85a8063a50dd115f65e0"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>wobbleFactor</b></td></tr>
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy_behavior.html#a80484f747dfb85a8063a50dd115f65e0">wobbleFactor</a></td></tr>
+<tr class="memdesc:a80484f747dfb85a8063a50dd115f65e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">A scalar to multiply randomMovement by, to amplify random movement. <br /></td></tr>
 <tr class="separator:a80484f747dfb85a8063a50dd115f65e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade5bcff77085ea22523d28312c252d75"><td class="memItemLeft" align="right" valign="top"><a id="ade5bcff77085ea22523d28312c252d75"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>wobbleWait</b></td></tr>
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy_behavior.html#ade5bcff77085ea22523d28312c252d75">wobbleWait</a></td></tr>
+<tr class="memdesc:ade5bcff77085ea22523d28312c252d75"><td class="mdescLeft">&#160;</td><td class="mdescRight">How long until a new randomMovement should be applied to movement. <br /></td></tr>
 <tr class="separator:ade5bcff77085ea22523d28312c252d75"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a1a0d6efe8ce9e53a0e4bddd06c379097"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a0d6efe8ce9e53a0e4bddd06c379097">&#9670;&nbsp;</a></span>RecievePlayerParameter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EnemyBehavior.RecievePlayerParameter </td>
+          <td>(</td>
+          <td class="paramtype">GameObject&#160;</td>
+          <td class="paramname"><em>playerObject</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section pre"><dt>Precondition</dt><dd>: none </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>: assigns GameObject Character to playerObject </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">playerObject</td><td>the player object we are currently interacting with ! </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Assets/Scripts/EnemyBehavior.cs</li>
 </ul>

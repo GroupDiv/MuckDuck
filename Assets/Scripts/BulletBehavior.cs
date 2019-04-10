@@ -4,14 +4,18 @@ using UnityEngine;
 
 public class BulletBehavior : MonoBehaviour
 {
+    //! To set speed of bullet from unity editor
+    public float speed; 
 
-    public float speed; //! To set speed of bullet from unity editor
 
-    // None of the destroy stuff works yet --TB
-    public float destroyTimer; //! This is unused for bullet destruction
+    //! This is unused for bullet destruction
+    public float destroyTimer;
 
-    private Rigidbody2D rb2d; //! The rigidbody of the bullet object, used for setting collisions
-    private float initialTime; //! Also currently unused for bullet destruction
+    //! The rigidbody of the bullet object, used for setting collisions
+    private Rigidbody2D rb2d; 
+
+    //! Also currently unused for bullet destruction
+    private float initialTime;
 
     /*!
     @pre: none
@@ -28,7 +32,7 @@ public class BulletBehavior : MonoBehaviour
 
     /*!
     @pre: none
-    @post: checks if bullet has reached its target. If so, target is destroyed.
+    @post: checks if bullet has reached its lifespoan. If so, bullet is destroyed.
     !*/
     void Update()
     {
