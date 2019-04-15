@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour {
 
-    //! speed is a multiplier to movement, because it is a public variable it can be changed without recompiling
+    //! speed is a multiplier to movement, because it is a public variable it can be changed without  recompiling
     public float speed;
 
     /*! fireRate is how fast the gun will fire.  nextFire is updated every time the gun is shot by adding fireRate to the current time.
