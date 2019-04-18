@@ -14,6 +14,5 @@ public class ShakeBehavior : MonoBehaviour
     !*/
     public void EnemyCameraShake(){
         shakeAnimator.SetTrigger("shake");
-        Debug.Log("Shaking...");
     }
 }
