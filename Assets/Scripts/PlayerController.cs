@@ -58,6 +58,9 @@ public class PlayerController : MonoBehaviour {
 
     private ShakeBehavior shake; 
 
+    private float powerDownTime;
+    private bool shotPoweredUp;
+
     /*!
     @pre: none
     @post: initializes player object with initial firing time and movement properties.
@@ -82,6 +85,8 @@ public class PlayerController : MonoBehaviour {
         updateLivesString(lives);
 
         shake = GameObject.FindGameObjectWithTag("Shake").GetComponent<ShakeBehavior>();
+
+        shotPoweredUp = false;
     }
 
     /*!
@@ -153,6 +158,10 @@ public class PlayerController : MonoBehaviour {
                 Application.LoadLevel (Application.loadedLevel);
             }
         }
+
+        if (shotPoweredUp && Time.time > powerDownTime) {
+            shotPowerDown();
+        }
     }
 
     /*!
@@ -209,5 +218,16 @@ public class PlayerController : MonoBehaviour {
     public void GameOver() {
         gameOverText.text = "Game Over!";
         gameOver = true;
+    }
+
+    public void shotPowerUp(float powerUpDuration) {
+        fireRate = fireRate / 2;
+        powerDownTime = Time.time + powerUpDuration;
+        shotPoweredUp = true;
+    }
+
+    public void shotPowerDown() {
+        fireRate = fireRate * 2;
+        shotPoweredUp = false;
     }
 }
