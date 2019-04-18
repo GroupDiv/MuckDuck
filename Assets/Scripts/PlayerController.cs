@@ -56,9 +56,13 @@ public class PlayerController : MonoBehaviour {
     //! True if the player restarts, resets to false once the game is restarted
     private bool restart;
 
+    //! The animation component of the camera that shakes when player is hit or object is destroyed
     private ShakeBehavior shake; 
 
+    //! Keeps track of when (in game-time) the shot power up will end
     private float powerDownTime;
+
+    //! True if shot speed is powered-up
     private bool shotPoweredUp;
 
     /*!
@@ -84,7 +88,7 @@ public class PlayerController : MonoBehaviour {
         lives = 3;
         updateLivesString(lives);
 
-        shake = GameObject.FindGameObjectWithTag("Shake").GetComponent<ShakeBehavior>();
+        shake = GameObject.FindGameObjectWithTag("Shake").GetComponent<ShakeBehavior>;
 
         shotPoweredUp = false;
     }
@@ -220,12 +224,22 @@ public class PlayerController : MonoBehaviour {
         gameOver = true;
     }
 
+
+    /*!
+    * @pre: player has picked up rate of fire powerup
+    * @post: fire rate is doubled and powerDownTime is set, shotPoweredUp flag is set
+    * @param powerUpDuration - lenght of time (in seconds) for the power up to last
+    !*/
     public void shotPowerUp(float powerUpDuration) {
         fireRate = fireRate / 2;
         powerDownTime = Time.time + powerUpDuration;
         shotPoweredUp = true;
     }
 
+    /*!
+    * @pre: firerate power up has lived its life and time is up
+    * @post: resets fire rate and shotPoweredUp flag
+    !*/
     public void shotPowerDown() {
         fireRate = fireRate * 2;
         shotPoweredUp = false;
