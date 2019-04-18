@@ -88,7 +88,7 @@ public class PlayerController : MonoBehaviour {
         lives = 3;
         updateLivesString(lives);
 
-        shake = GameObject.FindGameObjectWithTag("Shake").GetComponent<ShakeBehavior>;
+        shake = GameObject.FindGameObjectWithTag("Shake").GetComponent<ShakeBehavior>();
 
         shotPoweredUp = false;
     }
