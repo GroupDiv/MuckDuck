@@ -65,13 +65,18 @@ public class PlayerController : MonoBehaviour {
     //! True if shot speed is powered-up
     private bool shotPoweredUp;
 
+    //high score
+    public int highScore = 0;
+
+    string highScoreKey = "HighScore";
+
     /*!
     @pre: none
     @post: initializes player object with initial firing time and movement properties.
     !*/
     void Start()
     {
-                //forces the game window to be the resolution we want
+        //forces the game window to be the resolution we want
         Screen.SetResolution(540, 960, true);
         rb2d = GetComponent<Rigidbody2D> ();
         nextFire = Time.time;
@@ -90,6 +95,8 @@ public class PlayerController : MonoBehaviour {
         shake = GameObject.FindGameObjectWithTag("Shake").GetComponent<ShakeBehavior>();
 
         shotPoweredUp = false;
+
+        highScore = PlayerPrefs.GetInt(highScoreKey, 0);
     }
 
     /*!
@@ -223,6 +230,14 @@ public class PlayerController : MonoBehaviour {
         gameOver = true;
     }
 
+    public void OnDisable()
+    {
+        if (score > highScore)
+        {
+            PlayerPrefs.SetInt(highScoreKey, score);
+            PlayerPrefs.Save();
+        }
+    }
 
     /*!
     * @pre: player has picked up rate of fire powerup

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3731196, g: 0.38074002, b: 0.35872713, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -854,6 +854,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 7462737852209530755}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1764469182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1764469181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 902906f2f6a30db48bb04d2b4a48a9b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!58 &1764469186
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -894,7 +906,7 @@ AudioSource:
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
-  BypassEffects: 0
+  BypassEffects: 1
   BypassListenerEffects: 0
   BypassReverbZones: 0
   rolloffCustomCurve:
