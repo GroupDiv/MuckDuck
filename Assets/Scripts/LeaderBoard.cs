@@ -8,6 +8,7 @@ public class LeaderBoard : MonoBehaviour
     public int highScore;
 
     string highScoreKey = "HighScore";
+    
     // Start is called before the first frame update
     void Start()
     {

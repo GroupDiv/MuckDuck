@@ -50,6 +50,9 @@ public class PlayerController : MonoBehaviour {
     //! The game over text displayed after a game over
     public Text gameOverText;
 
+    //! The high score text displayed after a game over
+    public Text highScoreText;
+
     //! True if game over, false otherwise
     private bool gameOver;
 
@@ -84,6 +87,7 @@ public class PlayerController : MonoBehaviour {
         restart = false;
         gameOverText.text = "";
         restartText.text = "";
+        highScoreText.text = "";
         // drag is a property of rigidbody that determines how much the object slows down.
         rb2d.drag = friction;
 
@@ -228,8 +232,14 @@ public class PlayerController : MonoBehaviour {
     public void GameOver() {
         gameOverText.text = "Game Over!";
         gameOver = true;
+        if (score > highScore)
+        {
+            PlayerPrefs.SetInt(highScoreKey, score);
+            PlayerPrefs.Save();
+        }
+        highScoreText.text = "High Score: " + highScore.ToString();
     }
-
+/*
     public void OnDisable()
     {
         if (score > highScore)
@@ -238,7 +248,7 @@ public class PlayerController : MonoBehaviour {
             PlayerPrefs.Save();
         }
     }
-
+*/
     /*!
     * @pre: player has picked up rate of fire powerup
     * @post: fire rate is doubled and powerDownTime is set, shotPoweredUp flag is set
