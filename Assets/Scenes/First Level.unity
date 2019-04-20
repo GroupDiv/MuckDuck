@@ -754,7 +754,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hazard: {fileID: 6464199135043392564, guid: 27c8be829d4bb426a8d8d2e8a5168d1c, type: 3}
-  spawnValues: {x: 2, y: 4}
+  spawnValues: {x: 2, y: 5.5}
   hazardCount: 1000
   spawnWait: 0.5
   startWait: 0.5
@@ -768,7 +768,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1225813170}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.3765812, y: 0.7392255, z: -0.11008083}
+  m_LocalPosition: {x: -0.03, y: 5.54, z: -0.11008083}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
