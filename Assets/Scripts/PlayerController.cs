@@ -236,8 +236,12 @@ public class PlayerController : MonoBehaviour {
         {
             PlayerPrefs.SetInt(highScoreKey, score);
             PlayerPrefs.Save();
+            highScoreText.text = "New High Score: " + highScore.ToString();
         }
-        highScoreText.text = "High Score: " + highScore.ToString();
+        else
+        {
+            highScoreText.text = "High Score: " + highScore.ToString();
+        }
     }
 /*
     public void OnDisable()
