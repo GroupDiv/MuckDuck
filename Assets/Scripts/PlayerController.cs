@@ -173,7 +173,7 @@ public class PlayerController : MonoBehaviour {
             }
             else if (Input.GetKeyDown(KeyCode.Q))
             {
-                Application.LoadLevel(0);
+                Application.LoadLevel(0);  //! Returns player to main menu
             }
         }
 
