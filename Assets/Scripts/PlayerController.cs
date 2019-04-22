@@ -161,7 +161,7 @@ public class PlayerController : MonoBehaviour {
         {
             // Hide the duck's sprite
             this.GetComponent<SpriteRenderer>().enabled = false;
-            restartText.text = "Press 'R' to Restart";
+            restartText.text = "Press 'R' to Restart\nPress 'Q' to return to menu";
             restart = true;
         }
 
@@ -170,6 +170,10 @@ public class PlayerController : MonoBehaviour {
             if (Input.GetKeyDown(KeyCode.R))
             {
                 Application.LoadLevel (Application.loadedLevel);
+            }
+            else if (Input.GetKeyDown(KeyCode.Q))
+            {
+                Application.LoadLevel(0);
             }
         }
 
