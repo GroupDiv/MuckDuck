@@ -236,6 +236,14 @@ public class PlayerController : MonoBehaviour {
     public void GameOver() {
         gameOverText.text = "Game Over!";
         gameOver = true;
+        printHighScore();
+    }
+
+    /*!
+    * @pre: game is over
+    * @post: determines high score and prints result to the screen. If it's a new record, store the new high score
+    !*/
+    public void printHighScore() {
         if (score > highScore)
         {
             highScore = score;
@@ -248,16 +256,7 @@ public class PlayerController : MonoBehaviour {
             highScoreText.text = "High Score: " + highScore.ToString();
         }
     }
-/*
-    public void OnDisable()
-    {
-        if (score > highScore)
-        {
-            PlayerPrefs.SetInt(highScoreKey, score);
-            PlayerPrefs.Save();
-        }
-    }
-*/
+
     /*!
     * @pre: player has picked up rate of fire powerup
     * @post: fire rate is doubled and powerDownTime is set, shotPoweredUp flag is set
