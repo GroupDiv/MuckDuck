@@ -16,18 +16,30 @@ public class MainMenuBehavior : MonoBehaviour
     //! Text for "Duck"
     public GameObject duckText;
 
+    //! Text for high score
+    public GameObject highScoreText;
+
     //! "Play" button object
     public GameObject playButton;
 
     //! Amount of time in seconds that each word will delay to be printed
     public float textDisplayTime;
+
+    //! Stores the high score
+    private int highScore;
+
+    //! String used to search PlayerPrefs for the high score
+    private string highScoreKey = "HighScore";
     
 
     void Start()
     {
         muckText.GetComponent<UnityEngine.UI.Text>().text = " ";
         duckText.GetComponent<UnityEngine.UI.Text>().text = " ";
-        //playButton.SetActive(!gameObject.activeSelf);
+        highScoreText.GetComponent<UnityEngine.UI.Text>().text = " ";
+        
+        highScore = PlayerPrefs.GetInt(highScoreKey, 0);
+
         if (usernameInputText != null)
         {
             userInputField.text = usernameInputText;
@@ -57,7 +69,8 @@ public class MainMenuBehavior : MonoBehaviour
         muckText.GetComponent<UnityEngine.UI.Text>().text = "MUCK";
         yield return new WaitForSeconds(textDisplayTime);
         duckText.GetComponent<UnityEngine.UI.Text>().text = "DUCK";
-        //yield return new WaitForSeconds(textDisplayTime);
-        //gameObject.SetActive(gameObject.activeSelf);
+        yield return new WaitForSeconds(textDisplayTime);
+        yield return new WaitForSeconds(textDisplayTime);   // wait twice as long because it's a little cooler
+        highScoreText.GetComponent<UnityEngine.UI.Text>().text = "High Score: " + highScore.ToString();
     }
 }
