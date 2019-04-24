@@ -204,8 +204,8 @@ GameObject:
   - component: {fileID: 314776737}
   - component: {fileID: 314776736}
   - component: {fileID: 314776735}
-  m_Layer: 8
-  m_Name: Quad
+  m_Layer: 0
+  m_Name: Scrolling Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -223,6 +223,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf652ad5bde374d639722a2c26607089, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scrollOffsetSpeed: 20
 --- !u!64 &314776736
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -442,7 +443,7 @@ Canvas:
   m_GameObject: {fileID: 466151461}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 534669904}
   m_PlaneDistance: 100
   m_PixelPerfect: 1
