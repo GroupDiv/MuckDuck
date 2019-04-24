@@ -246,15 +246,11 @@ public class PlayerController : MonoBehaviour {
     public void printHighScore() {
         if (score > highScore)
         {
-            highScore = score;
-            highScoreText.text = "New High Score: " + score.ToString();
             PlayerPrefs.SetInt(highScoreKey, score);
             PlayerPrefs.Save();
         }
-        else
-        {
-            highScoreText.text = "High Score: " + highScore.ToString();
-        }
+        highScore = PlayerPrefs.GetInt(highScoreKey, 0);
+        highScoreText.text = "High Score: " + highScore.ToString();
     }
 
     /*!
