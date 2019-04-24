@@ -8,26 +8,13 @@ public class QueenBauss : MonoBehaviour
     //! Enemy speed settable from Unity editor
     public float speed;
 
-    //! The direction of the character from this instance of the enemy
-    private Vector2 directionOfCharacter; 
-    
-    //! An occasionally-generated random vector to apply to enemy movement
-    public Vector2 randomMovement; 
-
-    //! A scalar to multiply randomMovement by, to amplify random movement
-    public float wobbleFactor;  
-
-    //! How long until a new randomMovement should be applied to movement
-    public float wobbleWait; 
-
-    //! The variable that keeps track of the next time to apply randomMovement
-    private float nextWobble; 
-
     //! The class the contains the animation to apply camera shake behavior to
     private ShakeBehavior shake;
 
     //! Tracks the number of time the bauss has been hit
     private int hits;
+
+    private bool dirRight = true;
 
     /*!
     * @pre: none
@@ -38,7 +25,6 @@ public class QueenBauss : MonoBehaviour
     {
         Character = playerObject;
         shake = GameObject.FindGameObjectWithTag("Shake").GetComponent<ShakeBehavior>();
-        nextWobble = Time.time;
 
     }
 
@@ -52,7 +38,7 @@ public class QueenBauss : MonoBehaviour
         // Destroy everything that leaves the trigger
         if (other.gameObject.tag == "Bullet"){
             shake.EnemyCameraShake();
-            hits++
+            hits++;
         }
         if(hits == 15)
         {
@@ -64,17 +50,23 @@ public class QueenBauss : MonoBehaviour
 
     /*!
     * @pre: none
-    * @post: updates enemy position according to player and if nextWobble is up, as well as updating the nextWobble
+    * @post: updates boss to move back and forth
     !*/
     void FixedUpdate()
     {
-        if (nextWobble < Time.time){
-            randomMovement = Random.insideUnitCircle;
-            nextWobble = Time.time + wobbleWait;
+        if (dirRight)
+            transform.Translate(Vector2.right * speed * Time.deltaTime);
+        else
+            transform.Translate(-Vector2.right * speed * Time.deltaTime);
+
+        if (transform.position.x >= 4.0f)
+        {
+            dirRight = false;
         }
 
-        directionOfCharacter = Character.transform.position - transform.position;
-        directionOfCharacter = directionOfCharacter.normalized + randomMovement * wobbleFactor;    // Get Direction to Move Towards
-        transform.Translate(directionOfCharacter * speed, Space.World);
+        if (transform.position.x <= -4)
+        {
+            dirRight = true;
+        }
     }
 }
