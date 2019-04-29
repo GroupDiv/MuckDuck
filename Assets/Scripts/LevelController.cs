@@ -4,7 +4,7 @@ using UnityEngine;
 
 
 
-public class levelController : MonoBehaviour
+public class LevelController : MonoBehaviour
 {
 
     public GameObject enemySpawn;
