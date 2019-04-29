@@ -42,7 +42,7 @@ public class BossSpawn : MonoBehaviour
         yield return new WaitForSeconds(startWait);
         while (true)
         {
-            Vector2 spawnPosition = new Vector2(Random.Range(-spawnValues.x, spawnValues.x), 0);
+            Vector2 spawnPosition = new Vector2(0, 4);
             Quaternion spawnRotation = Quaternion.identity;
             var obj = Instantiate(hazard, spawnPosition, spawnRotation);
             obj.GetComponent<QueenBauss>().RecievePlayerParameter(playerObject);

@@ -9,7 +9,7 @@ public class QueenBauss : MonoBehaviour
     public float speed;
 
     //! The class the contains the animation to apply camera shake behavior to
-    private ShakeBehavior shake;
+    //public ShakeBehavior shake;
 
     //! Tracks the number of time the bauss has been hit
     public int hits;
@@ -24,7 +24,7 @@ public class QueenBauss : MonoBehaviour
     public void RecievePlayerParameter(GameObject playerObject)
     {
         Character = playerObject;
-        shake = GameObject.FindGameObjectWithTag("Shake").GetComponent<ShakeBehavior>();
+        //shake = GameObject.FindGameObjectWithTag("Shake").GetComponent<ShakeBehavior>();
 
     }
 
@@ -35,16 +35,17 @@ public class QueenBauss : MonoBehaviour
     !*/
     void OnTriggerEnter2D(Collider2D other)
     {
-        // Destroy everything that leaves the trigger
+        Debug.Log("Something is touching me");
         if (other.gameObject.tag == "Bullet"){
-            shake.EnemyCameraShake();
+            //shake.EnemyCameraShake();
             hits++;
-        }
-        if(hits == 15)
-        {
-            Destroy(other.gameObject);
-            Destroy(gameObject);
-            Character.GetComponent<PlayerController>().score += 10;
+            if (hits == 5)
+            {
+                Debug.Log("I'm a hit");
+                Destroy(other.gameObject);
+                Destroy(gameObject);
+                Character.GetComponent<PlayerController>().score += 30;
+            }
         }
     }
 
