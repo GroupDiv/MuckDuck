@@ -21,11 +21,11 @@ public class WaveBehavior : MonoBehaviour
     //! How long to wait at the begining of the wave's life
     public float startWait; 
 
-    //! How long to wait in between spawns
-    public float waveWait; 
-
     //! A reference to the player object, for passing down to the enemies so they know who to follow
     public GameObject playerObject; 
+
+    //! A flag that is true when a wave is completed, to send to the level controller
+    public bool waveComplete;
 
     /*!
     * @pre: none
@@ -33,6 +33,7 @@ public class WaveBehavior : MonoBehaviour
     !*/
     void Start()
     {
+        waveComplete = false;
         StartCoroutine (SpawnWaves());
     }
 
@@ -42,19 +43,22 @@ public class WaveBehavior : MonoBehaviour
     !*/
     IEnumerator SpawnWaves()
     {
-        yield return new WaitForSeconds(startWait);
-        while (true)
-        {
-            for (int i = 0; i < hazardCount; i++)
+        while (true) {
+            yield return new WaitForSeconds(startWait);
+            while (waveComplete == false)
             {
-                Vector2 spawnPosition = new Vector2(Random.Range(-spawnValues.x, spawnValues.x), spawnValues.y);
-                Quaternion spawnRotation = Quaternion.identity;
-                var obj = Instantiate(hazard, spawnPosition, spawnRotation);
-                obj.GetComponent<EnemyBehavior>().RecievePlayerParameter(playerObject);
+                for (int i = 0; i < hazardCount; i++)
+                {
+                    Vector2 spawnPosition = new Vector2(Random.Range(-spawnValues.x, spawnValues.x), spawnValues.y);
+                    Quaternion spawnRotation = Quaternion.identity;
+                    var obj = Instantiate(hazard, spawnPosition, spawnRotation);
+                    obj.GetComponent<EnemyBehavior>().RecievePlayerParameter(playerObject);
 
-                yield return new WaitForSeconds(spawnWait);
+                    yield return new WaitForSeconds(spawnWait);
+                }
+
+                waveComplete = true;
             }
-            yield return new WaitForSeconds(waveWait);
-        }
+    }
     }
 }
