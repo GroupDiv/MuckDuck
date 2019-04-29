@@ -14,11 +14,18 @@ public class QueenBauss : MonoBehaviour
     //! The class the contains the animation to apply camera shake behavior to
     //public ShakeBehavior shake;
 
-    //! Tracks the number of time the bauss has been hit
-    public int hits;
+    //! Tracks the number of bullet hits the boss can take
+    public int health;
 
-    private bool dirRight = true;
+    //! Tracks how much damage the boss has received, when damage == health, the boss dies
+    private int damage;
 
+    private bool dirRight;
+
+    void Start() {
+        dirRight = true;
+        damage = 0;
+    }
     /*!
     * @pre: none
     * @post: assigns GameObject Character to playerObject 
@@ -40,18 +47,20 @@ public class QueenBauss : MonoBehaviour
     {
         Debug.Log("Something is touching me");
         if (other.gameObject.tag == "Bullet"){
+            Destroy(other.gameObject);
             //shake.EnemyCameraShake();
-            hits++;
-            if (hits == 5)
-            {
-                Debug.Log("I'm a hit");
-                Destroy(other.gameObject);
-                Destroy(gameObject);
-                Character.GetComponent<PlayerController>().score += 30;
-            }
+            damage++;
         }
     }
 
+    void Update() {
+        if (damage == health)
+        {
+            Debug.Log("I'm a hit");
+            Destroy(gameObject);
+            Character.GetComponent<PlayerController>().score += 100;
+        }
+    }
     /*!
     * @pre: none
     * @post: updates boss to move back and forth
