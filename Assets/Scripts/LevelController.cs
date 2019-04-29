@@ -71,10 +71,11 @@ public class LevelController : MonoBehaviour
     * @post: Flags are reset and a new level is started.  Difficulty is updated.
     !*/
     void levelUp() {
+        level ++;
         playerObject.GetComponent<PlayerController>().levelUp = false;
+        playerObject.GetComponent<PlayerController>().updateLevelString(level);
         currentlyBoss = false;
         enemySpawn.GetComponent<WaveBehavior>().waveComplete = false;
-        level ++;
         enemySpawn.GetComponent<WaveBehavior>().hazardCount += waveDifficultyModifier * level;
     }
 }
