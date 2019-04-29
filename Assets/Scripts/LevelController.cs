@@ -27,6 +27,12 @@ public class LevelController : MonoBehaviour
     //! True when a boss is present, false otherwise
     private bool currentlyBoss;
 
+    //! The number of additional enemies to spawn each successive level
+    public int waveDifficultyModifier;
+
+    //! The amount of health to add to the boss each level
+    public int bossDifficultyModifier;
+
     void Start()
     {
         int level = 1;
@@ -56,18 +62,19 @@ public class LevelController : MonoBehaviour
         if (!currentlyBoss){
             currentlyBoss = true;
             var queenTracker = Instantiate(queen, bossSpawn.position, bossSpawn.rotation);
-            queenTracker.GetComponent<QueenBauss>().RecievePlayerParameter(playerObject);
+            queenTracker.GetComponent<QueenBauss>().RecievePlayerParameter(playerObject, (bossDifficultyModifier * level));
         }
     }
 
     /*!
     * @pre: The boss is defeated
-    * @post: Flags are reset and a new level is started
+    * @post: Flags are reset and a new level is started.  Difficulty is updated.
     !*/
     void levelUp() {
         playerObject.GetComponent<PlayerController>().levelUp = false;
         currentlyBoss = false;
         enemySpawn.GetComponent<WaveBehavior>().waveComplete = false;
         level ++;
+        enemySpawn.GetComponent<WaveBehavior>().hazardCount += waveDifficultyModifier * level;
     }
 }
