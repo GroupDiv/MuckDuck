@@ -6,16 +6,19 @@ using UnityEngine;
 
 public class LevelController : MonoBehaviour
 {
-
+    //! The object that manages spawning smaller bees
     public GameObject enemySpawn;
 
     //! The location to spawn the boss
     public Transform bossSpawn;
 
+    //! The game object that will be spawned in as a boss
     public GameObject queen;
 
+    //! The variable that keeps track of the level
     public int level;
 
+    //! The player object.  This is used for updating score and setting levelUp flags
     public GameObject playerObject;
 
     //! A flag to tell if it is time to spawn a boss
@@ -26,6 +29,7 @@ public class LevelController : MonoBehaviour
 
     void Start()
     {
+        int level = 1;
         bossSpawnFlag = false;
         currentlyBoss = false;
     }
@@ -43,6 +47,10 @@ public class LevelController : MonoBehaviour
         }
     }
 
+    /*!
+    * @pre: The wave of small enemies is completely spawned and there is currently no boss
+    * @post: A boss is spawned and all flats are properly spet 
+    !*/
     void spawnQueen() {
         bossSpawnFlag = false;
         if (!currentlyBoss){
@@ -52,6 +60,10 @@ public class LevelController : MonoBehaviour
         }
     }
 
+    /*!
+    * @pre: The boss is defeated
+    * @post: Flags are reset and a new level is started
+    !*/
     void levelUp() {
         playerObject.GetComponent<PlayerController>().levelUp = false;
         currentlyBoss = false;
