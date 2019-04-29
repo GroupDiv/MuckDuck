@@ -73,12 +73,16 @@ public class PlayerController : MonoBehaviour {
 
     string highScoreKey = "HighScore";
 
+    //! A flag that is true when a boss is defeated, telling the level controller to make everything more difficult
+    public bool levelUp;
+
     /*!
     @pre: none
     @post: initializes player object with initial firing time and movement properties.
     !*/
     void Start()
     {
+        levelUp = false;
         //forces the game window to be the resolution we want
         Screen.SetResolution(540, 960, true);
         rb2d = GetComponent<Rigidbody2D> ();
@@ -246,15 +250,11 @@ public class PlayerController : MonoBehaviour {
     public void printHighScore() {
         if (score > highScore)
         {
-            highScore = score;
-            highScoreText.text = "New High Score: " + score.ToString();
             PlayerPrefs.SetInt(highScoreKey, score);
             PlayerPrefs.Save();
         }
-        else
-        {
-            highScoreText.text = "High Score: " + highScore.ToString();
-        }
+        highScore = PlayerPrefs.GetInt(highScoreKey, 0);
+        highScoreText.text = "High Score: " + highScore.ToString();
     }
 
     /*!
