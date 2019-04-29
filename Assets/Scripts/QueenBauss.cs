@@ -32,9 +32,10 @@ public class QueenBauss : MonoBehaviour
     * @post: assigns GameObject Character to playerObject 
     * @param playerObject: the player object we are currently interacting with
     !*/
-    public void RecievePlayerParameter(GameObject playerObject)
+    public void RecievePlayerParameter(GameObject playerObject, int difficultyModifier)
     {
         Character = playerObject;
+        health += difficultyModifier;
         //shake = GameObject.FindGameObjectWithTag("Shake").GetComponent<ShakeBehavior>();
 
     }
