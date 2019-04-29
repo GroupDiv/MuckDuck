@@ -26,6 +26,7 @@ public class QueenBauss : MonoBehaviour
         dirRight = true;
         damage = 0;
     }
+
     /*!
     * @pre: none
     * @post: assigns GameObject Character to playerObject 
@@ -45,7 +46,7 @@ public class QueenBauss : MonoBehaviour
     !*/
     void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Something is touching me");
+        //Debug.Log("Something is touching me");
         if (other.gameObject.tag == "Bullet"){
             Destroy(other.gameObject);
             //shake.EnemyCameraShake();
@@ -56,8 +57,9 @@ public class QueenBauss : MonoBehaviour
     void Update() {
         if (damage == health)
         {
-            Debug.Log("I'm a hit");
+            //Debug.Log("I'm a hit");
             Destroy(gameObject);
+            Character.GetComponent<PlayerController>().levelUp = true;
             Character.GetComponent<PlayerController>().score += 100;
         }
     }

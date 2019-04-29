@@ -221,8 +221,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemySpawn: {fileID: 1225813170}
-  bossSpawn: {fileID: 0}
+  bossSpawn: {fileID: 2036895270}
+  queen: {fileID: 2243326521822349444, guid: 9bba8054d98094473af8238ef02d6525, type: 3}
   level: 0
+  playerObject: {fileID: 1764469181}
 --- !u!4 &214829684
 Transform:
   m_ObjectHideFlags: 0
@@ -1482,6 +1484,36 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 6dc9150dc176d47e78e75bcbc500ba78, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af3e90a510e49451bb208b14e146cd89, type: 3}
+--- !u!1 &2036895269
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2036895270}
+  m_Layer: 0
+  m_Name: BossSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2036895270
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2036895269}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 3.22, z: -0.11008083}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &7462737852209530755
 PrefabInstance:
   m_ObjectHideFlags: 0
