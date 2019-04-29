@@ -8,6 +8,9 @@ public class QueenBauss : MonoBehaviour
     //! Enemy speed settable from Unity editor
     public float speed;
 
+    //! How far (horizontally) the boss can move from its origin
+    public float boundary;
+
     //! The class the contains the animation to apply camera shake behavior to
     //public ShakeBehavior shake;
 
@@ -60,12 +63,12 @@ public class QueenBauss : MonoBehaviour
         else
             transform.Translate(-Vector2.right * speed * Time.deltaTime);
 
-        if (transform.position.x >= 4.0f)
+        if (transform.position.x >= boundary)
         {
             dirRight = false;
         }
 
-        if (transform.position.x <= -4)
+        if (transform.position.x <= -boundary)
         {
             dirRight = true;
         }
