@@ -12,7 +12,7 @@ public class QueenBauss : MonoBehaviour
     private ShakeBehavior shake;
 
     //! Tracks the number of time the bauss has been hit
-    private int hits;
+    public int hits;
 
     private bool dirRight = true;
 
