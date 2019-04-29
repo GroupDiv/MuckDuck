@@ -26,6 +26,9 @@ public class EnemyBehavior : MonoBehaviour
     //! The class the contains the animation to apply camera shake behavior to
     private ShakeBehavior shake; 
 
+    public bool testMode = true;
+    public bool testUpdatesScore = false;
+
     /*!
     * @pre: none
     * @post: assigns GameObject Character to playerObject 
@@ -36,7 +39,6 @@ public class EnemyBehavior : MonoBehaviour
         Character = playerObject;
         shake = GameObject.FindGameObjectWithTag("Shake").GetComponent<ShakeBehavior>();
         nextWobble = Time.time;
-
     }
 
     /*!
@@ -51,7 +53,21 @@ public class EnemyBehavior : MonoBehaviour
             shake.EnemyCameraShake();
             Destroy(other.gameObject);
             Destroy(gameObject);
+            int initScore = Character.GetComponent<PlayerController>().score;
             Character.GetComponent<PlayerController>().score += 10;
+
+            if (testMode && !testUpdatesScore)
+            {
+                if (Character.GetComponent<PlayerController>().score - initScore == 10)
+                {
+                    Debug.Log("Adds 10 to the score with every hit: PASSED");
+                }
+                else
+                {
+                    Debug.Log("Adds 10 to the score with every hit: FAILED");
+                }
+                testUpdatesScore = true;
+            }
         }
     }
 
