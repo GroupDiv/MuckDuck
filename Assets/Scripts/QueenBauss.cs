@@ -21,12 +21,16 @@ public class QueenBauss : MonoBehaviour
     //! Tracks how much damage the boss has received, when damage == health, the boss dies
     private int damage;
 
-    //! Defines which projectile the boss shoots
-    public GameObject projectile;
+    //! Defines which bullet object the duck will use to shoot.
+    public GameObject bullet;
 
-    //! A reference to the object where the boss's projectiles spawn (relative to boss position)
-    public Transform projectileSpawn;
+    //! A reference to the object where the bullets spawn (this is always relative to player position)
+    public Transform bulletSpawn;
 
+    /*! fireRate is how fast the gun will fire.  nextFire is updated every time the gun is shot by adding fireRate to the current time.
+    the shot won't be ready until this time has passed !*/
+    public float fireRate;
+    private float nextFire;
 
     //! How many projectiles to spawn in each wave
     public int hazardCount;
@@ -44,7 +48,7 @@ public class QueenBauss : MonoBehaviour
     {
         dirRight = true;
         damage = 0;
-        StartCoroutine(SpawnProjectiles());
+        nextFire = Time.time;
     }
 
     /*!
@@ -83,6 +87,18 @@ public class QueenBauss : MonoBehaviour
             Character.GetComponent<PlayerController>().levelUp = true;
             Character.GetComponent<PlayerController>().score += 100;
         }
+
+        // Checks if Fire1 (default spacebar) is pushed and if the timer is ready for the next fire
+        if (nextFire < Time.time)
+        {
+
+            // adds time to nextFire to delay the next shot
+            nextFire = Time.time + fireRate;
+
+            // spawns a bullet at the end bullet spawn location (top of the duck)
+            Instantiate(bullet, bulletSpawn.position, bulletSpawn.rotation);
+        }
+
     }
     /*!
     * @pre: none
@@ -103,25 +119,6 @@ public class QueenBauss : MonoBehaviour
         if (transform.position.x <= -boundary)
         {
             dirRight = true;
-        }
-    }
-
-    IEnumerator SpawnProjectiles()
-    {
-        while (true)
-        {
-            for (int i = 0; i < hazardCount; i++)
-            {
-                Quaternion spawnRotation = Quaternion.identity;
-                var obj = Instantiate(projectile, projectileSpawn.position, projectileSpawn.rotation);
-                yield return new WaitForSeconds(spawnWait);
-                if(health == (damage-1))
-                {
-                    spawnWait *= (float).25;
-                    waveWait *= (float).35;
-                }
-            }
-            yield return new WaitForSeconds(waveWait);
         }
     }
 }
