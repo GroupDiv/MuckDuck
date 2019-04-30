@@ -1724,6 +1724,11 @@ PrefabInstance:
       propertyPath: levelText
       value: 
       objectReference: {fileID: 1838197694}
+    - target: {fileID: 7462737853704056381, guid: 9962d04e0ff4347329929aaaa75eded8,
+        type: 3}
+      propertyPath: lives
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7462737853577136625, guid: 9962d04e0ff4347329929aaaa75eded8,
         type: 3}
       propertyPath: m_LocalPosition.x
