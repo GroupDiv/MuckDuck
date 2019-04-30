@@ -33,8 +33,10 @@ public class EnemyBehavior : MonoBehaviour
     private GameObject testModeObject;
 
     void Start() {
-        testModeObject = GameObject.Find("TestModeManager");
-        testMode = testModeObject.GetComponent<TestModeManager>().testFlag;
+
+        //  UNCOMMENT THE BELOW TO ENABLE TEST MODE
+        //testModeObject = GameObject.Find("TestModeManager");
+        //testMode = testModeObject.GetComponent<TestModeManager>().testFlag;
     }
 
     /*!
