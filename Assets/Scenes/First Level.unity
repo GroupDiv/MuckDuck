@@ -227,6 +227,7 @@ MonoBehaviour:
   playerObject: {fileID: 1764469181}
   waveDifficultyModifier: 5
   bossDifficultyModifier: 5
+  scrollingBackground: {fileID: 314776734}
 --- !u!4 &214829684
 Transform:
   m_ObjectHideFlags: 0
@@ -273,7 +274,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf652ad5bde374d639722a2c26607089, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollOffsetSpeed: 20
+  scrollOffsetSpeed: 30
 --- !u!64 &314776736
 MeshCollider:
   m_ObjectHideFlags: 0
