@@ -112,6 +112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   powerUpDuration: 10
+  pickUpSound: {fileID: 8300000, guid: 6dc9150dc176d47e78e75bcbc500ba78, type: 3}
 --- !u!82 &8467383383999499952
 AudioSource:
   m_ObjectHideFlags: 0
