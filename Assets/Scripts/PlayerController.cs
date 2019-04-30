@@ -54,6 +54,9 @@ public class PlayerController : MonoBehaviour {
     //! The high score text displayed after a game over
     public Text highScoreText;
 
+    //!  The text that displays the current level
+    public Text levelText;
+
     //! True if game over, false otherwise
     public bool gameOver;
 
@@ -71,6 +74,9 @@ public class PlayerController : MonoBehaviour {
 
     //high score
     public int highScore = 0;
+
+    //! keeps track of current level
+    public int level;
 
     string highScoreKey = "HighScore";
 
@@ -109,6 +115,8 @@ public class PlayerController : MonoBehaviour {
         updateScoreString(score);
         lives = 3;
         updateLivesString(lives);
+        level = 1;
+        updateLevelString(level);
 
         shake = GameObject.FindGameObjectWithTag("Shake").GetComponent<ShakeBehavior>();
 
@@ -171,9 +179,10 @@ public class PlayerController : MonoBehaviour {
             this.GetComponent<SpriteRenderer>().enabled = true;
             updateScoreString(this.score);
             updateLivesString(this.lives);
+            updateLevelString(this.level);
         }
 
-        if (lives == 0)
+        if (lives <= 0)
         {
             GameOver();
             if (testMode && !testGameOver)
@@ -235,6 +244,10 @@ public class PlayerController : MonoBehaviour {
     !*/
     void updateScoreString(int newScore) {
         this.scoreText.text = "SCORE: " + newScore.ToString();
+    }
+    
+    public void updateLevelString(int newLevel) {
+        this.levelText.text = "LEVEL " + newLevel.ToString();
     }
 
     /*!

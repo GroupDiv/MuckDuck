@@ -33,9 +33,12 @@ public class LevelController : MonoBehaviour
     //! The amount of health to add to the boss each level
     public int bossDifficultyModifier;
 
+    //! The object to track the background (to speed up each level)
+    public GameObject scrollingBackground;
+
     void Start()
     {
-        int level = 1;
+        level = 1;
         bossSpawnFlag = false;
         currentlyBoss = false;
     }
@@ -71,10 +74,12 @@ public class LevelController : MonoBehaviour
     * @post: Flags are reset and a new level is started.  Difficulty is updated.
     !*/
     void levelUp() {
+        level ++;
         playerObject.GetComponent<PlayerController>().levelUp = false;
+        playerObject.GetComponent<PlayerController>().level = level;
         currentlyBoss = false;
         enemySpawn.GetComponent<WaveBehavior>().waveComplete = false;
-        level ++;
         enemySpawn.GetComponent<WaveBehavior>().hazardCount += waveDifficultyModifier * level;
+        scrollingBackground.GetComponent<ScrollBehavior>().scrollOffsetSpeed /= 2;
     }
 }

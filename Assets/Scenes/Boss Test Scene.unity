@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3731196, g: 0.38074002, b: 0.35872713, a: 1}
+  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.3587269, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -621,6 +621,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1184804963 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8364706777227069993, guid: 9bba8054d98094473af8238ef02d6525,
+    type: 3}
+  m_PrefabInstance: {fileID: 1467009948}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1341522615
 GameObject:
   m_ObjectHideFlags: 0
@@ -1104,6 +1110,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Queen
       objectReference: {fileID: 0}
+    - target: {fileID: 2243326521822349444, guid: 9bba8054d98094473af8238ef02d6525,
+        type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 2243326521822349447, guid: 9bba8054d98094473af8238ef02d6525,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1158,6 +1169,42 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2243326521822349446, guid: 9bba8054d98094473af8238ef02d6525,
+        type: 3}
+      propertyPath: projectile
+      value: 
+      objectReference: {fileID: 4846264915054316061, guid: 18c75b91dffe0478d87c00d956c9fb44,
+        type: 3}
+    - target: {fileID: 2243326521822349446, guid: 9bba8054d98094473af8238ef02d6525,
+        type: 3}
+      propertyPath: projectileSpawn
+      value: 
+      objectReference: {fileID: 1184804963}
+    - target: {fileID: 2243326521822349446, guid: 9bba8054d98094473af8238ef02d6525,
+        type: 3}
+      propertyPath: speed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2243326521822349446, guid: 9bba8054d98094473af8238ef02d6525,
+        type: 3}
+      propertyPath: hazardCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2243326521822349446, guid: 9bba8054d98094473af8238ef02d6525,
+        type: 3}
+      propertyPath: spawnWait
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2243326521822349446, guid: 9bba8054d98094473af8238ef02d6525,
+        type: 3}
+      propertyPath: waveWait
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2954715064694186018, guid: 9bba8054d98094473af8238ef02d6525,
+        type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9bba8054d98094473af8238ef02d6525, type: 3}
