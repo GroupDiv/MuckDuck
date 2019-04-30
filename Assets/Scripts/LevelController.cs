@@ -36,6 +36,7 @@ public class LevelController : MonoBehaviour
     //! The object to track the background (to speed up each level)
     public GameObject scrollingBackground;
 
+    //! The object that will spawn when a power up is needed
     public GameObject powerUpObject;
 
     //! Tracks where to spawn the power ups
@@ -103,6 +104,7 @@ public class LevelController : MonoBehaviour
         currentlyBoss = false;
         enemySpawn.GetComponent<WaveBehavior>().waveComplete = false;
         enemySpawn.GetComponent<WaveBehavior>().hazardCount += waveDifficultyModifier * level;
+        enemySpawn.GetComponent<WaveBehavior>().spawnWait *= 0.75f;
         scrollingBackground.GetComponent<ScrollBehavior>().scrollOffsetSpeed /= 2;
     }
 }
