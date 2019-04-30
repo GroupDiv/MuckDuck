@@ -1110,6 +1110,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Queen
       objectReference: {fileID: 0}
+    - target: {fileID: 2243326521822349444, guid: 9bba8054d98094473af8238ef02d6525,
+        type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 2243326521822349447, guid: 9bba8054d98094473af8238ef02d6525,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1195,6 +1200,11 @@ PrefabInstance:
         type: 3}
       propertyPath: waveWait
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2954715064694186018, guid: 9bba8054d98094473af8238ef02d6525,
+        type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9bba8054d98094473af8238ef02d6525, type: 3}
