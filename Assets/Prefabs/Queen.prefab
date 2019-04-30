@@ -52,9 +52,6 @@ MonoBehaviour:
   bullet: {fileID: 4846264915054316061, guid: 18c75b91dffe0478d87c00d956c9fb44, type: 3}
   bulletSpawn: {fileID: 8364706777227069993}
   fireRate: 2
-  hazardCount: 10
-  spawnWait: 0
-  waveWait: 0
 --- !u!58 &2243326521822349440
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -108,7 +105,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 325b5a0b2d2664281bae6f9d74a88538, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 50373d5b716d94a39a2c514ea45d2643, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
