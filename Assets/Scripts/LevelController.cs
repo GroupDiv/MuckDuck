@@ -98,13 +98,29 @@ public class LevelController : MonoBehaviour
     * @post: Flags are reset and a new level is started.  Difficulty is updated.
     !*/
     void levelUp() {
+
+        //! Increases the level as tracked by LevelController
         level ++;
+
+        //! Resets the player's levelUp flag
         playerObject.GetComponent<PlayerController>().levelUp = false;
+
+        //! Sets the player's level to match LevelController's
         playerObject.GetComponent<PlayerController>().level = level;
+
+        //! Resets the flag that tracks if there is currently a boss on screen -- this is a redundancy
         currentlyBoss = false;
+
+        //! Resets the flag that turns off the enemy spawner 
         enemySpawn.GetComponent<WaveBehavior>().waveComplete = false;
+
+        //! Increases the amount of enemies that will be spawned next level
         enemySpawn.GetComponent<WaveBehavior>().hazardCount += waveDifficultyModifier * level;
-        enemySpawn.GetComponent<WaveBehavior>().spawnWait *= 0.75f;
+
+        //! Decreases the amount of time between enemy spawns
+        enemySpawn.GetComponent<WaveBehavior>().spawnWait *= 0.8f;
+
+        //! Increases the speed of the scrolling background
         scrollingBackground.GetComponent<ScrollBehavior>().scrollOffsetSpeed /= 2;
     }
 }
