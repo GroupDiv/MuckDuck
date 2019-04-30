@@ -51,8 +51,12 @@ public class LevelController : MonoBehaviour
     //! Tracks if it is time to spawn a power up
     private bool powerUpFlag;
 
+    //! Tracks the current modification to boss's fire rate
+    private float bossFireRateModifier;
+
     void Start()
     {
+        bossFireRateModifier = 1;
         lastPowerUp = 0;
         level = 1;
         bossSpawnFlag = false;
@@ -85,7 +89,7 @@ public class LevelController : MonoBehaviour
         if (!currentlyBoss){
             currentlyBoss = true;
             var queenTracker = Instantiate(queen, bossSpawn.position, bossSpawn.rotation);
-            queenTracker.GetComponent<QueenBauss>().RecievePlayerParameter(playerObject, (bossDifficultyModifier * level), (.25f));
+            queenTracker.GetComponent<QueenBauss>().RecievePlayerParameter(playerObject, (bossDifficultyModifier * level), bossFireRateModifier);
         }
     }
 
@@ -122,5 +126,8 @@ public class LevelController : MonoBehaviour
 
         //! Increases the speed of the scrolling background
         scrollingBackground.GetComponent<ScrollBehavior>().scrollOffsetSpeed /= 2;
+
+        //! Increments the change to the boss's fire rate
+        bossFireRateModifier *= 0.75f;
     }
 }

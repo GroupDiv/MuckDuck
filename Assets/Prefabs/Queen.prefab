@@ -48,10 +48,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   boundary: 1.33
-  health: 10
+  health: 15
   bullet: {fileID: 4846264915054316061, guid: 18c75b91dffe0478d87c00d956c9fb44, type: 3}
   bulletSpawn: {fileID: 8364706777227069993}
-  fireRate: 2
+  fireRate: 1.5
 --- !u!58 &2243326521822349440
 CircleCollider2D:
   m_ObjectHideFlags: 0

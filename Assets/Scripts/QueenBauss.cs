@@ -50,7 +50,7 @@ public class QueenBauss : MonoBehaviour
     {
         Character = playerObject;
         health += difficultyModifier;
-        fireRate -= bulletFrequency;
+        fireRate *= bulletFrequency;
         //shake = GameObject.FindGameObjectWithTag("Shake").GetComponent<ShakeBehavior>();
 
     }
