@@ -102,8 +102,13 @@ public class PlayerController : MonoBehaviour {
     void Start()
     {
 
-        testModeObject = GameObject.Find("TestModeManager");
-        testMode = testModeObject.GetComponent<TestModeManager>().testFlag;
+
+        //    UNCOMMENT THESE TO ENABLE TEST MODE   //
+
+        //testModeObject = GameObject.Find("TestModeManager");
+        //testMode = testModeObject.GetComponent<TestModeManager>().testFlag;
+
+        //  UNCOMMENT THE ABOVE TO ENABLE TEST MODE //
 
         levelUp = false;
         //forces the game window to be the resolution we want
