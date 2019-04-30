@@ -49,12 +49,12 @@ MonoBehaviour:
   speed: 1
   boundary: 1.33
   health: 10
-  projectile: {fileID: 4846264915054316061, guid: 18c75b91dffe0478d87c00d956c9fb44,
-    type: 3}
-  projectileSpawn: {fileID: 8364706777227069993}
+  bullet: {fileID: 4846264915054316061, guid: 18c75b91dffe0478d87c00d956c9fb44, type: 3}
+  bulletSpawn: {fileID: 8364706777227069993}
+  fireRate: 2
   hazardCount: 10
   spawnWait: 0
-  waveWait: 1
+  waveWait: 0
 --- !u!58 &2243326521822349440
 CircleCollider2D:
   m_ObjectHideFlags: 0
