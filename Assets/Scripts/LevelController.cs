@@ -36,8 +36,23 @@ public class LevelController : MonoBehaviour
     //! The object to track the background (to speed up each level)
     public GameObject scrollingBackground;
 
+    public GameObject powerUpObject;
+
+    //! Tracks where to spawn the power ups
+    public Transform powerUpSpawn;
+
+    //! The score interval in which to spawn a power up
+    public int powerUpThreshold;
+
+    //! Tracks the last score at which a power up was spawned
+    private int lastPowerUp;
+
+    //! Tracks if it is time to spawn a power up
+    private bool powerUpFlag;
+
     void Start()
     {
+        lastPowerUp = 0;
         level = 1;
         bossSpawnFlag = false;
         currentlyBoss = false;
@@ -54,6 +69,10 @@ public class LevelController : MonoBehaviour
         if (playerObject.GetComponent<PlayerController>().levelUp == true){
             levelUp();
         }
+        if (playerObject.GetComponent<PlayerController>().score % powerUpThreshold == 0 && playerObject.GetComponent<PlayerController>().score != lastPowerUp) {
+            lastPowerUp = playerObject.GetComponent<PlayerController>().score;
+            spawnPowerUp();
+        }
     }
 
     /*!
@@ -67,6 +86,10 @@ public class LevelController : MonoBehaviour
             var queenTracker = Instantiate(queen, bossSpawn.position, bossSpawn.rotation);
             queenTracker.GetComponent<QueenBauss>().RecievePlayerParameter(playerObject, (bossDifficultyModifier * level), (.25f));
         }
+    }
+
+    void spawnPowerUp() {
+        Instantiate(powerUpObject, powerUpSpawn.position, powerUpSpawn.rotation);
     }
 
     /*!

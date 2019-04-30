@@ -228,6 +228,10 @@ MonoBehaviour:
   waveDifficultyModifier: 5
   bossDifficultyModifier: 5
   scrollingBackground: {fileID: 314776734}
+  powerUpObject: {fileID: 6705947043730153112, guid: af3e90a510e49451bb208b14e146cd89,
+    type: 3}
+  powerUpSpawn: {fileID: 2100538879}
+  powerUpThreshold: 400
 --- !u!4 &214829684
 Transform:
   m_ObjectHideFlags: 0
