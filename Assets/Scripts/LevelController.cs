@@ -33,6 +33,9 @@ public class LevelController : MonoBehaviour
     //! The amount of health to add to the boss each level
     public int bossDifficultyModifier;
 
+    //! The object to track the background (to speed up each level)
+    public GameObject scrollingBackground;
+
     void Start()
     {
         level = 1;
@@ -77,5 +80,6 @@ public class LevelController : MonoBehaviour
         currentlyBoss = false;
         enemySpawn.GetComponent<WaveBehavior>().waveComplete = false;
         enemySpawn.GetComponent<WaveBehavior>().hazardCount += waveDifficultyModifier * level;
+        scrollingBackground.GetComponent<ScrollBehavior>().scrollOffsetSpeed /= 2;
     }
 }
