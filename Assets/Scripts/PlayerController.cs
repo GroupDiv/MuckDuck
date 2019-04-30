@@ -81,7 +81,7 @@ public class PlayerController : MonoBehaviour {
     string highScoreKey = "HighScore";
 
     //testing variables
-    public bool testMode = true; // true or false depending on which game mode user selects
+    public bool testMode = false; // true or false depending on which game mode user selects
     public bool testLives;
     public bool testRestart;
     public bool testPowerUp;
@@ -92,12 +92,19 @@ public class PlayerController : MonoBehaviour {
     //! A flag that is true when a boss is defeated, telling the level controller to make everything more difficult
     public bool levelUp;
 
+    //! The game object that tracks if the level is loaded in test mode or not
+    private GameObject testModeObject;
+
     /*!
     @pre: none
     @post: initializes player object with initial firing time and movement properties.
     !*/
     void Start()
     {
+
+        testModeObject = GameObject.Find("TestModeManager");
+        testMode = testModeObject.GetComponent<TestModeManager>().testFlag;
+
         levelUp = false;
         //forces the game window to be the resolution we want
         Screen.SetResolution(540, 960, true);

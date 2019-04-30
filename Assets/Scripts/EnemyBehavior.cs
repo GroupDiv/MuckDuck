@@ -26,8 +26,16 @@ public class EnemyBehavior : MonoBehaviour
     //! The class the contains the animation to apply camera shake behavior to
     private ShakeBehavior shake; 
 
-    public bool testMode = true;
+    public bool testMode;
     public bool testUpdatesScore = false;
+
+    //! A game object that tracks if the game is in test mode or not
+    private GameObject testModeObject;
+
+    void Start() {
+        testModeObject = GameObject.Find("TestModeManager");
+        testMode = testModeObject.GetComponent<TestModeManager>().testFlag;
+    }
 
     /*!
     * @pre: none

@@ -22,6 +22,9 @@ public class MainMenuBehavior : MonoBehaviour
     //! "Play" button object
     public GameObject playButton;
 
+    //! Test button object
+    public GameObject testButton;
+
     //! Amount of time in seconds that each word will delay to be printed
     public float textDisplayTime;
 
@@ -30,10 +33,14 @@ public class MainMenuBehavior : MonoBehaviour
 
     //! String used to search PlayerPrefs for the high score
     private string highScoreKey = "HighScore";
+
+    //! The game object to track the test mode flag
+    public GameObject testModeManager;
     
 
     void Start()
     {
+        DontDestroyOnLoad(testModeManager);
         muckText.GetComponent<UnityEngine.UI.Text>().text = " ";
         duckText.GetComponent<UnityEngine.UI.Text>().text = " ";
         highScoreText.GetComponent<UnityEngine.UI.Text>().text = " ";
@@ -62,6 +69,11 @@ public class MainMenuBehavior : MonoBehaviour
     }
     public void QuitGame() {
         Application.Quit();
+    }
+
+    public void PlayTest() {
+        testModeManager.GetComponent<TestModeManager>().testFlag = true;
+        Application.LoadLevel(1);
     }
 
     private IEnumerator textDelay() {
