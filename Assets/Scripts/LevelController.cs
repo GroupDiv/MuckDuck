@@ -65,7 +65,7 @@ public class LevelController : MonoBehaviour
         if (!currentlyBoss){
             currentlyBoss = true;
             var queenTracker = Instantiate(queen, bossSpawn.position, bossSpawn.rotation);
-            queenTracker.GetComponent<QueenBauss>().RecievePlayerParameter(playerObject, (bossDifficultyModifier * level));
+            queenTracker.GetComponent<QueenBauss>().RecievePlayerParameter(playerObject, (bossDifficultyModifier * level), (.25f));
         }
     }
 

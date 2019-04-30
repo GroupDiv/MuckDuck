@@ -32,16 +32,6 @@ public class QueenBauss : MonoBehaviour
     public float fireRate;
     private float nextFire;
 
-    //! How many projectiles to spawn in each wave
-    public int hazardCount;
-
-    //! How long to wait between spawns
-    public float spawnWait;
-
-    //! How long to wait in between spawns
-    public float waveWait;
-
-
     private bool dirRight;
 
     void Start()
@@ -56,10 +46,11 @@ public class QueenBauss : MonoBehaviour
     * @post: assigns GameObject Character to playerObject 
     * @param playerObject: the player object we are currently interacting with
     !*/
-    public void RecievePlayerParameter(GameObject playerObject, int difficultyModifier)
+    public void RecievePlayerParameter(GameObject playerObject, int difficultyModifier, float bulletFrequency)
     {
         Character = playerObject;
         health += difficultyModifier;
+        fireRate -= bulletFrequency;
         //shake = GameObject.FindGameObjectWithTag("Shake").GetComponent<ShakeBehavior>();
 
     }
@@ -88,14 +79,14 @@ public class QueenBauss : MonoBehaviour
             Character.GetComponent<PlayerController>().score += 100;
         }
 
-        // Checks if Fire1 (default spacebar) is pushed and if the timer is ready for the next fire
+        // Checks if the timer is ready for the next fire
         if (nextFire < Time.time)
         {
 
             // adds time to nextFire to delay the next shot
             nextFire = Time.time + fireRate;
 
-            // spawns a bullet at the end bullet spawn location (top of the duck)
+            // spawns a bullet at the end bullet spawn location (bottom of queen)
             Instantiate(bullet, bulletSpawn.position, bulletSpawn.rotation);
         }
 
