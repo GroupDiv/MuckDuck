@@ -182,7 +182,7 @@ public class PlayerController : MonoBehaviour {
             updateLevelString(this.level);
         }
 
-        if (lives == 0)
+        if (lives <= 0)
         {
             GameOver();
             if (testMode && !testGameOver)
