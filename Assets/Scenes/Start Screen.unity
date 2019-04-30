@@ -455,6 +455,7 @@ MonoBehaviour:
   duckText: {fileID: 1746711444}
   highScoreText: {fileID: 1063133641}
   playButton: {fileID: 34978508}
+  testButton: {fileID: 2101119066}
   textDisplayTime: 0.5
   testModeManager: {fileID: 1629521264}
 --- !u!4 &326097182
@@ -1229,6 +1230,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b96fc63d5bf594442b0bd38dc5c9ecdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  testFlag: 0
 --- !u!1 &1746711444
 GameObject:
   m_ObjectHideFlags: 0
@@ -1522,7 +1524,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.00002861, y: -158}
+  m_AnchoredPosition: {x: -0.00002861, y: -159}
   m_SizeDelta: {x: 394.2, y: 69.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2101119068
@@ -1566,7 +1568,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 326097181}
-        m_MethodName: QuitGame
+        m_MethodName: PlayTest
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
