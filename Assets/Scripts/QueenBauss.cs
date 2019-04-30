@@ -46,14 +46,16 @@ public class QueenBauss : MonoBehaviour
         damage = 0;
         StartCoroutine(SpawnProjectiles());
     }
+
     /*!
     * @pre: none
     * @post: assigns GameObject Character to playerObject 
     * @param playerObject: the player object we are currently interacting with
     !*/
-    public void RecievePlayerParameter(GameObject playerObject)
+    public void RecievePlayerParameter(GameObject playerObject, int difficultyModifier)
     {
         Character = playerObject;
+        health += difficultyModifier;
         //shake = GameObject.FindGameObjectWithTag("Shake").GetComponent<ShakeBehavior>();
 
     }
@@ -65,9 +67,7 @@ public class QueenBauss : MonoBehaviour
     !*/
     void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Something is touching me");
-        if (other.gameObject.tag == "Bullet")
-        {
+        if (other.gameObject.tag == "Bullet"){
             Destroy(other.gameObject);
             //shake.EnemyCameraShake();
             damage++;
@@ -78,8 +78,9 @@ public class QueenBauss : MonoBehaviour
     {
         if (damage == health)
         {
-            Debug.Log("I'm a hit");
+            //Debug.Log("I'm a hit");
             Destroy(gameObject);
+            Character.GetComponent<PlayerController>().levelUp = true;
             Character.GetComponent<PlayerController>().score += 100;
         }
     }

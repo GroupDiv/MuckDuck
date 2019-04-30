@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class PlayerController : MonoBehaviour {
 
@@ -53,11 +54,14 @@ public class PlayerController : MonoBehaviour {
     //! The high score text displayed after a game over
     public Text highScoreText;
 
+    //!  The text that displays the current level
+    public Text levelText;
+
     //! True if game over, false otherwise
-    private bool gameOver;
+    public bool gameOver;
 
     //! True if the player restarts, resets to false once the game is restarted
-    private bool restart;
+    public bool restart;
 
     //! The animation component of the camera that shakes when player is hit or object is destroyed
     private ShakeBehavior shake; 
@@ -71,7 +75,22 @@ public class PlayerController : MonoBehaviour {
     //high score
     public int highScore = 0;
 
+    //! keeps track of current level
+    public int level;
+
     string highScoreKey = "HighScore";
+
+    //testing variables
+    public bool testMode = true; // true or false depending on which game mode user selects
+    public bool testLives;
+    public bool testRestart;
+    public bool testPowerUp;
+    public bool testPowerDown;
+    public bool testUpdatesHighScore;
+    public bool testGameOver;
+
+    //! A flag that is true when a boss is defeated, telling the level controller to make everything more difficult
+    public bool levelUp;
 
     /*!
     @pre: none
@@ -79,6 +98,7 @@ public class PlayerController : MonoBehaviour {
     !*/
     void Start()
     {
+        levelUp = false;
         //forces the game window to be the resolution we want
         Screen.SetResolution(540, 960, true);
         rb2d = GetComponent<Rigidbody2D> ();
@@ -95,12 +115,21 @@ public class PlayerController : MonoBehaviour {
         updateScoreString(score);
         lives = 3;
         updateLivesString(lives);
+        level = 1;
+        updateLevelString(level);
 
         shake = GameObject.FindGameObjectWithTag("Shake").GetComponent<ShakeBehavior>();
 
         shotPoweredUp = false;
 
         highScore = PlayerPrefs.GetInt(highScoreKey, 0);
+
+        testLives = false;
+        testRestart = false;
+        testPowerUp = false;
+        testPowerDown = false;
+        testUpdatesHighScore = false;
+        testGameOver = false;
     }
 
     /*!
@@ -150,11 +179,24 @@ public class PlayerController : MonoBehaviour {
             this.GetComponent<SpriteRenderer>().enabled = true;
             updateScoreString(this.score);
             updateLivesString(this.lives);
+            updateLevelString(this.level);
         }
 
         if (lives == 0)
         {
             GameOver();
+            if (testMode && !testGameOver)
+            {
+                if (gameOver)
+                {
+                    Debug.Log("GameOver() sets gameOver to true: PASSED");
+                }
+                else
+                {
+                    Debug.Log("GameOver() sets gameOver to true: FAILED");
+                }
+                testGameOver = true;
+            }
         }
 
         if (gameOver)
@@ -170,6 +212,19 @@ public class PlayerController : MonoBehaviour {
             if (Input.GetKeyDown(KeyCode.R))
             {
                 Application.LoadLevel (Application.loadedLevel);
+
+                if (testMode && !testRestart)
+                {
+                    if (restart)
+                    {
+                        Debug.Log("Restart reloads the game: PASSED");
+                    }
+                    else
+                    {
+                        Debug.Log("Restart reloads the game: FAILED");
+                    }
+                    testRestart = true;
+                }
             }
             else if (Input.GetKeyDown(KeyCode.Q))
             {
@@ -190,6 +245,10 @@ public class PlayerController : MonoBehaviour {
     void updateScoreString(int newScore) {
         this.scoreText.text = "SCORE: " + newScore.ToString();
     }
+    
+    public void updateLevelString(int newLevel) {
+        this.levelText.text = "LEVEL " + newLevel.ToString();
+    }
 
     /*!
     * @pre: score has been updated
@@ -206,14 +265,29 @@ public class PlayerController : MonoBehaviour {
     * @post: If the collision is with an ememy, decrements player lives
     * @param collision: collider object the player comes into contact with
     !*/
-    void OnTriggerEnter2D(Collider2D collision)
+    public void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Enemy" && gameOver == false)
         {
+            int initLives = this.lives;
+
             shake.EnemyCameraShake();
             Destroy(collision.gameObject);
             playMusic();
             this.lives--;
+
+            if (testMode && !testLives)
+            {
+                if (initLives - this.lives == 1)
+                {
+                    Debug.Log("Lives decrement when player comes into contact with enemy: PASSED");
+                }
+                else
+                {
+                    Debug.Log("Lives decrement when player comes into contact with enemy: FAILED");
+                }
+                testLives = true;
+            }
         }
     }
 
@@ -248,6 +322,19 @@ public class PlayerController : MonoBehaviour {
         {
             PlayerPrefs.SetInt(highScoreKey, score);
             PlayerPrefs.Save();
+
+            if (testMode && !testUpdatesHighScore)
+            {
+                if (score == PlayerPrefs.GetInt(highScoreKey, 0))
+                {
+                    Debug.Log("Updates high score when achieved: PASSED");
+                }
+                else
+                {
+                    Debug.Log("Updates high score when achieved: FAILED");
+                }
+                testUpdatesHighScore = true;
+            }
         }
         highScore = PlayerPrefs.GetInt(highScoreKey, 0);
         highScoreText.text = "High Score: " + highScore.ToString();
@@ -256,12 +343,26 @@ public class PlayerController : MonoBehaviour {
     /*!
     * @pre: player has picked up rate of fire powerup
     * @post: fire rate is doubled and powerDownTime is set, shotPoweredUp flag is set
-    * @param powerUpDuration - lenght of time (in seconds) for the power up to last
+    * @param powerUpDuration - length of time (in seconds) for the power up to last
     !*/
     public void shotPowerUp(float powerUpDuration) {
+        float initFireRate = fireRate;
         fireRate = fireRate / 2;
         powerDownTime = Time.time + powerUpDuration;
         shotPoweredUp = true;
+
+        if (testMode && !testPowerUp)
+        {
+            if (fireRate < initFireRate)
+            {
+                Debug.Log("PowerUps increase fire rate: PASSED");
+            }
+            else
+            {
+                Debug.Log("PowerUps increase fire rate: FAILED");
+            }
+            testPowerUp = true;
+        }
     }
 
     /*!
@@ -269,7 +370,21 @@ public class PlayerController : MonoBehaviour {
     * @post: resets fire rate and shotPoweredUp flag
     !*/
     public void shotPowerDown() {
+        float initFireRate = fireRate;
         fireRate = fireRate * 2;
         shotPoweredUp = false;
+
+        if (testMode && !testPowerDown)
+        {
+            if (fireRate > initFireRate)
+            {
+                Debug.Log("PowerUps decrease fire rate: PASSED");
+            }
+            else
+            {
+                Debug.Log("PowerUps decrease fire rate: FAILED");
+            }
+            testPowerDown = true;
+        }
     }
 }
