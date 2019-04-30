@@ -21,9 +21,6 @@ public class ShotPowerupBehavior : MonoBehaviour
 
     void playAudio()
     {
-        GetComponent<AudioSource>().clip = pickUpSound;
-        GetComponent<AudioSource>().Play();
-        GetComponent<AudioSource>().volume = 1.0f; // optional
-        GetComponent<AudioSource>().loop = false; // for audio looping
+        AudioSource.PlayClipAtPoint(pickUpSound, transform.position);
     }
 }
