@@ -35,7 +35,7 @@ public class LevelController : MonoBehaviour
 
     void Start()
     {
-        int level = 1;
+        level = 1;
         bossSpawnFlag = false;
         currentlyBoss = false;
     }
@@ -73,7 +73,7 @@ public class LevelController : MonoBehaviour
     void levelUp() {
         level ++;
         playerObject.GetComponent<PlayerController>().levelUp = false;
-        playerObject.GetComponent<PlayerController>().updateLevelString(level);
+        playerObject.GetComponent<PlayerController>().level = level;
         currentlyBoss = false;
         enemySpawn.GetComponent<WaveBehavior>().waveComplete = false;
         enemySpawn.GetComponent<WaveBehavior>().hazardCount += waveDifficultyModifier * level;

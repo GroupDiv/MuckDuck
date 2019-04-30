@@ -76,7 +76,7 @@ public class PlayerController : MonoBehaviour {
     public int highScore = 0;
 
     //! keeps track of current level
-    private int level;
+    public int level;
 
     string highScoreKey = "HighScore";
 
@@ -179,6 +179,7 @@ public class PlayerController : MonoBehaviour {
             this.GetComponent<SpriteRenderer>().enabled = true;
             updateScoreString(this.score);
             updateLivesString(this.lives);
+            updateLevelString(this.level);
         }
 
         if (lives == 0)
