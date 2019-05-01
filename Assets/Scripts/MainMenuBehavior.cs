@@ -36,6 +36,8 @@ public class MainMenuBehavior : MonoBehaviour
 
     //! The game object to track the test mode flag
     public GameObject testModeManager;
+
+    public AudioClip textSound;
     
 
     void Start()
@@ -79,8 +81,10 @@ public class MainMenuBehavior : MonoBehaviour
     private IEnumerator textDelay() {
         yield return new WaitForSeconds(textDisplayTime);
         muckText.GetComponent<UnityEngine.UI.Text>().text = "MUCK";
+        AudioSource.PlayClipAtPoint(textSound, new Vector3(0, 0, -10f), 1f);
         yield return new WaitForSeconds(textDisplayTime);
         duckText.GetComponent<UnityEngine.UI.Text>().text = "DUCK";
+        AudioSource.PlayClipAtPoint(textSound, new Vector3(0, 0, -10f), 1f);
         yield return new WaitForSeconds(textDisplayTime);
         yield return new WaitForSeconds(textDisplayTime);   // wait twice as long because it's a little cooler
         highScoreText.GetComponent<UnityEngine.UI.Text>().text = "High Score: " + highScore.ToString();
