@@ -458,6 +458,7 @@ MonoBehaviour:
   testButton: {fileID: 2101119066}
   textDisplayTime: 0.5
   testModeManager: {fileID: 1629521264}
+  textSound: {fileID: 8300000, guid: 6853526a7d7134fdba9d46207f0c951c, type: 3}
 --- !u!4 &326097182
 Transform:
   m_ObjectHideFlags: 0
