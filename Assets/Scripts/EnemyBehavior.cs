@@ -32,6 +32,8 @@ public class EnemyBehavior : MonoBehaviour
     //! A game object that tracks if the game is in test mode or not
     private GameObject testModeObject;
 
+    public AudioClip deathSound;
+
     void Start() {
 
         //  UNCOMMENT THE BELOW TO ENABLE TEST MODE
@@ -60,6 +62,7 @@ public class EnemyBehavior : MonoBehaviour
     {
         // Destroy everything that leaves the trigger
         if (other.gameObject.tag == "Bullet"){
+            AudioSource.PlayClipAtPoint(deathSound, new Vector3(0, 0, -10f), 0.3f);
             shake.EnemyCameraShake();
             Destroy(other.gameObject);
             Destroy(gameObject);

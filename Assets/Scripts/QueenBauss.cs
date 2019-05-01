@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class QueenBauss : MonoBehaviour
 {
+    AudioSource audioData;
+
     //! Target Object to follow (usually player)
     private GameObject Character;
 
@@ -34,11 +36,21 @@ public class QueenBauss : MonoBehaviour
 
     private bool dirRight;
 
+    public AudioClip bossKillSound;
+
+    public AudioClip bossHit;
+
+    public AudioClip bossEnter;
+
+    public AudioClip bossShoot;
+
     void Start()
     {
+        AudioSource.PlayClipAtPoint(bossEnter, new Vector3(0, 0, -10f), 1f);
+        audioData = GetComponent<AudioSource>();
         dirRight = true;
         damage = 0;
-        nextFire = Time.time;
+        nextFire = Time.time + fireRate;
     }
 
     /*!
@@ -63,6 +75,7 @@ public class QueenBauss : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Bullet"){
+            AudioSource.PlayClipAtPoint(bossHit, new Vector3(0, 0, -10f), 0.7f);
             Destroy(other.gameObject);
             //shake.EnemyCameraShake();
             damage++;
@@ -74,6 +87,7 @@ public class QueenBauss : MonoBehaviour
         if (damage == health)
         {
             //Debug.Log("I'm a hit");
+            AudioSource.PlayClipAtPoint(bossKillSound, new Vector3(0, 0, -10f), 1);
             Destroy(gameObject);
             Character.GetComponent<PlayerController>().levelUp = true;
             Character.GetComponent<PlayerController>().score += 100;
@@ -88,9 +102,14 @@ public class QueenBauss : MonoBehaviour
 
             // spawns a bullet at the end bullet spawn location (bottom of queen)
             Instantiate(bullet, bulletSpawn.position, bulletSpawn.rotation);
+
+            AudioSource.PlayClipAtPoint(bossShoot, new Vector3(0, 0, -10f), 1f);
         }
 
+        
+
     }
+
     /*!
     * @pre: none
     * @post: updates boss to move back and forth

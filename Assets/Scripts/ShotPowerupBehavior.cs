@@ -21,6 +21,6 @@ public class ShotPowerupBehavior : MonoBehaviour
 
     void playAudio()
     {
-        AudioSource.PlayClipAtPoint(pickUpSound, transform.position);
+        AudioSource.PlayClipAtPoint(pickUpSound, new Vector3(0, 0, -10f));
     }
 }
