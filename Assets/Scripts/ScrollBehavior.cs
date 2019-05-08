@@ -4,9 +4,14 @@ using UnityEngine;
 
 public class ScrollBehavior : MonoBehaviour
 {
+
+    //! The speed at which the screen scrolls.  This is what is changed by the Level Controller
     public float scrollOffsetSpeed = 20.0f;
 
-    // Update is called once per frame
+    /*!
+    @pre: this is called every frame
+    @post: the material covering the background is moved according to the scrollOffsetSpeed
+    !*/
     void Update()
     {
         MeshRenderer BGmr = GetComponent<MeshRenderer>();

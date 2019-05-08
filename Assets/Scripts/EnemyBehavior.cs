@@ -26,12 +26,16 @@ public class EnemyBehavior : MonoBehaviour
     //! The class the contains the animation to apply camera shake behavior to
     private ShakeBehavior shake; 
 
+    //! Tracks if the test mode is enabled, this will be passed to the actual game
     public bool testMode;
+
+    //! Flips to true if test mode is enabled and the score updates properly
     public bool testUpdatesScore = false;
 
     //! A game object that tracks if the game is in test mode or not
     private GameObject testModeObject;
 
+    //! Sound that plays when the enemy dies
     public AudioClip deathSound;
 
     void Start() {

@@ -54,6 +54,11 @@ public class LevelController : MonoBehaviour
     //! Tracks the current modification to boss's fire rate
     private float bossFireRateModifier;
 
+
+    /*!
+    @pre: a game is started
+    @post: initializes level at easiest values
+    !*/
     void Start()
     {
         bossFireRateModifier = 1;
@@ -93,6 +98,10 @@ public class LevelController : MonoBehaviour
         }
     }
 
+    /*!
+    @pre: the powerup score threshold is met 
+    @post: a power-up is spawned to the left of the viewable play area
+    !*/
     void spawnPowerUp() {
         Instantiate(powerUpObject, powerUpSpawn.position, powerUpSpawn.rotation);
     }

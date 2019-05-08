@@ -80,7 +80,7 @@ public class PlayerController : MonoBehaviour {
 
     string highScoreKey = "HighScore";
 
-    //testing variables
+    //! Testing variables
     public bool testMode = false; // true or false depending on which game mode user selects
     public bool testLives;
     public bool testRestart;

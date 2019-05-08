@@ -5,14 +5,14 @@ using UnityEngine;
 public class TestModeManager : MonoBehaviour
 {
 
+    //! True if test mode, false otherwise.  This is literally the only point of this object.  It also is the only object that lives between the start screen menu and the main game
     public bool testFlag;
-    // Start is called before the first frame update
+
     void Start()
     {
         testFlag = false;
     }
 
-    // Update is called once per frame
     void Update()
     {
         

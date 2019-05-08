@@ -4,21 +4,21 @@ using UnityEngine;
 
 public class LeaderBoard : MonoBehaviour
 {
-    //high score
+    //! The high score to be retreived/updated if necessary
     public int highScore;
 
+    //! The key Unity searches for to set to attach the high score value to
     string highScoreKey = "HighScore";
     
-    // Start is called before the first frame update
+
     void Start()
     {
         highScore = PlayerPrefs.GetInt(highScoreKey, 0);
     }
 
-    // Update is called once per frame
     void Update()
     {
+        //! use highScore to print high score to start screen and game over screen
         highScore = PlayerPrefs.GetInt(highScoreKey, 0);
-        //use highScore to print hgih score to start screen or game over screen (whichever we decide)
     }
 }

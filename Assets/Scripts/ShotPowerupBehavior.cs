@@ -11,6 +11,10 @@ public class ShotPowerupBehavior : MonoBehaviour
     //! The audio played on pickup
     public AudioClip pickUpSound;
 
+    /*!
+    @pre: an object collides with the powerup
+    @post: sets the flags in PlayerController to indicate that the power-up has been picked up
+    !*/
     void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.tag == "Player") {
             playAudio();
@@ -19,6 +23,7 @@ public class ShotPowerupBehavior : MonoBehaviour
         }
     }
 
+    //! Plays the power up sound
     void playAudio()
     {
         AudioSource.PlayClipAtPoint(pickUpSound, new Vector3(0, 0, -10f));

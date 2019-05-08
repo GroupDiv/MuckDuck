@@ -21,10 +21,7 @@ public class BossProjectileBehavior : MonoBehaviour
 
     }
 
-    /*!
-    @pre: none
-    @post: none
-    !*/
+    //! This is unused
     void Update()
     {
 
