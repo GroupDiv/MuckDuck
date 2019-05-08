@@ -23,9 +23,9 @@
   <td id="projectlogo"><img alt="Logo" src="duck.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Muck Duck
-   &#160;<span id="projectnumber">0.1</span>
+   &#160;<span id="projectnumber">1.0</span>
    </div>
-   <div id="projectbrief">First sprint of our top-down 2D shooter, MuckDuck</div>
+   <div id="projectbrief">Arcade-style Space Shooter</div>
   </td>
  </tr>
  </tbody>
@@ -72,13 +72,28 @@ $(function() {
 <div class="title">PlayerController Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p>Inherits MonoBehaviour.</p>
+<div class="dynheader">
+Inheritance diagram for PlayerController:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_player_controller.png" alt=""/>
+ </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a201205acdeda463736f868b6f20f05a3"><td class="memItemLeft" align="right" valign="top"><a id="a201205acdeda463736f868b6f20f05a3"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>updateLevelString</b> (int newLevel)</td></tr>
+<tr class="separator:a201205acdeda463736f868b6f20f05a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9cb907e7cb020bfa04ef52f158aa6fcb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_controller.html#a9cb907e7cb020bfa04ef52f158aa6fcb">OnTriggerEnter2D</a> (Collider2D collision)</td></tr>
+<tr class="separator:a9cb907e7cb020bfa04ef52f158aa6fcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a022c877a529497a8fdb3fcf7e21cf090"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_controller.html#a022c877a529497a8fdb3fcf7e21cf090">GameOver</a> ()</td></tr>
 <tr class="separator:a022c877a529497a8fdb3fcf7e21cf090"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a685b3e7478ec3431f858455832c45527"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_controller.html#a685b3e7478ec3431f858455832c45527">printHighScore</a> ()</td></tr>
+<tr class="separator:a685b3e7478ec3431f858455832c45527"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbd4651a9689e6e27538e149b0e3f2a9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_controller.html#acbd4651a9689e6e27538e149b0e3f2a9">shotPowerUp</a> (float powerUpDuration)</td></tr>
+<tr class="separator:acbd4651a9689e6e27538e149b0e3f2a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d6e6be056b9cc9f2db7195e633bdd4c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_controller.html#a5d6e6be056b9cc9f2db7195e633bdd4c">shotPowerDown</a> ()</td></tr>
+<tr class="separator:a5d6e6be056b9cc9f2db7195e633bdd4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -130,6 +145,55 @@ Text&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 Text&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_controller.html#ad22c814018c51eab731676920276c38d">gameOverText</a></td></tr>
 <tr class="memdesc:ad22c814018c51eab731676920276c38d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The game over text displayed after a game over. <br /></td></tr>
 <tr class="separator:ad22c814018c51eab731676920276c38d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a16f1a71fa4ce1002d8aebbcec0514b"><td class="memItemLeft" align="right" valign="top"><a id="a5a16f1a71fa4ce1002d8aebbcec0514b"></a>
+Text&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_controller.html#a5a16f1a71fa4ce1002d8aebbcec0514b">highScoreText</a></td></tr>
+<tr class="memdesc:a5a16f1a71fa4ce1002d8aebbcec0514b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The high score text displayed after a game over. <br /></td></tr>
+<tr class="separator:a5a16f1a71fa4ce1002d8aebbcec0514b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9db6bb729491dad366bc5237b2a4b2e"><td class="memItemLeft" align="right" valign="top"><a id="aa9db6bb729491dad366bc5237b2a4b2e"></a>
+Text&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_controller.html#aa9db6bb729491dad366bc5237b2a4b2e">levelText</a></td></tr>
+<tr class="memdesc:aa9db6bb729491dad366bc5237b2a4b2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The text that displays the current level. <br /></td></tr>
+<tr class="separator:aa9db6bb729491dad366bc5237b2a4b2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2043c4af0099d9ef9b126794cdb08363"><td class="memItemLeft" align="right" valign="top"><a id="a2043c4af0099d9ef9b126794cdb08363"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_controller.html#a2043c4af0099d9ef9b126794cdb08363">gameOver</a></td></tr>
+<tr class="memdesc:a2043c4af0099d9ef9b126794cdb08363"><td class="mdescLeft">&#160;</td><td class="mdescRight">True if game over, false otherwise. <br /></td></tr>
+<tr class="separator:a2043c4af0099d9ef9b126794cdb08363"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5009280ff718bf792e6c49be57d2d961"><td class="memItemLeft" align="right" valign="top"><a id="a5009280ff718bf792e6c49be57d2d961"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_controller.html#a5009280ff718bf792e6c49be57d2d961">restart</a></td></tr>
+<tr class="memdesc:a5009280ff718bf792e6c49be57d2d961"><td class="mdescLeft">&#160;</td><td class="mdescRight">True if the player restarts, resets to false once the game is restarted. <br /></td></tr>
+<tr class="separator:a5009280ff718bf792e6c49be57d2d961"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adba61318804b2e3f908c6e3290ca755d"><td class="memItemLeft" align="right" valign="top"><a id="adba61318804b2e3f908c6e3290ca755d"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>highScore</b> = 0</td></tr>
+<tr class="separator:adba61318804b2e3f908c6e3290ca755d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72b14fadfbe633bb3ba317b2a59c557e"><td class="memItemLeft" align="right" valign="top"><a id="a72b14fadfbe633bb3ba317b2a59c557e"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_controller.html#a72b14fadfbe633bb3ba317b2a59c557e">level</a></td></tr>
+<tr class="memdesc:a72b14fadfbe633bb3ba317b2a59c557e"><td class="mdescLeft">&#160;</td><td class="mdescRight">keeps track of current level <br /></td></tr>
+<tr class="separator:a72b14fadfbe633bb3ba317b2a59c557e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99608cc786dba21c5c1dc22f4cef1327"><td class="memItemLeft" align="right" valign="top"><a id="a99608cc786dba21c5c1dc22f4cef1327"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_controller.html#a99608cc786dba21c5c1dc22f4cef1327">testMode</a> = false</td></tr>
+<tr class="memdesc:a99608cc786dba21c5c1dc22f4cef1327"><td class="mdescLeft">&#160;</td><td class="mdescRight">Testing variables. <br /></td></tr>
+<tr class="separator:a99608cc786dba21c5c1dc22f4cef1327"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9dcb593b13e3fd9145f5d749a0931eb0"><td class="memItemLeft" align="right" valign="top"><a id="a9dcb593b13e3fd9145f5d749a0931eb0"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>testLives</b></td></tr>
+<tr class="separator:a9dcb593b13e3fd9145f5d749a0931eb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2de6872ee0710f0969004e1b26b01e47"><td class="memItemLeft" align="right" valign="top"><a id="a2de6872ee0710f0969004e1b26b01e47"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>testRestart</b></td></tr>
+<tr class="separator:a2de6872ee0710f0969004e1b26b01e47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affbbdfb14b0f101485d4dc1a54883f38"><td class="memItemLeft" align="right" valign="top"><a id="affbbdfb14b0f101485d4dc1a54883f38"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>testPowerUp</b></td></tr>
+<tr class="separator:affbbdfb14b0f101485d4dc1a54883f38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8cf3b4a76e12592ce5b52bf5a6dae35"><td class="memItemLeft" align="right" valign="top"><a id="aa8cf3b4a76e12592ce5b52bf5a6dae35"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>testPowerDown</b></td></tr>
+<tr class="separator:aa8cf3b4a76e12592ce5b52bf5a6dae35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa95666d7ebdc47342a0fe58a8c58d846"><td class="memItemLeft" align="right" valign="top"><a id="aa95666d7ebdc47342a0fe58a8c58d846"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>testUpdatesHighScore</b></td></tr>
+<tr class="separator:aa95666d7ebdc47342a0fe58a8c58d846"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96474cb76d48047171329a05522f12a3"><td class="memItemLeft" align="right" valign="top"><a id="a96474cb76d48047171329a05522f12a3"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>testGameOver</b></td></tr>
+<tr class="separator:a96474cb76d48047171329a05522f12a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40ca018dd43b840f93242df83148ee37"><td class="memItemLeft" align="right" valign="top"><a id="a40ca018dd43b840f93242df83148ee37"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_controller.html#a40ca018dd43b840f93242df83148ee37">levelUp</a></td></tr>
+<tr class="memdesc:a40ca018dd43b840f93242df83148ee37"><td class="mdescLeft">&#160;</td><td class="mdescRight">A flag that is true when a boss is defeated, telling the level controller to make everything more difficult. <br /></td></tr>
+<tr class="separator:a40ca018dd43b840f93242df83148ee37"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a022c877a529497a8fdb3fcf7e21cf090"></a>
@@ -148,6 +212,96 @@ Text&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </div><div class="memdoc">
 <dl class="section pre"><dt>Precondition</dt><dd>: player has run out of lives </dd></dl>
 <dl class="section post"><dt>Postcondition</dt><dd>: updates game over text to "Game Over" which will be displayed in the UI ! </dd></dl>
+
+</div>
+</div>
+<a id="a9cb907e7cb020bfa04ef52f158aa6fcb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9cb907e7cb020bfa04ef52f158aa6fcb">&#9670;&nbsp;</a></span>OnTriggerEnter2D()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PlayerController.OnTriggerEnter2D </td>
+          <td>(</td>
+          <td class="paramtype">Collider2D&#160;</td>
+          <td class="paramname"><em>collision</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section pre"><dt>Precondition</dt><dd>: player hits another collider gameobject </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>: If the collision is with an ememy, decrements player lives </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">collision</td><td>collider object the player comes into contact with ! </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a685b3e7478ec3431f858455832c45527"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a685b3e7478ec3431f858455832c45527">&#9670;&nbsp;</a></span>printHighScore()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PlayerController.printHighScore </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section pre"><dt>Precondition</dt><dd>: game is over </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>: determines high score and prints result to the screen. If it's a new record, store the new high score ! </dd></dl>
+
+</div>
+</div>
+<a id="a5d6e6be056b9cc9f2db7195e633bdd4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d6e6be056b9cc9f2db7195e633bdd4c">&#9670;&nbsp;</a></span>shotPowerDown()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PlayerController.shotPowerDown </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section pre"><dt>Precondition</dt><dd>: firerate power up has lived its life and time is up </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>: resets fire rate and shotPoweredUp flag ! </dd></dl>
+
+</div>
+</div>
+<a id="acbd4651a9689e6e27538e149b0e3f2a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acbd4651a9689e6e27538e149b0e3f2a9">&#9670;&nbsp;</a></span>shotPowerUp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PlayerController.shotPowerUp </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>powerUpDuration</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section pre"><dt>Precondition</dt><dd>: player has picked up rate of fire powerup </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>: fire rate is doubled and powerDownTime is set, shotPoweredUp flag is set </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">powerUpDuration</td><td>- length of time (in seconds) for the power up to last ! </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

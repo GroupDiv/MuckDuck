@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 
+//! Contains enemy movement and other behavior
 public class EnemyBehavior : MonoBehaviour
 {
     //! Target Object to follow (usually player)

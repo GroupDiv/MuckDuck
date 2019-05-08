@@ -1,9 +1,11 @@
 \hypertarget{class_enemy_behavior}{}\section{Enemy\+Behavior Class Reference}
 \label{class_enemy_behavior}\index{EnemyBehavior@{EnemyBehavior}}
-
-
-Inherits Mono\+Behaviour.
-
+Inheritance diagram for Enemy\+Behavior\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_enemy_behavior}
+\end{center}
+\end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -23,7 +25,16 @@ float \mbox{\hyperlink{class_enemy_behavior_a80484f747dfb85a8063a50dd115f65e0}{w
 \begin{DoxyCompactList}\small\item\em A scalar to multiply random\+Movement by, to amplify random movement. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_enemy_behavior_ade5bcff77085ea22523d28312c252d75}\label{class_enemy_behavior_ade5bcff77085ea22523d28312c252d75}} 
 float \mbox{\hyperlink{class_enemy_behavior_ade5bcff77085ea22523d28312c252d75}{wobble\+Wait}}
-\begin{DoxyCompactList}\small\item\em How long until a new random\+Movement should be applied to movement. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em How long until a new random\+Movement should be applied to movement. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_enemy_behavior_af8c760cde02386745dc1017af509049d}\label{class_enemy_behavior_af8c760cde02386745dc1017af509049d}} 
+bool \mbox{\hyperlink{class_enemy_behavior_af8c760cde02386745dc1017af509049d}{test\+Mode}}
+\begin{DoxyCompactList}\small\item\em Tracks if the test mode is enabled, this will be passed to the actual game. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_enemy_behavior_a45bada468af071f8ff4ff0f8b6d5a443}\label{class_enemy_behavior_a45bada468af071f8ff4ff0f8b6d5a443}} 
+bool \mbox{\hyperlink{class_enemy_behavior_a45bada468af071f8ff4ff0f8b6d5a443}{test\+Updates\+Score}} = false
+\begin{DoxyCompactList}\small\item\em Flips to true if test mode is enabled and the score updates properly. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_enemy_behavior_a82176ba450bef73880b2ff7db3123037}\label{class_enemy_behavior_a82176ba450bef73880b2ff7db3123037}} 
+Audio\+Clip \mbox{\hyperlink{class_enemy_behavior_a82176ba450bef73880b2ff7db3123037}{death\+Sound}}
+\begin{DoxyCompactList}\small\item\em Sound that plays when the enemy dies. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Member Function Documentation}

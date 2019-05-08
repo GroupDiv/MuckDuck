@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//! Manages the behavior of the bullets shot by the boss
 public class BossProjectileBehavior : MonoBehaviour
 {
     //! To set speed of projectile from unity editor

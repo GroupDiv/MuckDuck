@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['playercontroller',['PlayerController',['../class_player_controller.html',1,'']]]
+  ['leaderboard',['LeaderBoard',['../class_leader_board.html',1,'']]],
+  ['levelcontroller',['LevelController',['../class_level_controller.html',1,'']]]
 ];

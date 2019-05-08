@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//! Maintains the speed at which the background scrolls.  Updated by LevelController.
 public class ScrollBehavior : MonoBehaviour
 {
 

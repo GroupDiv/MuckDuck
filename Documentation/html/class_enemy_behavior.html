@@ -23,9 +23,9 @@
   <td id="projectlogo"><img alt="Logo" src="duck.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Muck Duck
-   &#160;<span id="projectnumber">0.1</span>
+   &#160;<span id="projectnumber">1.0</span>
    </div>
-   <div id="projectbrief">First sprint of our top-down 2D shooter, MuckDuck</div>
+   <div id="projectbrief">Arcade-style Space Shooter</div>
   </td>
  </tr>
  </tbody>
@@ -72,8 +72,12 @@ $(function() {
 <div class="title">EnemyBehavior Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p>Inherits MonoBehaviour.</p>
+<div class="dynheader">
+Inheritance diagram for EnemyBehavior:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_enemy_behavior.png" alt=""/>
+ </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -98,6 +102,18 @@ float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cla
 float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy_behavior.html#ade5bcff77085ea22523d28312c252d75">wobbleWait</a></td></tr>
 <tr class="memdesc:ade5bcff77085ea22523d28312c252d75"><td class="mdescLeft">&#160;</td><td class="mdescRight">How long until a new randomMovement should be applied to movement. <br /></td></tr>
 <tr class="separator:ade5bcff77085ea22523d28312c252d75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8c760cde02386745dc1017af509049d"><td class="memItemLeft" align="right" valign="top"><a id="af8c760cde02386745dc1017af509049d"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy_behavior.html#af8c760cde02386745dc1017af509049d">testMode</a></td></tr>
+<tr class="memdesc:af8c760cde02386745dc1017af509049d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tracks if the test mode is enabled, this will be passed to the actual game. <br /></td></tr>
+<tr class="separator:af8c760cde02386745dc1017af509049d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45bada468af071f8ff4ff0f8b6d5a443"><td class="memItemLeft" align="right" valign="top"><a id="a45bada468af071f8ff4ff0f8b6d5a443"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy_behavior.html#a45bada468af071f8ff4ff0f8b6d5a443">testUpdatesScore</a> = false</td></tr>
+<tr class="memdesc:a45bada468af071f8ff4ff0f8b6d5a443"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flips to true if test mode is enabled and the score updates properly. <br /></td></tr>
+<tr class="separator:a45bada468af071f8ff4ff0f8b6d5a443"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82176ba450bef73880b2ff7db3123037"><td class="memItemLeft" align="right" valign="top"><a id="a82176ba450bef73880b2ff7db3123037"></a>
+AudioClip&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy_behavior.html#a82176ba450bef73880b2ff7db3123037">deathSound</a></td></tr>
+<tr class="memdesc:a82176ba450bef73880b2ff7db3123037"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sound that plays when the enemy dies. <br /></td></tr>
+<tr class="separator:a82176ba450bef73880b2ff7db3123037"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a1a0d6efe8ce9e53a0e4bddd06c379097"></a>

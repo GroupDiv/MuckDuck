@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//! The script attached to enemies that will destroy them when a bullet object enters their collider
 public class DestroyByBullet  : MonoBehaviour
 {
     //! A publicly-settable reference to the player, currently unused

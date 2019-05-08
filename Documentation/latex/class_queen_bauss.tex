@@ -1,0 +1,92 @@
+\hypertarget{class_queen_bauss}{}\section{Queen\+Bauss Class Reference}
+\label{class_queen_bauss}\index{QueenBauss@{QueenBauss}}
+Inheritance diagram for Queen\+Bauss\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_queen_bauss}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_queen_bauss_a40fa065ef12d2fa9e9483c271d3e75a6}{Recieve\+Player\+Parameter}} (Game\+Object player\+Object, int difficulty\+Modifier, float bullet\+Frequency)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_queen_bauss_a11c5f07cee01d4587cad453edbb32fa3}\label{class_queen_bauss_a11c5f07cee01d4587cad453edbb32fa3}} 
+float \mbox{\hyperlink{class_queen_bauss_a11c5f07cee01d4587cad453edbb32fa3}{speed}}
+\begin{DoxyCompactList}\small\item\em Boss speed settable from Unity editor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_queen_bauss_a738d137bcf9a273c67a1b122c6f28822}\label{class_queen_bauss_a738d137bcf9a273c67a1b122c6f28822}} 
+float \mbox{\hyperlink{class_queen_bauss_a738d137bcf9a273c67a1b122c6f28822}{boundary}}
+\begin{DoxyCompactList}\small\item\em How far (horizontally) the boss can move from its origin. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_queen_bauss_a4b5e0b4ec9040a158c5fafca921593e2}{health}}
+\begin{DoxyCompactList}\small\item\em The class the contains the animation to apply camera shake behavior to. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_queen_bauss_a3b035e20519b15a46b1cfa28a3300d1a}\label{class_queen_bauss_a3b035e20519b15a46b1cfa28a3300d1a}} 
+Game\+Object \mbox{\hyperlink{class_queen_bauss_a3b035e20519b15a46b1cfa28a3300d1a}{bullet}}
+\begin{DoxyCompactList}\small\item\em Defines which bullet object the boss will use to shoot. (this will be different from player\textquotesingle{}s bullets) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_queen_bauss_a5c17fa20ec6761760b7651176a1c1e7e}\label{class_queen_bauss_a5c17fa20ec6761760b7651176a1c1e7e}} 
+Transform \mbox{\hyperlink{class_queen_bauss_a5c17fa20ec6761760b7651176a1c1e7e}{bullet\+Spawn}}
+\begin{DoxyCompactList}\small\item\em A reference to the object where the bullets spawn (this is always relative to boss position, as it is a child prefab of the boss) \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_queen_bauss_a493ca87e362739138d3a758f267c2f9c}{fire\+Rate}}
+\item 
+\mbox{\Hypertarget{class_queen_bauss_ab1eb1668c503a5ccef801c9d689f756f}\label{class_queen_bauss_ab1eb1668c503a5ccef801c9d689f756f}} 
+Audio\+Clip \mbox{\hyperlink{class_queen_bauss_ab1eb1668c503a5ccef801c9d689f756f}{boss\+Kill\+Sound}}
+\begin{DoxyCompactList}\small\item\em Sound that plays when the boss dies. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_queen_bauss_a6166e72e2c9d4056bffe09629f55c61f}\label{class_queen_bauss_a6166e72e2c9d4056bffe09629f55c61f}} 
+Audio\+Clip \mbox{\hyperlink{class_queen_bauss_a6166e72e2c9d4056bffe09629f55c61f}{boss\+Hit}}
+\begin{DoxyCompactList}\small\item\em Sound that plays when the boss is hit. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_queen_bauss_a63ad4d36e93462b57ae6de42ceb642ae}\label{class_queen_bauss_a63ad4d36e93462b57ae6de42ceb642ae}} 
+Audio\+Clip \mbox{\hyperlink{class_queen_bauss_a63ad4d36e93462b57ae6de42ceb642ae}{boss\+Enter}}
+\begin{DoxyCompactList}\small\item\em Sound that plays when the boss is spawned. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_queen_bauss_a9cff9aa86adc0ceccbd311bd007f5b5c}\label{class_queen_bauss_a9cff9aa86adc0ceccbd311bd007f5b5c}} 
+Audio\+Clip \mbox{\hyperlink{class_queen_bauss_a9cff9aa86adc0ceccbd311bd007f5b5c}{boss\+Shoot}}
+\begin{DoxyCompactList}\small\item\em Sound that plays when the boss fires. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_queen_bauss_a40fa065ef12d2fa9e9483c271d3e75a6}\label{class_queen_bauss_a40fa065ef12d2fa9e9483c271d3e75a6}} 
+\index{QueenBauss@{QueenBauss}!RecievePlayerParameter@{RecievePlayerParameter}}
+\index{RecievePlayerParameter@{RecievePlayerParameter}!QueenBauss@{QueenBauss}}
+\subsubsection{\texorpdfstring{RecievePlayerParameter()}{RecievePlayerParameter()}}
+{\footnotesize\ttfamily void Queen\+Bauss.\+Recieve\+Player\+Parameter (\begin{DoxyParamCaption}\item[{Game\+Object}]{player\+Object,  }\item[{int}]{difficulty\+Modifier,  }\item[{float}]{bullet\+Frequency }\end{DoxyParamCaption})}
+
+\begin{DoxyPrecond}{Precondition}
+\+: called at object initialization 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+\+: inherits difficulty modifiers from Level Controller 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parameters}
+{\em player\+Object} & the player object we are currently interacting with \\
+\hline
+{\em difficulty\+Modifier} & How much health the boss will have \\
+\hline
+{\em bullet\+Frequency} & the firerate of the boss ! \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_queen_bauss_a493ca87e362739138d3a758f267c2f9c}\label{class_queen_bauss_a493ca87e362739138d3a758f267c2f9c}} 
+\index{QueenBauss@{QueenBauss}!fireRate@{fireRate}}
+\index{fireRate@{fireRate}!QueenBauss@{QueenBauss}}
+\subsubsection{\texorpdfstring{fireRate}{fireRate}}
+{\footnotesize\ttfamily float Queen\+Bauss.\+fire\+Rate}
+
+fire\+Rate is how fast the gun will fire. next\+Fire is updated every time the gun is shot by adding fire\+Rate to the current time. the shot won\textquotesingle{}t be ready until this time has passed ! \mbox{\Hypertarget{class_queen_bauss_a4b5e0b4ec9040a158c5fafca921593e2}\label{class_queen_bauss_a4b5e0b4ec9040a158c5fafca921593e2}} 
+\index{QueenBauss@{QueenBauss}!health@{health}}
+\index{health@{health}!QueenBauss@{QueenBauss}}
+\subsubsection{\texorpdfstring{health}{health}}
+{\footnotesize\ttfamily int Queen\+Bauss.\+health}
+
+
+
+The class the contains the animation to apply camera shake behavior to. 
+
+Tracks the number of bullet hits the boss can take 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Scripts/Queen\+Bauss.\+cs\end{DoxyCompactItemize}

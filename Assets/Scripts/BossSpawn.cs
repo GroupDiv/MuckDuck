@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//! Mostly just an object used to track the location in which the queen is spawned.  The script is unused except for as a physical location in the editor.
 public class BossSpawn : MonoBehaviour
 {
 
@@ -28,20 +29,20 @@ public class BossSpawn : MonoBehaviour
 
     /*!
     * @pre: none
-    * @post: starts enemy spawn by calling SpawnWaves
+    * @post: calls the SpawnQueen() function, which is never used
     !*/
     void Start()
     {
-        StartCoroutine (SpawnQueen());
+        StartCoroutine (SpawnQueen());  // even though this is 
     }
 
     /*!
     * @pre: none
-    * @post: randomly generates continuously spawning wave of enemies
+    * @post: spawns the queen, but is never actually used (the queen is spawned using a different script)
     !*/
     IEnumerator SpawnQueen()
     {
-        yield return new WaitForSeconds(startWait);
+        yield return new WaitForSeconds(startWait);   // This will wait forever, because it is unused
         while (true)
         {
             Vector2 spawnPosition = new Vector2(0, 4);

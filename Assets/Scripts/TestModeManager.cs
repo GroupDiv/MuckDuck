@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//! Simply sets a flag if test mode is enabled, survives through start screen into main game
 public class TestModeManager : MonoBehaviour
 {
 

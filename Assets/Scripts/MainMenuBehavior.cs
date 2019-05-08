@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//! Manages behavior of the start menu and handles user input
 public class MainMenuBehavior : MonoBehaviour
 {
     //! where user enters username

@@ -1,13 +1,26 @@
 \hypertarget{class_player_controller}{}\section{Player\+Controller Class Reference}
 \label{class_player_controller}\index{PlayerController@{PlayerController}}
-
-
-Inherits Mono\+Behaviour.
-
+Inheritance diagram for Player\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_player_controller}
+\end{center}
+\end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\Hypertarget{class_player_controller_a201205acdeda463736f868b6f20f05a3}\label{class_player_controller_a201205acdeda463736f868b6f20f05a3}} 
+void {\bfseries update\+Level\+String} (int new\+Level)
+\item 
+void \mbox{\hyperlink{class_player_controller_a9cb907e7cb020bfa04ef52f158aa6fcb}{On\+Trigger\+Enter2D}} (Collider2D collision)
+\item 
 void \mbox{\hyperlink{class_player_controller_a022c877a529497a8fdb3fcf7e21cf090}{Game\+Over}} ()
+\item 
+void \mbox{\hyperlink{class_player_controller_a685b3e7478ec3431f858455832c45527}{print\+High\+Score}} ()
+\item 
+void \mbox{\hyperlink{class_player_controller_acbd4651a9689e6e27538e149b0e3f2a9}{shot\+Power\+Up}} (float power\+Up\+Duration)
+\item 
+void \mbox{\hyperlink{class_player_controller_a5d6e6be056b9cc9f2db7195e633bdd4c}{shot\+Power\+Down}} ()
 \end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
@@ -48,7 +61,49 @@ Text \mbox{\hyperlink{class_player_controller_a5dacc07bd5240b4d30337caeb89d6e02}
 \begin{DoxyCompactList}\small\item\em The restart text displayed after a game over. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_player_controller_ad22c814018c51eab731676920276c38d}\label{class_player_controller_ad22c814018c51eab731676920276c38d}} 
 Text \mbox{\hyperlink{class_player_controller_ad22c814018c51eab731676920276c38d}{game\+Over\+Text}}
-\begin{DoxyCompactList}\small\item\em The game over text displayed after a game over. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The game over text displayed after a game over. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_player_controller_a5a16f1a71fa4ce1002d8aebbcec0514b}\label{class_player_controller_a5a16f1a71fa4ce1002d8aebbcec0514b}} 
+Text \mbox{\hyperlink{class_player_controller_a5a16f1a71fa4ce1002d8aebbcec0514b}{high\+Score\+Text}}
+\begin{DoxyCompactList}\small\item\em The high score text displayed after a game over. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_player_controller_aa9db6bb729491dad366bc5237b2a4b2e}\label{class_player_controller_aa9db6bb729491dad366bc5237b2a4b2e}} 
+Text \mbox{\hyperlink{class_player_controller_aa9db6bb729491dad366bc5237b2a4b2e}{level\+Text}}
+\begin{DoxyCompactList}\small\item\em The text that displays the current level. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_player_controller_a2043c4af0099d9ef9b126794cdb08363}\label{class_player_controller_a2043c4af0099d9ef9b126794cdb08363}} 
+bool \mbox{\hyperlink{class_player_controller_a2043c4af0099d9ef9b126794cdb08363}{game\+Over}}
+\begin{DoxyCompactList}\small\item\em True if game over, false otherwise. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_player_controller_a5009280ff718bf792e6c49be57d2d961}\label{class_player_controller_a5009280ff718bf792e6c49be57d2d961}} 
+bool \mbox{\hyperlink{class_player_controller_a5009280ff718bf792e6c49be57d2d961}{restart}}
+\begin{DoxyCompactList}\small\item\em True if the player restarts, resets to false once the game is restarted. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_player_controller_adba61318804b2e3f908c6e3290ca755d}\label{class_player_controller_adba61318804b2e3f908c6e3290ca755d}} 
+int {\bfseries high\+Score} = 0
+\item 
+\mbox{\Hypertarget{class_player_controller_a72b14fadfbe633bb3ba317b2a59c557e}\label{class_player_controller_a72b14fadfbe633bb3ba317b2a59c557e}} 
+int \mbox{\hyperlink{class_player_controller_a72b14fadfbe633bb3ba317b2a59c557e}{level}}
+\begin{DoxyCompactList}\small\item\em keeps track of current level \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_player_controller_a99608cc786dba21c5c1dc22f4cef1327}\label{class_player_controller_a99608cc786dba21c5c1dc22f4cef1327}} 
+bool \mbox{\hyperlink{class_player_controller_a99608cc786dba21c5c1dc22f4cef1327}{test\+Mode}} = false
+\begin{DoxyCompactList}\small\item\em Testing variables. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_player_controller_a9dcb593b13e3fd9145f5d749a0931eb0}\label{class_player_controller_a9dcb593b13e3fd9145f5d749a0931eb0}} 
+bool {\bfseries test\+Lives}
+\item 
+\mbox{\Hypertarget{class_player_controller_a2de6872ee0710f0969004e1b26b01e47}\label{class_player_controller_a2de6872ee0710f0969004e1b26b01e47}} 
+bool {\bfseries test\+Restart}
+\item 
+\mbox{\Hypertarget{class_player_controller_affbbdfb14b0f101485d4dc1a54883f38}\label{class_player_controller_affbbdfb14b0f101485d4dc1a54883f38}} 
+bool {\bfseries test\+Power\+Up}
+\item 
+\mbox{\Hypertarget{class_player_controller_aa8cf3b4a76e12592ce5b52bf5a6dae35}\label{class_player_controller_aa8cf3b4a76e12592ce5b52bf5a6dae35}} 
+bool {\bfseries test\+Power\+Down}
+\item 
+\mbox{\Hypertarget{class_player_controller_aa95666d7ebdc47342a0fe58a8c58d846}\label{class_player_controller_aa95666d7ebdc47342a0fe58a8c58d846}} 
+bool {\bfseries test\+Updates\+High\+Score}
+\item 
+\mbox{\Hypertarget{class_player_controller_a96474cb76d48047171329a05522f12a3}\label{class_player_controller_a96474cb76d48047171329a05522f12a3}} 
+bool {\bfseries test\+Game\+Over}
+\item 
+\mbox{\Hypertarget{class_player_controller_a40ca018dd43b840f93242df83148ee37}\label{class_player_controller_a40ca018dd43b840f93242df83148ee37}} 
+bool \mbox{\hyperlink{class_player_controller_a40ca018dd43b840f93242df83148ee37}{level\+Up}}
+\begin{DoxyCompactList}\small\item\em A flag that is true when a boss is defeated, telling the level controller to make everything more difficult. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Member Function Documentation}
@@ -64,6 +119,64 @@ Text \mbox{\hyperlink{class_player_controller_ad22c814018c51eab731676920276c38d}
 \begin{DoxyPostcond}{Postcondition}
 \+: updates game over text to \char`\"{}\+Game Over\char`\"{} which will be displayed in the UI ! 
 \end{DoxyPostcond}
+\mbox{\Hypertarget{class_player_controller_a9cb907e7cb020bfa04ef52f158aa6fcb}\label{class_player_controller_a9cb907e7cb020bfa04ef52f158aa6fcb}} 
+\index{PlayerController@{PlayerController}!OnTriggerEnter2D@{OnTriggerEnter2D}}
+\index{OnTriggerEnter2D@{OnTriggerEnter2D}!PlayerController@{PlayerController}}
+\subsubsection{\texorpdfstring{OnTriggerEnter2D()}{OnTriggerEnter2D()}}
+{\footnotesize\ttfamily void Player\+Controller.\+On\+Trigger\+Enter2D (\begin{DoxyParamCaption}\item[{Collider2D}]{collision }\end{DoxyParamCaption})}
+
+\begin{DoxyPrecond}{Precondition}
+\+: player hits another collider gameobject 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+\+: If the collision is with an ememy, decrements player lives 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parameters}
+{\em collision} & collider object the player comes into contact with ! \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_player_controller_a685b3e7478ec3431f858455832c45527}\label{class_player_controller_a685b3e7478ec3431f858455832c45527}} 
+\index{PlayerController@{PlayerController}!printHighScore@{printHighScore}}
+\index{printHighScore@{printHighScore}!PlayerController@{PlayerController}}
+\subsubsection{\texorpdfstring{printHighScore()}{printHighScore()}}
+{\footnotesize\ttfamily void Player\+Controller.\+print\+High\+Score (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyPrecond}{Precondition}
+\+: game is over 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+\+: determines high score and prints result to the screen. If it\textquotesingle{}s a new record, store the new high score ! 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_player_controller_a5d6e6be056b9cc9f2db7195e633bdd4c}\label{class_player_controller_a5d6e6be056b9cc9f2db7195e633bdd4c}} 
+\index{PlayerController@{PlayerController}!shotPowerDown@{shotPowerDown}}
+\index{shotPowerDown@{shotPowerDown}!PlayerController@{PlayerController}}
+\subsubsection{\texorpdfstring{shotPowerDown()}{shotPowerDown()}}
+{\footnotesize\ttfamily void Player\+Controller.\+shot\+Power\+Down (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyPrecond}{Precondition}
+\+: firerate power up has lived its life and time is up 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+\+: resets fire rate and shot\+Powered\+Up flag ! 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_player_controller_acbd4651a9689e6e27538e149b0e3f2a9}\label{class_player_controller_acbd4651a9689e6e27538e149b0e3f2a9}} 
+\index{PlayerController@{PlayerController}!shotPowerUp@{shotPowerUp}}
+\index{shotPowerUp@{shotPowerUp}!PlayerController@{PlayerController}}
+\subsubsection{\texorpdfstring{shotPowerUp()}{shotPowerUp()}}
+{\footnotesize\ttfamily void Player\+Controller.\+shot\+Power\+Up (\begin{DoxyParamCaption}\item[{float}]{power\+Up\+Duration }\end{DoxyParamCaption})}
+
+\begin{DoxyPrecond}{Precondition}
+\+: player has picked up rate of fire powerup 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+\+: fire rate is doubled and power\+Down\+Time is set, shot\+Powered\+Up flag is set 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parameters}
+{\em power\+Up\+Duration} & -\/ length of time (in seconds) for the power up to last ! \\
+\hline
+\end{DoxyParams}
 
 
 \subsection{Member Data Documentation}

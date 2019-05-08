@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//! Handles the spawning of enemies in "waves", and sets public flags to indicate its status
 public class WaveBehavior : MonoBehaviour
 {
 

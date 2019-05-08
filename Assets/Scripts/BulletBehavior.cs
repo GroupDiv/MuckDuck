@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//! Describes the behvaior of the bullets shot by the player
 public class BulletBehavior : MonoBehaviour
 {
     //! To set speed of bullet from unity editor

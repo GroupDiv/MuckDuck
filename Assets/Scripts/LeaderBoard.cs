@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//! Controls setting/retreiving high score from PlayerPrefs file
 public class LeaderBoard : MonoBehaviour
 {
     //! The high score to be retreived/updated if necessary

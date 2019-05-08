@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System;
 
+//! The longest script - describes player input and duck behavior.  Also manages score and other UI components.
 public class PlayerController : MonoBehaviour {
 
     //! speed is a multiplier to movement, because it is a public variable it can be changed without  recompiling

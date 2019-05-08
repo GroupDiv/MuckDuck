@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//! Holds the shake animation and applies it to the enemy objects
 public class ShakeBehavior : MonoBehaviour
 {
 

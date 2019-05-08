@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-
+//! The script that maintains difficulty and spawning, and updates accordingly each level
 public class LevelController : MonoBehaviour
 {
     //! The object that manages spawning smaller bees

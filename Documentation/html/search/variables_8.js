@@ -1,10 +1,11 @@
 var searchData=
 [
-  ['score',['score',['../class_player_controller.html#ac4f30954818a6c7d0e344721a0342fec',1,'PlayerController']]],
-  ['scoretext',['scoreText',['../class_player_controller.html#a8f1361a4354591db4e79c4e6609e0a88',1,'PlayerController']]],
-  ['shakeanimator',['shakeAnimator',['../class_shake_behavior.html#aae508c1977572a978bd931512057da10',1,'ShakeBehavior']]],
-  ['spawnvalues',['spawnValues',['../class_wave_behavior.html#ae26807be7d4406478efc4886aa610189',1,'WaveBehavior']]],
-  ['spawnwait',['spawnWait',['../class_wave_behavior.html#a401c9221c61cc6b50bc1d538b5365555',1,'WaveBehavior']]],
-  ['speed',['speed',['../class_bullet_behavior.html#a96bc765df5aeef30e70dc9f37f262085',1,'BulletBehavior.speed()'],['../class_enemy_behavior.html#a1c7f38d162cec582d736b2b7d7d0ac6b',1,'EnemyBehavior.speed()'],['../class_player_controller.html#a0928605583f0563cd84fe43119d336ec',1,'PlayerController.speed()']]],
-  ['startwait',['startWait',['../class_wave_behavior.html#ae8cd1f5cb102b67698fd4043bf2314d2',1,'WaveBehavior']]]
+  ['pickupsound',['pickUpSound',['../class_shot_powerup_behavior.html#a0b865b0b14261d875a66d839358408b3',1,'ShotPowerupBehavior']]],
+  ['playbutton',['playButton',['../class_main_menu_behavior.html#a64731257ca447074b47712040ea77a58',1,'MainMenuBehavior']]],
+  ['player',['player',['../class_destroy_by_bullet.html#ac3225ab3c49d644840b85519aed90623',1,'DestroyByBullet']]],
+  ['playerobject',['playerObject',['../class_boss_spawn.html#acf908e160b37dbbae76a3bf8ee3ed6d4',1,'BossSpawn.playerObject()'],['../class_level_controller.html#a1999776383f5764862b235ee28106434',1,'LevelController.playerObject()'],['../class_wave_behavior.html#a97c0d24bc7af3d86d245206339a04d1f',1,'WaveBehavior.playerObject()']]],
+  ['powerupduration',['powerUpDuration',['../class_shot_powerup_behavior.html#aae016007c1f9cf0f78fec0278c853666',1,'ShotPowerupBehavior']]],
+  ['powerupobject',['powerUpObject',['../class_level_controller.html#a99291eb24ff2d4f118ae35100ba238d2',1,'LevelController']]],
+  ['powerupspawn',['powerUpSpawn',['../class_level_controller.html#a9d1d63a7deb1d44661820a73b806c9bf',1,'LevelController']]],
+  ['powerupthreshold',['powerUpThreshold',['../class_level_controller.html#a4cde6e70afc6404160a2950fa82d3569',1,'LevelController']]]
 ];

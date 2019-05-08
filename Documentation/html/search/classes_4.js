@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['shakebehavior',['ShakeBehavior',['../class_shake_behavior.html',1,'']]]
+  ['mainmenubehavior',['MainMenuBehavior',['../class_main_menu_behavior.html',1,'']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['wavebehavior',['WaveBehavior',['../class_wave_behavior.html',1,'']]]
+  ['playercontroller',['PlayerController',['../class_player_controller.html',1,'']]]
 ];

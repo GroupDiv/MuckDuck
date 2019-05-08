@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 
+//! Contains the boss's behavior, including movement, projectiles, and health management
 public class QueenBauss : MonoBehaviour
 {
     AudioSource audioData;
