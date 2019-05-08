@@ -1,5 +1,10 @@
 \hypertarget{class_boss_spawn}{}\section{Boss\+Spawn Class Reference}
 \label{class_boss_spawn}\index{BossSpawn@{BossSpawn}}
+
+
+Mostly just an object used to track the location in which the queen is spawned. The script is unused except for as a physical location in the editor.  
+
+
 Inheritance diagram for Boss\+Spawn\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,26 +14,86 @@ Inheritance diagram for Boss\+Spawn\+:\begin{figure}[H]
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_boss_spawn_a5fde10547d9cd6309ee29a636a042081}\label{class_boss_spawn_a5fde10547d9cd6309ee29a636a042081}} 
 Game\+Object \mbox{\hyperlink{class_boss_spawn_a5fde10547d9cd6309ee29a636a042081}{hazard}}
 \begin{DoxyCompactList}\small\item\em The boss object to be spawned. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_boss_spawn_a86c641a6ea5754b9160ae4c0a0a8668d}\label{class_boss_spawn_a86c641a6ea5754b9160ae4c0a0a8668d}} 
 Vector2 \mbox{\hyperlink{class_boss_spawn_a86c641a6ea5754b9160ae4c0a0a8668d}{spawn\+Values}}
 \begin{DoxyCompactList}\small\item\em The range from the object from which the hazards will spawn -- U\+N\+U\+S\+ED -\/TB. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_boss_spawn_aa09381d8f6025a408b13c7df16568ff0}\label{class_boss_spawn_aa09381d8f6025a408b13c7df16568ff0}} 
 float \mbox{\hyperlink{class_boss_spawn_aa09381d8f6025a408b13c7df16568ff0}{spawn\+Wait}}
 \begin{DoxyCompactList}\small\item\em How long to wait between spawns -- U\+N\+U\+S\+U\+ED -\/TB. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_boss_spawn_a96261ab1bd409caeb45cd8d59426b518}\label{class_boss_spawn_a96261ab1bd409caeb45cd8d59426b518}} 
 float \mbox{\hyperlink{class_boss_spawn_a96261ab1bd409caeb45cd8d59426b518}{start\+Wait}}
 \begin{DoxyCompactList}\small\item\em How long to wait at the begining of the wave\textquotesingle{}s life -- U\+N\+U\+S\+ED -\/TB. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_boss_spawn_a8a35320ba7ac1e86bf1c913647f8b09c}\label{class_boss_spawn_a8a35320ba7ac1e86bf1c913647f8b09c}} 
 float \mbox{\hyperlink{class_boss_spawn_a8a35320ba7ac1e86bf1c913647f8b09c}{wave\+Wait}}
 \begin{DoxyCompactList}\small\item\em How long to wait in between spawns -- U\+N\+U\+S\+U\+ED -\/TB. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_boss_spawn_acf908e160b37dbbae76a3bf8ee3ed6d4}\label{class_boss_spawn_acf908e160b37dbbae76a3bf8ee3ed6d4}} 
 Game\+Object \mbox{\hyperlink{class_boss_spawn_acf908e160b37dbbae76a3bf8ee3ed6d4}{player\+Object}}
 \begin{DoxyCompactList}\small\item\em A reference to the player object, for passing down to the enemies so they know who to follow -- U\+N\+U\+S\+ED -\/TB. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
+\subsection{Detailed Description}
+Mostly just an object used to track the location in which the queen is spawned. The script is unused except for as a physical location in the editor. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_boss_spawn_a5fde10547d9cd6309ee29a636a042081}\label{class_boss_spawn_a5fde10547d9cd6309ee29a636a042081}} 
+\index{BossSpawn@{BossSpawn}!hazard@{hazard}}
+\index{hazard@{hazard}!BossSpawn@{BossSpawn}}
+\subsubsection{\texorpdfstring{hazard}{hazard}}
+{\footnotesize\ttfamily Game\+Object Boss\+Spawn.\+hazard}
+
+
+
+The boss object to be spawned. 
+
+\mbox{\Hypertarget{class_boss_spawn_acf908e160b37dbbae76a3bf8ee3ed6d4}\label{class_boss_spawn_acf908e160b37dbbae76a3bf8ee3ed6d4}} 
+\index{BossSpawn@{BossSpawn}!playerObject@{playerObject}}
+\index{playerObject@{playerObject}!BossSpawn@{BossSpawn}}
+\subsubsection{\texorpdfstring{playerObject}{playerObject}}
+{\footnotesize\ttfamily Game\+Object Boss\+Spawn.\+player\+Object}
+
+
+
+A reference to the player object, for passing down to the enemies so they know who to follow -- U\+N\+U\+S\+ED -\/TB. 
+
+\mbox{\Hypertarget{class_boss_spawn_a86c641a6ea5754b9160ae4c0a0a8668d}\label{class_boss_spawn_a86c641a6ea5754b9160ae4c0a0a8668d}} 
+\index{BossSpawn@{BossSpawn}!spawnValues@{spawnValues}}
+\index{spawnValues@{spawnValues}!BossSpawn@{BossSpawn}}
+\subsubsection{\texorpdfstring{spawnValues}{spawnValues}}
+{\footnotesize\ttfamily Vector2 Boss\+Spawn.\+spawn\+Values}
+
+
+
+The range from the object from which the hazards will spawn -- U\+N\+U\+S\+ED -\/TB. 
+
+\mbox{\Hypertarget{class_boss_spawn_aa09381d8f6025a408b13c7df16568ff0}\label{class_boss_spawn_aa09381d8f6025a408b13c7df16568ff0}} 
+\index{BossSpawn@{BossSpawn}!spawnWait@{spawnWait}}
+\index{spawnWait@{spawnWait}!BossSpawn@{BossSpawn}}
+\subsubsection{\texorpdfstring{spawnWait}{spawnWait}}
+{\footnotesize\ttfamily float Boss\+Spawn.\+spawn\+Wait}
+
+
+
+How long to wait between spawns -- U\+N\+U\+S\+U\+ED -\/TB. 
+
+\mbox{\Hypertarget{class_boss_spawn_a96261ab1bd409caeb45cd8d59426b518}\label{class_boss_spawn_a96261ab1bd409caeb45cd8d59426b518}} 
+\index{BossSpawn@{BossSpawn}!startWait@{startWait}}
+\index{startWait@{startWait}!BossSpawn@{BossSpawn}}
+\subsubsection{\texorpdfstring{startWait}{startWait}}
+{\footnotesize\ttfamily float Boss\+Spawn.\+start\+Wait}
+
+
+
+How long to wait at the begining of the wave\textquotesingle{}s life -- U\+N\+U\+S\+ED -\/TB. 
+
+\mbox{\Hypertarget{class_boss_spawn_a8a35320ba7ac1e86bf1c913647f8b09c}\label{class_boss_spawn_a8a35320ba7ac1e86bf1c913647f8b09c}} 
+\index{BossSpawn@{BossSpawn}!waveWait@{waveWait}}
+\index{waveWait@{waveWait}!BossSpawn@{BossSpawn}}
+\subsubsection{\texorpdfstring{waveWait}{waveWait}}
+{\footnotesize\ttfamily float Boss\+Spawn.\+wave\+Wait}
+
+
+
+How long to wait in between spawns -- U\+N\+U\+S\+U\+ED -\/TB. 
+
+
+
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-Assets/\+Scripts/Boss\+Spawn.\+cs\end{DoxyCompactItemize}
+Assets/\+Scripts/\mbox{\hyperlink{_boss_spawn_8cs}{Boss\+Spawn.\+cs}}\end{DoxyCompactItemize}

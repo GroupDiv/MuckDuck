@@ -1,5 +1,10 @@
 \hypertarget{class_player_controller}{}\section{Player\+Controller Class Reference}
 \label{class_player_controller}\index{PlayerController@{PlayerController}}
+
+
+The longest script -\/ describes player input and duck behavior. Also manages score and other UI components.  
+
+
 Inheritance diagram for Player\+Controller\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,8 +14,7 @@ Inheritance diagram for Player\+Controller\+:\begin{figure}[H]
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_player_controller_a201205acdeda463736f868b6f20f05a3}\label{class_player_controller_a201205acdeda463736f868b6f20f05a3}} 
-void {\bfseries update\+Level\+String} (int new\+Level)
+void \mbox{\hyperlink{class_player_controller_a201205acdeda463736f868b6f20f05a3}{update\+Level\+String}} (int new\+Level)
 \item 
 void \mbox{\hyperlink{class_player_controller_a9cb907e7cb020bfa04ef52f158aa6fcb}{On\+Trigger\+Enter2D}} (Collider2D collision)
 \item 
@@ -25,86 +29,64 @@ void \mbox{\hyperlink{class_player_controller_a5d6e6be056b9cc9f2db7195e633bdd4c}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_player_controller_a0928605583f0563cd84fe43119d336ec}\label{class_player_controller_a0928605583f0563cd84fe43119d336ec}} 
 float \mbox{\hyperlink{class_player_controller_a0928605583f0563cd84fe43119d336ec}{speed}}
 \begin{DoxyCompactList}\small\item\em speed is a multiplier to movement, because it is a public variable it can be changed without recompiling \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{class_player_controller_aec1e8f25c69ea198fe38f965307437a4}{fire\+Rate}}
 \item 
 float \mbox{\hyperlink{class_player_controller_a22510e0221512fb7fe06808912fa1a55}{friction}}
 \item 
-\mbox{\Hypertarget{class_player_controller_a373cbc1dfe44cb185a84422b4a56bf9b}\label{class_player_controller_a373cbc1dfe44cb185a84422b4a56bf9b}} 
 float \mbox{\hyperlink{class_player_controller_a373cbc1dfe44cb185a84422b4a56bf9b}{x\+Min}}
 \begin{DoxyCompactList}\small\item\em These variables store the limits on how far the duck can travel. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_player_controller_a47d9b8f67993f190c8f170bc3f134ee6}\label{class_player_controller_a47d9b8f67993f190c8f170bc3f134ee6}} 
 Game\+Object \mbox{\hyperlink{class_player_controller_a47d9b8f67993f190c8f170bc3f134ee6}{bullet}}
 \begin{DoxyCompactList}\small\item\em Defines which bullet object the duck will use to shoot. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_player_controller_a45263a41dbdfe88658e0b58196aeba98}\label{class_player_controller_a45263a41dbdfe88658e0b58196aeba98}} 
 Transform \mbox{\hyperlink{class_player_controller_a45263a41dbdfe88658e0b58196aeba98}{bullet\+Spawn}}
 \begin{DoxyCompactList}\small\item\em A reference to the object where the bullets spawn (this is always relative to player position) \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_player_controller_a8f1361a4354591db4e79c4e6609e0a88}\label{class_player_controller_a8f1361a4354591db4e79c4e6609e0a88}} 
 Text \mbox{\hyperlink{class_player_controller_a8f1361a4354591db4e79c4e6609e0a88}{score\+Text}}
 \begin{DoxyCompactList}\small\item\em a Text variable to store the score string \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_player_controller_ac4f30954818a6c7d0e344721a0342fec}\label{class_player_controller_ac4f30954818a6c7d0e344721a0342fec}} 
 int \mbox{\hyperlink{class_player_controller_ac4f30954818a6c7d0e344721a0342fec}{score}}
 \begin{DoxyCompactList}\small\item\em keeps track of actual score value \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_player_controller_a4693ac0aaa4ce93171a7b58a4b7d8117}\label{class_player_controller_a4693ac0aaa4ce93171a7b58a4b7d8117}} 
 Text \mbox{\hyperlink{class_player_controller_a4693ac0aaa4ce93171a7b58a4b7d8117}{lives\+Text}}
 \begin{DoxyCompactList}\small\item\em a Text variable to store the lives string \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_player_controller_a011e869f64df3168d919fa6f41d58614}\label{class_player_controller_a011e869f64df3168d919fa6f41d58614}} 
 int \mbox{\hyperlink{class_player_controller_a011e869f64df3168d919fa6f41d58614}{lives}}
 \begin{DoxyCompactList}\small\item\em keeps track of lives remaining value \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_player_controller_a6206943367033fb9307accaf27f9a1ef}\label{class_player_controller_a6206943367033fb9307accaf27f9a1ef}} 
 Audio\+Clip \mbox{\hyperlink{class_player_controller_a6206943367033fb9307accaf27f9a1ef}{game\+Clip}}
 \begin{DoxyCompactList}\small\item\em The audio played when the player is hit. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_player_controller_a5dacc07bd5240b4d30337caeb89d6e02}\label{class_player_controller_a5dacc07bd5240b4d30337caeb89d6e02}} 
 Text \mbox{\hyperlink{class_player_controller_a5dacc07bd5240b4d30337caeb89d6e02}{restart\+Text}}
 \begin{DoxyCompactList}\small\item\em The restart text displayed after a game over. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_player_controller_ad22c814018c51eab731676920276c38d}\label{class_player_controller_ad22c814018c51eab731676920276c38d}} 
 Text \mbox{\hyperlink{class_player_controller_ad22c814018c51eab731676920276c38d}{game\+Over\+Text}}
 \begin{DoxyCompactList}\small\item\em The game over text displayed after a game over. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_player_controller_a5a16f1a71fa4ce1002d8aebbcec0514b}\label{class_player_controller_a5a16f1a71fa4ce1002d8aebbcec0514b}} 
 Text \mbox{\hyperlink{class_player_controller_a5a16f1a71fa4ce1002d8aebbcec0514b}{high\+Score\+Text}}
 \begin{DoxyCompactList}\small\item\em The high score text displayed after a game over. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_player_controller_aa9db6bb729491dad366bc5237b2a4b2e}\label{class_player_controller_aa9db6bb729491dad366bc5237b2a4b2e}} 
 Text \mbox{\hyperlink{class_player_controller_aa9db6bb729491dad366bc5237b2a4b2e}{level\+Text}}
 \begin{DoxyCompactList}\small\item\em The text that displays the current level. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_player_controller_a2043c4af0099d9ef9b126794cdb08363}\label{class_player_controller_a2043c4af0099d9ef9b126794cdb08363}} 
 bool \mbox{\hyperlink{class_player_controller_a2043c4af0099d9ef9b126794cdb08363}{game\+Over}}
 \begin{DoxyCompactList}\small\item\em True if game over, false otherwise. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_player_controller_a5009280ff718bf792e6c49be57d2d961}\label{class_player_controller_a5009280ff718bf792e6c49be57d2d961}} 
 bool \mbox{\hyperlink{class_player_controller_a5009280ff718bf792e6c49be57d2d961}{restart}}
 \begin{DoxyCompactList}\small\item\em True if the player restarts, resets to false once the game is restarted. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_player_controller_adba61318804b2e3f908c6e3290ca755d}\label{class_player_controller_adba61318804b2e3f908c6e3290ca755d}} 
-int {\bfseries high\+Score} = 0
+int \mbox{\hyperlink{class_player_controller_adba61318804b2e3f908c6e3290ca755d}{high\+Score}} = 0
 \item 
-\mbox{\Hypertarget{class_player_controller_a72b14fadfbe633bb3ba317b2a59c557e}\label{class_player_controller_a72b14fadfbe633bb3ba317b2a59c557e}} 
 int \mbox{\hyperlink{class_player_controller_a72b14fadfbe633bb3ba317b2a59c557e}{level}}
 \begin{DoxyCompactList}\small\item\em keeps track of current level \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_player_controller_a99608cc786dba21c5c1dc22f4cef1327}\label{class_player_controller_a99608cc786dba21c5c1dc22f4cef1327}} 
 bool \mbox{\hyperlink{class_player_controller_a99608cc786dba21c5c1dc22f4cef1327}{test\+Mode}} = false
 \begin{DoxyCompactList}\small\item\em Testing variables. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_player_controller_a9dcb593b13e3fd9145f5d749a0931eb0}\label{class_player_controller_a9dcb593b13e3fd9145f5d749a0931eb0}} 
-bool {\bfseries test\+Lives}
+bool \mbox{\hyperlink{class_player_controller_a9dcb593b13e3fd9145f5d749a0931eb0}{test\+Lives}}
 \item 
-\mbox{\Hypertarget{class_player_controller_a2de6872ee0710f0969004e1b26b01e47}\label{class_player_controller_a2de6872ee0710f0969004e1b26b01e47}} 
-bool {\bfseries test\+Restart}
+bool \mbox{\hyperlink{class_player_controller_a2de6872ee0710f0969004e1b26b01e47}{test\+Restart}}
 \item 
-\mbox{\Hypertarget{class_player_controller_affbbdfb14b0f101485d4dc1a54883f38}\label{class_player_controller_affbbdfb14b0f101485d4dc1a54883f38}} 
-bool {\bfseries test\+Power\+Up}
+bool \mbox{\hyperlink{class_player_controller_affbbdfb14b0f101485d4dc1a54883f38}{test\+Power\+Up}}
 \item 
-\mbox{\Hypertarget{class_player_controller_aa8cf3b4a76e12592ce5b52bf5a6dae35}\label{class_player_controller_aa8cf3b4a76e12592ce5b52bf5a6dae35}} 
-bool {\bfseries test\+Power\+Down}
+bool \mbox{\hyperlink{class_player_controller_aa8cf3b4a76e12592ce5b52bf5a6dae35}{test\+Power\+Down}}
 \item 
-\mbox{\Hypertarget{class_player_controller_aa95666d7ebdc47342a0fe58a8c58d846}\label{class_player_controller_aa95666d7ebdc47342a0fe58a8c58d846}} 
-bool {\bfseries test\+Updates\+High\+Score}
+bool \mbox{\hyperlink{class_player_controller_aa95666d7ebdc47342a0fe58a8c58d846}{test\+Updates\+High\+Score}}
 \item 
-\mbox{\Hypertarget{class_player_controller_a96474cb76d48047171329a05522f12a3}\label{class_player_controller_a96474cb76d48047171329a05522f12a3}} 
-bool {\bfseries test\+Game\+Over}
+bool \mbox{\hyperlink{class_player_controller_a96474cb76d48047171329a05522f12a3}{test\+Game\+Over}}
 \item 
-\mbox{\Hypertarget{class_player_controller_a40ca018dd43b840f93242df83148ee37}\label{class_player_controller_a40ca018dd43b840f93242df83148ee37}} 
 bool \mbox{\hyperlink{class_player_controller_a40ca018dd43b840f93242df83148ee37}{level\+Up}}
 \begin{DoxyCompactList}\small\item\em A flag that is true when a boss is defeated, telling the level controller to make everything more difficult. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\subsection{Detailed Description}
+The longest script -\/ describes player input and duck behavior. Also manages score and other UI components. 
 
 \subsection{Member Function Documentation}
 \mbox{\Hypertarget{class_player_controller_a022c877a529497a8fdb3fcf7e21cf090}\label{class_player_controller_a022c877a529497a8fdb3fcf7e21cf090}} 
@@ -177,9 +159,35 @@ bool \mbox{\hyperlink{class_player_controller_a40ca018dd43b840f93242df83148ee37}
 {\em power\+Up\+Duration} & -\/ length of time (in seconds) for the power up to last ! \\
 \hline
 \end{DoxyParams}
+\mbox{\Hypertarget{class_player_controller_a201205acdeda463736f868b6f20f05a3}\label{class_player_controller_a201205acdeda463736f868b6f20f05a3}} 
+\index{PlayerController@{PlayerController}!updateLevelString@{updateLevelString}}
+\index{updateLevelString@{updateLevelString}!PlayerController@{PlayerController}}
+\subsubsection{\texorpdfstring{updateLevelString()}{updateLevelString()}}
+{\footnotesize\ttfamily void Player\+Controller.\+update\+Level\+String (\begin{DoxyParamCaption}\item[{int}]{new\+Level }\end{DoxyParamCaption})}
+
 
 
 \subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_player_controller_a47d9b8f67993f190c8f170bc3f134ee6}\label{class_player_controller_a47d9b8f67993f190c8f170bc3f134ee6}} 
+\index{PlayerController@{PlayerController}!bullet@{bullet}}
+\index{bullet@{bullet}!PlayerController@{PlayerController}}
+\subsubsection{\texorpdfstring{bullet}{bullet}}
+{\footnotesize\ttfamily Game\+Object Player\+Controller.\+bullet}
+
+
+
+Defines which bullet object the duck will use to shoot. 
+
+\mbox{\Hypertarget{class_player_controller_a45263a41dbdfe88658e0b58196aeba98}\label{class_player_controller_a45263a41dbdfe88658e0b58196aeba98}} 
+\index{PlayerController@{PlayerController}!bulletSpawn@{bulletSpawn}}
+\index{bulletSpawn@{bulletSpawn}!PlayerController@{PlayerController}}
+\subsubsection{\texorpdfstring{bulletSpawn}{bulletSpawn}}
+{\footnotesize\ttfamily Transform Player\+Controller.\+bullet\+Spawn}
+
+
+
+A reference to the object where the bullets spawn (this is always relative to player position) 
+
 \mbox{\Hypertarget{class_player_controller_aec1e8f25c69ea198fe38f965307437a4}\label{class_player_controller_aec1e8f25c69ea198fe38f965307437a4}} 
 \index{PlayerController@{PlayerController}!fireRate@{fireRate}}
 \index{fireRate@{fireRate}!PlayerController@{PlayerController}}
@@ -192,8 +200,210 @@ fire\+Rate is how fast the gun will fire. next\+Fire is updated every time the g
 \subsubsection{\texorpdfstring{friction}{friction}}
 {\footnotesize\ttfamily float Player\+Controller.\+friction}
 
-Like speed, friction determines how fast the duck slows down, and it is adjustable on the fly. This may need a better implementation ! 
+Like speed, friction determines how fast the duck slows down, and it is adjustable on the fly. This may need a better implementation ! \mbox{\Hypertarget{class_player_controller_a6206943367033fb9307accaf27f9a1ef}\label{class_player_controller_a6206943367033fb9307accaf27f9a1ef}} 
+\index{PlayerController@{PlayerController}!gameClip@{gameClip}}
+\index{gameClip@{gameClip}!PlayerController@{PlayerController}}
+\subsubsection{\texorpdfstring{gameClip}{gameClip}}
+{\footnotesize\ttfamily Audio\+Clip Player\+Controller.\+game\+Clip}
+
+
+
+The audio played when the player is hit. 
+
+\mbox{\Hypertarget{class_player_controller_a2043c4af0099d9ef9b126794cdb08363}\label{class_player_controller_a2043c4af0099d9ef9b126794cdb08363}} 
+\index{PlayerController@{PlayerController}!gameOver@{gameOver}}
+\index{gameOver@{gameOver}!PlayerController@{PlayerController}}
+\subsubsection{\texorpdfstring{gameOver}{gameOver}}
+{\footnotesize\ttfamily bool Player\+Controller.\+game\+Over}
+
+
+
+True if game over, false otherwise. 
+
+\mbox{\Hypertarget{class_player_controller_ad22c814018c51eab731676920276c38d}\label{class_player_controller_ad22c814018c51eab731676920276c38d}} 
+\index{PlayerController@{PlayerController}!gameOverText@{gameOverText}}
+\index{gameOverText@{gameOverText}!PlayerController@{PlayerController}}
+\subsubsection{\texorpdfstring{gameOverText}{gameOverText}}
+{\footnotesize\ttfamily Text Player\+Controller.\+game\+Over\+Text}
+
+
+
+The game over text displayed after a game over. 
+
+\mbox{\Hypertarget{class_player_controller_adba61318804b2e3f908c6e3290ca755d}\label{class_player_controller_adba61318804b2e3f908c6e3290ca755d}} 
+\index{PlayerController@{PlayerController}!highScore@{highScore}}
+\index{highScore@{highScore}!PlayerController@{PlayerController}}
+\subsubsection{\texorpdfstring{highScore}{highScore}}
+{\footnotesize\ttfamily int Player\+Controller.\+high\+Score = 0}
+
+\mbox{\Hypertarget{class_player_controller_a5a16f1a71fa4ce1002d8aebbcec0514b}\label{class_player_controller_a5a16f1a71fa4ce1002d8aebbcec0514b}} 
+\index{PlayerController@{PlayerController}!highScoreText@{highScoreText}}
+\index{highScoreText@{highScoreText}!PlayerController@{PlayerController}}
+\subsubsection{\texorpdfstring{highScoreText}{highScoreText}}
+{\footnotesize\ttfamily Text Player\+Controller.\+high\+Score\+Text}
+
+
+
+The high score text displayed after a game over. 
+
+\mbox{\Hypertarget{class_player_controller_a72b14fadfbe633bb3ba317b2a59c557e}\label{class_player_controller_a72b14fadfbe633bb3ba317b2a59c557e}} 
+\index{PlayerController@{PlayerController}!level@{level}}
+\index{level@{level}!PlayerController@{PlayerController}}
+\subsubsection{\texorpdfstring{level}{level}}
+{\footnotesize\ttfamily int Player\+Controller.\+level}
+
+
+
+keeps track of current level 
+
+\mbox{\Hypertarget{class_player_controller_aa9db6bb729491dad366bc5237b2a4b2e}\label{class_player_controller_aa9db6bb729491dad366bc5237b2a4b2e}} 
+\index{PlayerController@{PlayerController}!levelText@{levelText}}
+\index{levelText@{levelText}!PlayerController@{PlayerController}}
+\subsubsection{\texorpdfstring{levelText}{levelText}}
+{\footnotesize\ttfamily Text Player\+Controller.\+level\+Text}
+
+
+
+The text that displays the current level. 
+
+\mbox{\Hypertarget{class_player_controller_a40ca018dd43b840f93242df83148ee37}\label{class_player_controller_a40ca018dd43b840f93242df83148ee37}} 
+\index{PlayerController@{PlayerController}!levelUp@{levelUp}}
+\index{levelUp@{levelUp}!PlayerController@{PlayerController}}
+\subsubsection{\texorpdfstring{levelUp}{levelUp}}
+{\footnotesize\ttfamily bool Player\+Controller.\+level\+Up}
+
+
+
+A flag that is true when a boss is defeated, telling the level controller to make everything more difficult. 
+
+\mbox{\Hypertarget{class_player_controller_a011e869f64df3168d919fa6f41d58614}\label{class_player_controller_a011e869f64df3168d919fa6f41d58614}} 
+\index{PlayerController@{PlayerController}!lives@{lives}}
+\index{lives@{lives}!PlayerController@{PlayerController}}
+\subsubsection{\texorpdfstring{lives}{lives}}
+{\footnotesize\ttfamily int Player\+Controller.\+lives}
+
+
+
+keeps track of lives remaining value 
+
+\mbox{\Hypertarget{class_player_controller_a4693ac0aaa4ce93171a7b58a4b7d8117}\label{class_player_controller_a4693ac0aaa4ce93171a7b58a4b7d8117}} 
+\index{PlayerController@{PlayerController}!livesText@{livesText}}
+\index{livesText@{livesText}!PlayerController@{PlayerController}}
+\subsubsection{\texorpdfstring{livesText}{livesText}}
+{\footnotesize\ttfamily Text Player\+Controller.\+lives\+Text}
+
+
+
+a Text variable to store the lives string 
+
+\mbox{\Hypertarget{class_player_controller_a5009280ff718bf792e6c49be57d2d961}\label{class_player_controller_a5009280ff718bf792e6c49be57d2d961}} 
+\index{PlayerController@{PlayerController}!restart@{restart}}
+\index{restart@{restart}!PlayerController@{PlayerController}}
+\subsubsection{\texorpdfstring{restart}{restart}}
+{\footnotesize\ttfamily bool Player\+Controller.\+restart}
+
+
+
+True if the player restarts, resets to false once the game is restarted. 
+
+\mbox{\Hypertarget{class_player_controller_a5dacc07bd5240b4d30337caeb89d6e02}\label{class_player_controller_a5dacc07bd5240b4d30337caeb89d6e02}} 
+\index{PlayerController@{PlayerController}!restartText@{restartText}}
+\index{restartText@{restartText}!PlayerController@{PlayerController}}
+\subsubsection{\texorpdfstring{restartText}{restartText}}
+{\footnotesize\ttfamily Text Player\+Controller.\+restart\+Text}
+
+
+
+The restart text displayed after a game over. 
+
+\mbox{\Hypertarget{class_player_controller_ac4f30954818a6c7d0e344721a0342fec}\label{class_player_controller_ac4f30954818a6c7d0e344721a0342fec}} 
+\index{PlayerController@{PlayerController}!score@{score}}
+\index{score@{score}!PlayerController@{PlayerController}}
+\subsubsection{\texorpdfstring{score}{score}}
+{\footnotesize\ttfamily int Player\+Controller.\+score}
+
+
+
+keeps track of actual score value 
+
+\mbox{\Hypertarget{class_player_controller_a8f1361a4354591db4e79c4e6609e0a88}\label{class_player_controller_a8f1361a4354591db4e79c4e6609e0a88}} 
+\index{PlayerController@{PlayerController}!scoreText@{scoreText}}
+\index{scoreText@{scoreText}!PlayerController@{PlayerController}}
+\subsubsection{\texorpdfstring{scoreText}{scoreText}}
+{\footnotesize\ttfamily Text Player\+Controller.\+score\+Text}
+
+
+
+a Text variable to store the score string 
+
+\mbox{\Hypertarget{class_player_controller_a0928605583f0563cd84fe43119d336ec}\label{class_player_controller_a0928605583f0563cd84fe43119d336ec}} 
+\index{PlayerController@{PlayerController}!speed@{speed}}
+\index{speed@{speed}!PlayerController@{PlayerController}}
+\subsubsection{\texorpdfstring{speed}{speed}}
+{\footnotesize\ttfamily float Player\+Controller.\+speed}
+
+
+
+speed is a multiplier to movement, because it is a public variable it can be changed without recompiling 
+
+\mbox{\Hypertarget{class_player_controller_a96474cb76d48047171329a05522f12a3}\label{class_player_controller_a96474cb76d48047171329a05522f12a3}} 
+\index{PlayerController@{PlayerController}!testGameOver@{testGameOver}}
+\index{testGameOver@{testGameOver}!PlayerController@{PlayerController}}
+\subsubsection{\texorpdfstring{testGameOver}{testGameOver}}
+{\footnotesize\ttfamily bool Player\+Controller.\+test\+Game\+Over}
+
+\mbox{\Hypertarget{class_player_controller_a9dcb593b13e3fd9145f5d749a0931eb0}\label{class_player_controller_a9dcb593b13e3fd9145f5d749a0931eb0}} 
+\index{PlayerController@{PlayerController}!testLives@{testLives}}
+\index{testLives@{testLives}!PlayerController@{PlayerController}}
+\subsubsection{\texorpdfstring{testLives}{testLives}}
+{\footnotesize\ttfamily bool Player\+Controller.\+test\+Lives}
+
+\mbox{\Hypertarget{class_player_controller_a99608cc786dba21c5c1dc22f4cef1327}\label{class_player_controller_a99608cc786dba21c5c1dc22f4cef1327}} 
+\index{PlayerController@{PlayerController}!testMode@{testMode}}
+\index{testMode@{testMode}!PlayerController@{PlayerController}}
+\subsubsection{\texorpdfstring{testMode}{testMode}}
+{\footnotesize\ttfamily bool Player\+Controller.\+test\+Mode = false}
+
+
+
+Testing variables. 
+
+\mbox{\Hypertarget{class_player_controller_aa8cf3b4a76e12592ce5b52bf5a6dae35}\label{class_player_controller_aa8cf3b4a76e12592ce5b52bf5a6dae35}} 
+\index{PlayerController@{PlayerController}!testPowerDown@{testPowerDown}}
+\index{testPowerDown@{testPowerDown}!PlayerController@{PlayerController}}
+\subsubsection{\texorpdfstring{testPowerDown}{testPowerDown}}
+{\footnotesize\ttfamily bool Player\+Controller.\+test\+Power\+Down}
+
+\mbox{\Hypertarget{class_player_controller_affbbdfb14b0f101485d4dc1a54883f38}\label{class_player_controller_affbbdfb14b0f101485d4dc1a54883f38}} 
+\index{PlayerController@{PlayerController}!testPowerUp@{testPowerUp}}
+\index{testPowerUp@{testPowerUp}!PlayerController@{PlayerController}}
+\subsubsection{\texorpdfstring{testPowerUp}{testPowerUp}}
+{\footnotesize\ttfamily bool Player\+Controller.\+test\+Power\+Up}
+
+\mbox{\Hypertarget{class_player_controller_a2de6872ee0710f0969004e1b26b01e47}\label{class_player_controller_a2de6872ee0710f0969004e1b26b01e47}} 
+\index{PlayerController@{PlayerController}!testRestart@{testRestart}}
+\index{testRestart@{testRestart}!PlayerController@{PlayerController}}
+\subsubsection{\texorpdfstring{testRestart}{testRestart}}
+{\footnotesize\ttfamily bool Player\+Controller.\+test\+Restart}
+
+\mbox{\Hypertarget{class_player_controller_aa95666d7ebdc47342a0fe58a8c58d846}\label{class_player_controller_aa95666d7ebdc47342a0fe58a8c58d846}} 
+\index{PlayerController@{PlayerController}!testUpdatesHighScore@{testUpdatesHighScore}}
+\index{testUpdatesHighScore@{testUpdatesHighScore}!PlayerController@{PlayerController}}
+\subsubsection{\texorpdfstring{testUpdatesHighScore}{testUpdatesHighScore}}
+{\footnotesize\ttfamily bool Player\+Controller.\+test\+Updates\+High\+Score}
+
+\mbox{\Hypertarget{class_player_controller_a373cbc1dfe44cb185a84422b4a56bf9b}\label{class_player_controller_a373cbc1dfe44cb185a84422b4a56bf9b}} 
+\index{PlayerController@{PlayerController}!xMin@{xMin}}
+\index{xMin@{xMin}!PlayerController@{PlayerController}}
+\subsubsection{\texorpdfstring{xMin}{xMin}}
+{\footnotesize\ttfamily float Player\+Controller.\+x\+Min}
+
+
+
+These variables store the limits on how far the duck can travel. 
+
+
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-Assets/\+Scripts/Player\+Controller.\+cs\end{DoxyCompactItemize}
+Assets/\+Scripts/\mbox{\hyperlink{_player_controller_8cs}{Player\+Controller.\+cs}}\end{DoxyCompactItemize}

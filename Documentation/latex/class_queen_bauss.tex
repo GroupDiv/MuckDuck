@@ -1,5 +1,10 @@
 \hypertarget{class_queen_bauss}{}\section{Queen\+Bauss Class Reference}
 \label{class_queen_bauss}\index{QueenBauss@{QueenBauss}}
+
+
+Contains the boss\textquotesingle{}s behavior, including movement, projectiles, and health management.  
+
+
 Inheritance diagram for Queen\+Bauss\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -14,35 +19,30 @@ void \mbox{\hyperlink{class_queen_bauss_a40fa065ef12d2fa9e9483c271d3e75a6}{Recie
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_queen_bauss_a11c5f07cee01d4587cad453edbb32fa3}\label{class_queen_bauss_a11c5f07cee01d4587cad453edbb32fa3}} 
 float \mbox{\hyperlink{class_queen_bauss_a11c5f07cee01d4587cad453edbb32fa3}{speed}}
 \begin{DoxyCompactList}\small\item\em Boss speed settable from Unity editor. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_queen_bauss_a738d137bcf9a273c67a1b122c6f28822}\label{class_queen_bauss_a738d137bcf9a273c67a1b122c6f28822}} 
 float \mbox{\hyperlink{class_queen_bauss_a738d137bcf9a273c67a1b122c6f28822}{boundary}}
 \begin{DoxyCompactList}\small\item\em How far (horizontally) the boss can move from its origin. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{class_queen_bauss_a4b5e0b4ec9040a158c5fafca921593e2}{health}}
 \begin{DoxyCompactList}\small\item\em The class the contains the animation to apply camera shake behavior to. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_queen_bauss_a3b035e20519b15a46b1cfa28a3300d1a}\label{class_queen_bauss_a3b035e20519b15a46b1cfa28a3300d1a}} 
 Game\+Object \mbox{\hyperlink{class_queen_bauss_a3b035e20519b15a46b1cfa28a3300d1a}{bullet}}
 \begin{DoxyCompactList}\small\item\em Defines which bullet object the boss will use to shoot. (this will be different from player\textquotesingle{}s bullets) \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_queen_bauss_a5c17fa20ec6761760b7651176a1c1e7e}\label{class_queen_bauss_a5c17fa20ec6761760b7651176a1c1e7e}} 
 Transform \mbox{\hyperlink{class_queen_bauss_a5c17fa20ec6761760b7651176a1c1e7e}{bullet\+Spawn}}
 \begin{DoxyCompactList}\small\item\em A reference to the object where the bullets spawn (this is always relative to boss position, as it is a child prefab of the boss) \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{class_queen_bauss_a493ca87e362739138d3a758f267c2f9c}{fire\+Rate}}
 \item 
-\mbox{\Hypertarget{class_queen_bauss_ab1eb1668c503a5ccef801c9d689f756f}\label{class_queen_bauss_ab1eb1668c503a5ccef801c9d689f756f}} 
 Audio\+Clip \mbox{\hyperlink{class_queen_bauss_ab1eb1668c503a5ccef801c9d689f756f}{boss\+Kill\+Sound}}
 \begin{DoxyCompactList}\small\item\em Sound that plays when the boss dies. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_queen_bauss_a6166e72e2c9d4056bffe09629f55c61f}\label{class_queen_bauss_a6166e72e2c9d4056bffe09629f55c61f}} 
 Audio\+Clip \mbox{\hyperlink{class_queen_bauss_a6166e72e2c9d4056bffe09629f55c61f}{boss\+Hit}}
 \begin{DoxyCompactList}\small\item\em Sound that plays when the boss is hit. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_queen_bauss_a63ad4d36e93462b57ae6de42ceb642ae}\label{class_queen_bauss_a63ad4d36e93462b57ae6de42ceb642ae}} 
 Audio\+Clip \mbox{\hyperlink{class_queen_bauss_a63ad4d36e93462b57ae6de42ceb642ae}{boss\+Enter}}
 \begin{DoxyCompactList}\small\item\em Sound that plays when the boss is spawned. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_queen_bauss_a9cff9aa86adc0ceccbd311bd007f5b5c}\label{class_queen_bauss_a9cff9aa86adc0ceccbd311bd007f5b5c}} 
 Audio\+Clip \mbox{\hyperlink{class_queen_bauss_a9cff9aa86adc0ceccbd311bd007f5b5c}{boss\+Shoot}}
 \begin{DoxyCompactList}\small\item\em Sound that plays when the boss fires. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\subsection{Detailed Description}
+Contains the boss\textquotesingle{}s behavior, including movement, projectiles, and health management. 
 
 \subsection{Member Function Documentation}
 \mbox{\Hypertarget{class_queen_bauss_a40fa065ef12d2fa9e9483c271d3e75a6}\label{class_queen_bauss_a40fa065ef12d2fa9e9483c271d3e75a6}} 
@@ -69,6 +69,76 @@ Audio\+Clip \mbox{\hyperlink{class_queen_bauss_a9cff9aa86adc0ceccbd311bd007f5b5c
 
 
 \subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_queen_bauss_a63ad4d36e93462b57ae6de42ceb642ae}\label{class_queen_bauss_a63ad4d36e93462b57ae6de42ceb642ae}} 
+\index{QueenBauss@{QueenBauss}!bossEnter@{bossEnter}}
+\index{bossEnter@{bossEnter}!QueenBauss@{QueenBauss}}
+\subsubsection{\texorpdfstring{bossEnter}{bossEnter}}
+{\footnotesize\ttfamily Audio\+Clip Queen\+Bauss.\+boss\+Enter}
+
+
+
+Sound that plays when the boss is spawned. 
+
+\mbox{\Hypertarget{class_queen_bauss_a6166e72e2c9d4056bffe09629f55c61f}\label{class_queen_bauss_a6166e72e2c9d4056bffe09629f55c61f}} 
+\index{QueenBauss@{QueenBauss}!bossHit@{bossHit}}
+\index{bossHit@{bossHit}!QueenBauss@{QueenBauss}}
+\subsubsection{\texorpdfstring{bossHit}{bossHit}}
+{\footnotesize\ttfamily Audio\+Clip Queen\+Bauss.\+boss\+Hit}
+
+
+
+Sound that plays when the boss is hit. 
+
+\mbox{\Hypertarget{class_queen_bauss_ab1eb1668c503a5ccef801c9d689f756f}\label{class_queen_bauss_ab1eb1668c503a5ccef801c9d689f756f}} 
+\index{QueenBauss@{QueenBauss}!bossKillSound@{bossKillSound}}
+\index{bossKillSound@{bossKillSound}!QueenBauss@{QueenBauss}}
+\subsubsection{\texorpdfstring{bossKillSound}{bossKillSound}}
+{\footnotesize\ttfamily Audio\+Clip Queen\+Bauss.\+boss\+Kill\+Sound}
+
+
+
+Sound that plays when the boss dies. 
+
+\mbox{\Hypertarget{class_queen_bauss_a9cff9aa86adc0ceccbd311bd007f5b5c}\label{class_queen_bauss_a9cff9aa86adc0ceccbd311bd007f5b5c}} 
+\index{QueenBauss@{QueenBauss}!bossShoot@{bossShoot}}
+\index{bossShoot@{bossShoot}!QueenBauss@{QueenBauss}}
+\subsubsection{\texorpdfstring{bossShoot}{bossShoot}}
+{\footnotesize\ttfamily Audio\+Clip Queen\+Bauss.\+boss\+Shoot}
+
+
+
+Sound that plays when the boss fires. 
+
+\mbox{\Hypertarget{class_queen_bauss_a738d137bcf9a273c67a1b122c6f28822}\label{class_queen_bauss_a738d137bcf9a273c67a1b122c6f28822}} 
+\index{QueenBauss@{QueenBauss}!boundary@{boundary}}
+\index{boundary@{boundary}!QueenBauss@{QueenBauss}}
+\subsubsection{\texorpdfstring{boundary}{boundary}}
+{\footnotesize\ttfamily float Queen\+Bauss.\+boundary}
+
+
+
+How far (horizontally) the boss can move from its origin. 
+
+\mbox{\Hypertarget{class_queen_bauss_a3b035e20519b15a46b1cfa28a3300d1a}\label{class_queen_bauss_a3b035e20519b15a46b1cfa28a3300d1a}} 
+\index{QueenBauss@{QueenBauss}!bullet@{bullet}}
+\index{bullet@{bullet}!QueenBauss@{QueenBauss}}
+\subsubsection{\texorpdfstring{bullet}{bullet}}
+{\footnotesize\ttfamily Game\+Object Queen\+Bauss.\+bullet}
+
+
+
+Defines which bullet object the boss will use to shoot. (this will be different from player\textquotesingle{}s bullets) 
+
+\mbox{\Hypertarget{class_queen_bauss_a5c17fa20ec6761760b7651176a1c1e7e}\label{class_queen_bauss_a5c17fa20ec6761760b7651176a1c1e7e}} 
+\index{QueenBauss@{QueenBauss}!bulletSpawn@{bulletSpawn}}
+\index{bulletSpawn@{bulletSpawn}!QueenBauss@{QueenBauss}}
+\subsubsection{\texorpdfstring{bulletSpawn}{bulletSpawn}}
+{\footnotesize\ttfamily Transform Queen\+Bauss.\+bullet\+Spawn}
+
+
+
+A reference to the object where the bullets spawn (this is always relative to boss position, as it is a child prefab of the boss) 
+
 \mbox{\Hypertarget{class_queen_bauss_a493ca87e362739138d3a758f267c2f9c}\label{class_queen_bauss_a493ca87e362739138d3a758f267c2f9c}} 
 \index{QueenBauss@{QueenBauss}!fireRate@{fireRate}}
 \index{fireRate@{fireRate}!QueenBauss@{QueenBauss}}
@@ -85,8 +155,18 @@ fire\+Rate is how fast the gun will fire. next\+Fire is updated every time the g
 
 The class the contains the animation to apply camera shake behavior to. 
 
-Tracks the number of bullet hits the boss can take 
+Tracks the number of bullet hits the boss can take \mbox{\Hypertarget{class_queen_bauss_a11c5f07cee01d4587cad453edbb32fa3}\label{class_queen_bauss_a11c5f07cee01d4587cad453edbb32fa3}} 
+\index{QueenBauss@{QueenBauss}!speed@{speed}}
+\index{speed@{speed}!QueenBauss@{QueenBauss}}
+\subsubsection{\texorpdfstring{speed}{speed}}
+{\footnotesize\ttfamily float Queen\+Bauss.\+speed}
+
+
+
+Boss speed settable from Unity editor. 
+
+
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-Assets/\+Scripts/Queen\+Bauss.\+cs\end{DoxyCompactItemize}
+Assets/\+Scripts/\mbox{\hyperlink{_queen_bauss_8cs}{Queen\+Bauss.\+cs}}\end{DoxyCompactItemize}

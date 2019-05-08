@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['recieveplayerparameter',['RecievePlayerParameter',['../class_enemy_behavior.html#a1a0d6efe8ce9e53a0e4bddd06c379097',1,'EnemyBehavior.RecievePlayerParameter()'],['../class_queen_bauss.html#a40fa065ef12d2fa9e9483c271d3e75a6',1,'QueenBauss.RecievePlayerParameter()']]]
+  ['playgame',['PlayGame',['../class_main_menu_behavior.html#ae01826edae2c48636a5ba76bfa193ea6',1,'MainMenuBehavior']]],
+  ['playtest',['PlayTest',['../class_main_menu_behavior.html#a781e8e3a21a016ef2c3c6410d20c1026',1,'MainMenuBehavior']]],
+  ['printhighscore',['printHighScore',['../class_player_controller.html#a685b3e7478ec3431f858455832c45527',1,'PlayerController']]]
 ];

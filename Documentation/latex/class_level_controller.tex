@@ -1,5 +1,10 @@
 \hypertarget{class_level_controller}{}\section{Level\+Controller Class Reference}
 \label{class_level_controller}\index{LevelController@{LevelController}}
+
+
+The script that maintains difficulty and spawning, and updates accordingly each level.  
+
+
 Inheritance diagram for Level\+Controller\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,41 +14,146 @@ Inheritance diagram for Level\+Controller\+:\begin{figure}[H]
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_level_controller_aa449cd525fbc71a079d640241e6ecff3}\label{class_level_controller_aa449cd525fbc71a079d640241e6ecff3}} 
 Game\+Object \mbox{\hyperlink{class_level_controller_aa449cd525fbc71a079d640241e6ecff3}{enemy\+Spawn}}
 \begin{DoxyCompactList}\small\item\em The object that manages spawning smaller bees. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_level_controller_a986d38f2ec210fe0bd48aae961ebb1a7}\label{class_level_controller_a986d38f2ec210fe0bd48aae961ebb1a7}} 
 Transform \mbox{\hyperlink{class_level_controller_a986d38f2ec210fe0bd48aae961ebb1a7}{boss\+Spawn}}
 \begin{DoxyCompactList}\small\item\em The location to spawn the boss. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_level_controller_a42fdf92db6ac8eb813e54501476bdc21}\label{class_level_controller_a42fdf92db6ac8eb813e54501476bdc21}} 
 Game\+Object \mbox{\hyperlink{class_level_controller_a42fdf92db6ac8eb813e54501476bdc21}{queen}}
 \begin{DoxyCompactList}\small\item\em The game object that will be spawned in as a boss. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_level_controller_ab3159878c28f1cf902172794006316d2}\label{class_level_controller_ab3159878c28f1cf902172794006316d2}} 
 int \mbox{\hyperlink{class_level_controller_ab3159878c28f1cf902172794006316d2}{level}}
 \begin{DoxyCompactList}\small\item\em The variable that keeps track of the level. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_level_controller_a1999776383f5764862b235ee28106434}\label{class_level_controller_a1999776383f5764862b235ee28106434}} 
 Game\+Object \mbox{\hyperlink{class_level_controller_a1999776383f5764862b235ee28106434}{player\+Object}}
 \begin{DoxyCompactList}\small\item\em The player object. This is used for updating score and setting level\+Up flags. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_level_controller_a7a4d99d10f9128d12efb3b10cdeee921}\label{class_level_controller_a7a4d99d10f9128d12efb3b10cdeee921}} 
 int \mbox{\hyperlink{class_level_controller_a7a4d99d10f9128d12efb3b10cdeee921}{wave\+Difficulty\+Modifier}}
 \begin{DoxyCompactList}\small\item\em The number of additional enemies to spawn each successive level. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_level_controller_aba68593c9e9aa85e67d95232aa91ad0b}\label{class_level_controller_aba68593c9e9aa85e67d95232aa91ad0b}} 
 int \mbox{\hyperlink{class_level_controller_aba68593c9e9aa85e67d95232aa91ad0b}{boss\+Difficulty\+Modifier}}
 \begin{DoxyCompactList}\small\item\em The amount of health to add to the boss each level. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_level_controller_a09cc9c55bc33be5c9c9861f1291f2070}\label{class_level_controller_a09cc9c55bc33be5c9c9861f1291f2070}} 
 Game\+Object \mbox{\hyperlink{class_level_controller_a09cc9c55bc33be5c9c9861f1291f2070}{scrolling\+Background}}
 \begin{DoxyCompactList}\small\item\em The object to track the background (to speed up each level) \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_level_controller_a99291eb24ff2d4f118ae35100ba238d2}\label{class_level_controller_a99291eb24ff2d4f118ae35100ba238d2}} 
 Game\+Object \mbox{\hyperlink{class_level_controller_a99291eb24ff2d4f118ae35100ba238d2}{power\+Up\+Object}}
 \begin{DoxyCompactList}\small\item\em The object that will spawn when a power up is needed. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_level_controller_a9d1d63a7deb1d44661820a73b806c9bf}\label{class_level_controller_a9d1d63a7deb1d44661820a73b806c9bf}} 
 Transform \mbox{\hyperlink{class_level_controller_a9d1d63a7deb1d44661820a73b806c9bf}{power\+Up\+Spawn}}
 \begin{DoxyCompactList}\small\item\em Tracks where to spawn the power ups. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_level_controller_a4cde6e70afc6404160a2950fa82d3569}\label{class_level_controller_a4cde6e70afc6404160a2950fa82d3569}} 
 int \mbox{\hyperlink{class_level_controller_a4cde6e70afc6404160a2950fa82d3569}{power\+Up\+Threshold}}
 \begin{DoxyCompactList}\small\item\em The score interval in which to spawn a power up. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
+\subsection{Detailed Description}
+The script that maintains difficulty and spawning, and updates accordingly each level. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_level_controller_aba68593c9e9aa85e67d95232aa91ad0b}\label{class_level_controller_aba68593c9e9aa85e67d95232aa91ad0b}} 
+\index{LevelController@{LevelController}!bossDifficultyModifier@{bossDifficultyModifier}}
+\index{bossDifficultyModifier@{bossDifficultyModifier}!LevelController@{LevelController}}
+\subsubsection{\texorpdfstring{bossDifficultyModifier}{bossDifficultyModifier}}
+{\footnotesize\ttfamily int Level\+Controller.\+boss\+Difficulty\+Modifier}
+
+
+
+The amount of health to add to the boss each level. 
+
+\mbox{\Hypertarget{class_level_controller_a986d38f2ec210fe0bd48aae961ebb1a7}\label{class_level_controller_a986d38f2ec210fe0bd48aae961ebb1a7}} 
+\index{LevelController@{LevelController}!bossSpawn@{bossSpawn}}
+\index{bossSpawn@{bossSpawn}!LevelController@{LevelController}}
+\subsubsection{\texorpdfstring{bossSpawn}{bossSpawn}}
+{\footnotesize\ttfamily Transform Level\+Controller.\+boss\+Spawn}
+
+
+
+The location to spawn the boss. 
+
+\mbox{\Hypertarget{class_level_controller_aa449cd525fbc71a079d640241e6ecff3}\label{class_level_controller_aa449cd525fbc71a079d640241e6ecff3}} 
+\index{LevelController@{LevelController}!enemySpawn@{enemySpawn}}
+\index{enemySpawn@{enemySpawn}!LevelController@{LevelController}}
+\subsubsection{\texorpdfstring{enemySpawn}{enemySpawn}}
+{\footnotesize\ttfamily Game\+Object Level\+Controller.\+enemy\+Spawn}
+
+
+
+The object that manages spawning smaller bees. 
+
+\mbox{\Hypertarget{class_level_controller_ab3159878c28f1cf902172794006316d2}\label{class_level_controller_ab3159878c28f1cf902172794006316d2}} 
+\index{LevelController@{LevelController}!level@{level}}
+\index{level@{level}!LevelController@{LevelController}}
+\subsubsection{\texorpdfstring{level}{level}}
+{\footnotesize\ttfamily int Level\+Controller.\+level}
+
+
+
+The variable that keeps track of the level. 
+
+\mbox{\Hypertarget{class_level_controller_a1999776383f5764862b235ee28106434}\label{class_level_controller_a1999776383f5764862b235ee28106434}} 
+\index{LevelController@{LevelController}!playerObject@{playerObject}}
+\index{playerObject@{playerObject}!LevelController@{LevelController}}
+\subsubsection{\texorpdfstring{playerObject}{playerObject}}
+{\footnotesize\ttfamily Game\+Object Level\+Controller.\+player\+Object}
+
+
+
+The player object. This is used for updating score and setting level\+Up flags. 
+
+\mbox{\Hypertarget{class_level_controller_a99291eb24ff2d4f118ae35100ba238d2}\label{class_level_controller_a99291eb24ff2d4f118ae35100ba238d2}} 
+\index{LevelController@{LevelController}!powerUpObject@{powerUpObject}}
+\index{powerUpObject@{powerUpObject}!LevelController@{LevelController}}
+\subsubsection{\texorpdfstring{powerUpObject}{powerUpObject}}
+{\footnotesize\ttfamily Game\+Object Level\+Controller.\+power\+Up\+Object}
+
+
+
+The object that will spawn when a power up is needed. 
+
+\mbox{\Hypertarget{class_level_controller_a9d1d63a7deb1d44661820a73b806c9bf}\label{class_level_controller_a9d1d63a7deb1d44661820a73b806c9bf}} 
+\index{LevelController@{LevelController}!powerUpSpawn@{powerUpSpawn}}
+\index{powerUpSpawn@{powerUpSpawn}!LevelController@{LevelController}}
+\subsubsection{\texorpdfstring{powerUpSpawn}{powerUpSpawn}}
+{\footnotesize\ttfamily Transform Level\+Controller.\+power\+Up\+Spawn}
+
+
+
+Tracks where to spawn the power ups. 
+
+\mbox{\Hypertarget{class_level_controller_a4cde6e70afc6404160a2950fa82d3569}\label{class_level_controller_a4cde6e70afc6404160a2950fa82d3569}} 
+\index{LevelController@{LevelController}!powerUpThreshold@{powerUpThreshold}}
+\index{powerUpThreshold@{powerUpThreshold}!LevelController@{LevelController}}
+\subsubsection{\texorpdfstring{powerUpThreshold}{powerUpThreshold}}
+{\footnotesize\ttfamily int Level\+Controller.\+power\+Up\+Threshold}
+
+
+
+The score interval in which to spawn a power up. 
+
+\mbox{\Hypertarget{class_level_controller_a42fdf92db6ac8eb813e54501476bdc21}\label{class_level_controller_a42fdf92db6ac8eb813e54501476bdc21}} 
+\index{LevelController@{LevelController}!queen@{queen}}
+\index{queen@{queen}!LevelController@{LevelController}}
+\subsubsection{\texorpdfstring{queen}{queen}}
+{\footnotesize\ttfamily Game\+Object Level\+Controller.\+queen}
+
+
+
+The game object that will be spawned in as a boss. 
+
+\mbox{\Hypertarget{class_level_controller_a09cc9c55bc33be5c9c9861f1291f2070}\label{class_level_controller_a09cc9c55bc33be5c9c9861f1291f2070}} 
+\index{LevelController@{LevelController}!scrollingBackground@{scrollingBackground}}
+\index{scrollingBackground@{scrollingBackground}!LevelController@{LevelController}}
+\subsubsection{\texorpdfstring{scrollingBackground}{scrollingBackground}}
+{\footnotesize\ttfamily Game\+Object Level\+Controller.\+scrolling\+Background}
+
+
+
+The object to track the background (to speed up each level) 
+
+\mbox{\Hypertarget{class_level_controller_a7a4d99d10f9128d12efb3b10cdeee921}\label{class_level_controller_a7a4d99d10f9128d12efb3b10cdeee921}} 
+\index{LevelController@{LevelController}!waveDifficultyModifier@{waveDifficultyModifier}}
+\index{waveDifficultyModifier@{waveDifficultyModifier}!LevelController@{LevelController}}
+\subsubsection{\texorpdfstring{waveDifficultyModifier}{waveDifficultyModifier}}
+{\footnotesize\ttfamily int Level\+Controller.\+wave\+Difficulty\+Modifier}
+
+
+
+The number of additional enemies to spawn each successive level. 
+
+
+
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-Assets/\+Scripts/Level\+Controller.\+cs\end{DoxyCompactItemize}
+Assets/\+Scripts/\mbox{\hyperlink{_level_controller_8cs}{Level\+Controller.\+cs}}\end{DoxyCompactItemize}

@@ -1,5 +1,10 @@
 \hypertarget{class_enemy_behavior}{}\section{Enemy\+Behavior Class Reference}
 \label{class_enemy_behavior}\index{EnemyBehavior@{EnemyBehavior}}
+
+
+Contains enemy movement and other behavior.  
+
+
 Inheritance diagram for Enemy\+Behavior\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -14,28 +19,24 @@ void \mbox{\hyperlink{class_enemy_behavior_a1a0d6efe8ce9e53a0e4bddd06c379097}{Re
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_enemy_behavior_a1c7f38d162cec582d736b2b7d7d0ac6b}\label{class_enemy_behavior_a1c7f38d162cec582d736b2b7d7d0ac6b}} 
 float \mbox{\hyperlink{class_enemy_behavior_a1c7f38d162cec582d736b2b7d7d0ac6b}{speed}}
 \begin{DoxyCompactList}\small\item\em Enemy speed settable from Unity editor. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_enemy_behavior_a6f9339ebbcc8c5ad4e538d52bfde73c1}\label{class_enemy_behavior_a6f9339ebbcc8c5ad4e538d52bfde73c1}} 
 Vector2 \mbox{\hyperlink{class_enemy_behavior_a6f9339ebbcc8c5ad4e538d52bfde73c1}{random\+Movement}}
 \begin{DoxyCompactList}\small\item\em An occasionally-\/generated random vector to apply to enemy movement. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_enemy_behavior_a80484f747dfb85a8063a50dd115f65e0}\label{class_enemy_behavior_a80484f747dfb85a8063a50dd115f65e0}} 
 float \mbox{\hyperlink{class_enemy_behavior_a80484f747dfb85a8063a50dd115f65e0}{wobble\+Factor}}
 \begin{DoxyCompactList}\small\item\em A scalar to multiply random\+Movement by, to amplify random movement. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_enemy_behavior_ade5bcff77085ea22523d28312c252d75}\label{class_enemy_behavior_ade5bcff77085ea22523d28312c252d75}} 
 float \mbox{\hyperlink{class_enemy_behavior_ade5bcff77085ea22523d28312c252d75}{wobble\+Wait}}
 \begin{DoxyCompactList}\small\item\em How long until a new random\+Movement should be applied to movement. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_enemy_behavior_af8c760cde02386745dc1017af509049d}\label{class_enemy_behavior_af8c760cde02386745dc1017af509049d}} 
 bool \mbox{\hyperlink{class_enemy_behavior_af8c760cde02386745dc1017af509049d}{test\+Mode}}
 \begin{DoxyCompactList}\small\item\em Tracks if the test mode is enabled, this will be passed to the actual game. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_enemy_behavior_a45bada468af071f8ff4ff0f8b6d5a443}\label{class_enemy_behavior_a45bada468af071f8ff4ff0f8b6d5a443}} 
 bool \mbox{\hyperlink{class_enemy_behavior_a45bada468af071f8ff4ff0f8b6d5a443}{test\+Updates\+Score}} = false
 \begin{DoxyCompactList}\small\item\em Flips to true if test mode is enabled and the score updates properly. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_enemy_behavior_a82176ba450bef73880b2ff7db3123037}\label{class_enemy_behavior_a82176ba450bef73880b2ff7db3123037}} 
 Audio\+Clip \mbox{\hyperlink{class_enemy_behavior_a82176ba450bef73880b2ff7db3123037}{death\+Sound}}
 \begin{DoxyCompactList}\small\item\em Sound that plays when the enemy dies. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\subsection{Detailed Description}
+Contains enemy movement and other behavior. 
 
 \subsection{Member Function Documentation}
 \mbox{\Hypertarget{class_enemy_behavior_a1a0d6efe8ce9e53a0e4bddd06c379097}\label{class_enemy_behavior_a1a0d6efe8ce9e53a0e4bddd06c379097}} 
@@ -57,6 +58,79 @@ Audio\+Clip \mbox{\hyperlink{class_enemy_behavior_a82176ba450bef73880b2ff7db3123
 \end{DoxyParams}
 
 
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_enemy_behavior_a82176ba450bef73880b2ff7db3123037}\label{class_enemy_behavior_a82176ba450bef73880b2ff7db3123037}} 
+\index{EnemyBehavior@{EnemyBehavior}!deathSound@{deathSound}}
+\index{deathSound@{deathSound}!EnemyBehavior@{EnemyBehavior}}
+\subsubsection{\texorpdfstring{deathSound}{deathSound}}
+{\footnotesize\ttfamily Audio\+Clip Enemy\+Behavior.\+death\+Sound}
+
+
+
+Sound that plays when the enemy dies. 
+
+\mbox{\Hypertarget{class_enemy_behavior_a6f9339ebbcc8c5ad4e538d52bfde73c1}\label{class_enemy_behavior_a6f9339ebbcc8c5ad4e538d52bfde73c1}} 
+\index{EnemyBehavior@{EnemyBehavior}!randomMovement@{randomMovement}}
+\index{randomMovement@{randomMovement}!EnemyBehavior@{EnemyBehavior}}
+\subsubsection{\texorpdfstring{randomMovement}{randomMovement}}
+{\footnotesize\ttfamily Vector2 Enemy\+Behavior.\+random\+Movement}
+
+
+
+An occasionally-\/generated random vector to apply to enemy movement. 
+
+\mbox{\Hypertarget{class_enemy_behavior_a1c7f38d162cec582d736b2b7d7d0ac6b}\label{class_enemy_behavior_a1c7f38d162cec582d736b2b7d7d0ac6b}} 
+\index{EnemyBehavior@{EnemyBehavior}!speed@{speed}}
+\index{speed@{speed}!EnemyBehavior@{EnemyBehavior}}
+\subsubsection{\texorpdfstring{speed}{speed}}
+{\footnotesize\ttfamily float Enemy\+Behavior.\+speed}
+
+
+
+Enemy speed settable from Unity editor. 
+
+\mbox{\Hypertarget{class_enemy_behavior_af8c760cde02386745dc1017af509049d}\label{class_enemy_behavior_af8c760cde02386745dc1017af509049d}} 
+\index{EnemyBehavior@{EnemyBehavior}!testMode@{testMode}}
+\index{testMode@{testMode}!EnemyBehavior@{EnemyBehavior}}
+\subsubsection{\texorpdfstring{testMode}{testMode}}
+{\footnotesize\ttfamily bool Enemy\+Behavior.\+test\+Mode}
+
+
+
+Tracks if the test mode is enabled, this will be passed to the actual game. 
+
+\mbox{\Hypertarget{class_enemy_behavior_a45bada468af071f8ff4ff0f8b6d5a443}\label{class_enemy_behavior_a45bada468af071f8ff4ff0f8b6d5a443}} 
+\index{EnemyBehavior@{EnemyBehavior}!testUpdatesScore@{testUpdatesScore}}
+\index{testUpdatesScore@{testUpdatesScore}!EnemyBehavior@{EnemyBehavior}}
+\subsubsection{\texorpdfstring{testUpdatesScore}{testUpdatesScore}}
+{\footnotesize\ttfamily bool Enemy\+Behavior.\+test\+Updates\+Score = false}
+
+
+
+Flips to true if test mode is enabled and the score updates properly. 
+
+\mbox{\Hypertarget{class_enemy_behavior_a80484f747dfb85a8063a50dd115f65e0}\label{class_enemy_behavior_a80484f747dfb85a8063a50dd115f65e0}} 
+\index{EnemyBehavior@{EnemyBehavior}!wobbleFactor@{wobbleFactor}}
+\index{wobbleFactor@{wobbleFactor}!EnemyBehavior@{EnemyBehavior}}
+\subsubsection{\texorpdfstring{wobbleFactor}{wobbleFactor}}
+{\footnotesize\ttfamily float Enemy\+Behavior.\+wobble\+Factor}
+
+
+
+A scalar to multiply random\+Movement by, to amplify random movement. 
+
+\mbox{\Hypertarget{class_enemy_behavior_ade5bcff77085ea22523d28312c252d75}\label{class_enemy_behavior_ade5bcff77085ea22523d28312c252d75}} 
+\index{EnemyBehavior@{EnemyBehavior}!wobbleWait@{wobbleWait}}
+\index{wobbleWait@{wobbleWait}!EnemyBehavior@{EnemyBehavior}}
+\subsubsection{\texorpdfstring{wobbleWait}{wobbleWait}}
+{\footnotesize\ttfamily float Enemy\+Behavior.\+wobble\+Wait}
+
+
+
+How long until a new random\+Movement should be applied to movement. 
+
+
+
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-Assets/\+Scripts/Enemy\+Behavior.\+cs\end{DoxyCompactItemize}
+Assets/\+Scripts/\mbox{\hyperlink{_enemy_behavior_8cs}{Enemy\+Behavior.\+cs}}\end{DoxyCompactItemize}
