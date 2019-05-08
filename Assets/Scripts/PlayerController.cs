@@ -105,8 +105,8 @@ public class PlayerController : MonoBehaviour {
 
         //    UNCOMMENT THESE TO ENABLE TEST MODE   //
 
-        //testModeObject = GameObject.Find("TestModeManager");
-        //testMode = testModeObject.GetComponent<TestModeManager>().testFlag;
+        testModeObject = GameObject.Find("TestModeManager");
+        testMode = testModeObject.GetComponent<TestModeManager>().testFlag;
 
         //  UNCOMMENT THE ABOVE TO ENABLE TEST MODE //
 
